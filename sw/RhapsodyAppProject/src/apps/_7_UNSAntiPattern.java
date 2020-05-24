@@ -46,6 +46,7 @@ public class _7_UNSAntiPattern extends AntiPatternBase
 			if(!state.isRoot() && !state.isDefault() && hasNoAction && hasNoInternalTransition && isInTransitionsEventEmpty && isOutTransitionsEventEmpty)
 			{
 				statesFound.add(state);
+				hitCount++;
 				bReturn = true;
 			}
 		}
@@ -78,7 +79,6 @@ public class _7_UNSAntiPattern extends AntiPatternBase
 			if((sourceNode != null && sourceNode.getType() == NodeTypeEnum.NodeType_condition) || irpTrigger != null)
 			{
 				bReturn = false;
-				hitCount++;
 			}	
 		}
 		
