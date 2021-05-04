@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+App-Id: 06f43bb298e74f3f8652b5e349463ac1
+Main-Class: apps.MainApp
+App-TriggerDriven: none
+App-Trigger: 
+App-Class-Path: C:/Rhapsody/8.4/Share/RhapsodyApps/RhapsodyApps.jar C:/Rhapsody/8.4/Share/RhapsodyApps/apps.jar C:/Rhapsody/8.4/Share/RhapsodyApps/libs/jdom.jar C:/Rhapsody/8.4/Share/RhapsodyApps/libs/swt.jar
+OMRoot-Hint: C:/Rhapsody/8.4/Share
+ProjectName-Hint: RhapsodyAppProject
+JavaAPI-Hint: C:/Rhapsody/8.4/Share/JavaAPI
