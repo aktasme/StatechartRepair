@@ -32,35 +32,7 @@ public class MainApp extends App
 			else
 			{
 				System.out.printf("Statechart is NOT Complex!\n");
-			}
-			
-/*			IRPState root = statechart.getRootState();
-						
-			IRPCollection elements = statechart.getElementsInDiagram();
-			IRPCollection triggers = statechart.getAllTriggers();
-			IRPCollection graphicalElements = statechart.getGraphicalElements();
-					
-			System.out.printf("MainApp::execute(): Element count in diagram:%d\n", elements.getCount());
-			System.out.printf("MainApp::execute(): Graphical Element count in diagram:%d\n", graphicalElements.getCount());
-			System.out.printf("MainApp::execute(): Trigger count in diagram:%d\n", triggers.getCount());
-			
-			//graphicalElements.toList();
-			
-			for(int index = 1; index <= elements.getCount(); index++)
-			{
-				IRPModelElement element = (IRPModelElement)elements.getItem(index);
-				System.out.printf("MainApp::execute(): All Elements [%d] %s:%s\n", index, element.getMetaClass(), element.getName());
-			}
-			
-			IRPCollection rootElements = root.getSubStates();
-			System.out.printf("MainApp::execute(): States under root count in diagram:%d\n", rootElements.getCount());
-			
-			for(int index = 1; index <= rootElements.getCount(); index++)
-			{
-				IRPModelElement element = (IRPModelElement)rootElements.getItem(index);
-				System.out.printf("MainApp::execute(): Root Elements [%d] %s:%s\n", index, element.getMetaClass(), element.getName());
-			}
-*/			
+			}		
 		}
 	}	
 	
