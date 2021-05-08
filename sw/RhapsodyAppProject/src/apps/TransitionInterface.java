@@ -2,7 +2,7 @@ package apps;
 
 import com.telelogic.rhapsody.core.*;
 
-public interface TransitionEx extends IRPTransition
+public interface TransitionInterface extends IRPTransition
 {
 	int ID = 0;
 }

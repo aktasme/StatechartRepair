@@ -2,7 +2,7 @@ package apps;
 
 import com.telelogic.rhapsody.core.*;
 
-public class Transition 
+public class Transition
 {
 	IRPTransition transition;
 	

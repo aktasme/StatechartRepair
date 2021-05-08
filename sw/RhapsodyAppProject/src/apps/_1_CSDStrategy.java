@@ -18,13 +18,16 @@ public class _1_CSDStrategy implements StrategyBase
 			bReturn = true;
 		}
 		
+		statechart.setComplexity(complexity);
+		
 		return bReturn;
 	}
 
 	@Override
 	public boolean Repair(Statechart statechart) 
 	{
-		/* State machine optimization and minimization algorithm can be used for complex statechart diagrams. In this work no solution is recommended for this type of diagrams. */
+		/* State machine optimization and minimization algorithm can be used for complex statechart diagrams. */
+		/* In this work no solution is recommended for this type of diagrams. */
 		return false;
 	}
 

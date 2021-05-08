@@ -27,11 +27,11 @@ public class MainApp extends App
 			_1_CSDStrategy strategyCSD = new _1_CSDStrategy();
 			if(strategyCSD.control(statechart))
 			{
-				System.out.printf("Statechart is Complex!\n");
+				System.out.printf("Statechart is Complex! (%f)\n", statechart.getComplexity());
 			}
 			else
 			{
-				System.out.printf("Statechart is NOT Complex!\n");
+				System.out.printf("Statechart is NOT Complex! (%f)\n", statechart.getComplexity());
 			}		
 		}
 	}	

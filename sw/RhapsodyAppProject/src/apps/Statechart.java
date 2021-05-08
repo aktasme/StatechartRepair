@@ -1,6 +1,7 @@
 package apps;
 
 import java.util.Vector;
+import java.util.HashMap;
 import com.telelogic.rhapsody.core.*;
 
 public class Statechart
@@ -9,12 +10,12 @@ public class Statechart
 	IRPState root;
 	IRPCollection elements;
 	
-	Vector<State> states;
+	HashMap<String ,State> states;
 	Vector<Condition> conditions;
 	Vector<Node> nodes;
 	Vector<Transition> transitions;
-	
-	int transitionCount = 0;
+
+	float complexity = 0;
 	
 	public Statechart(IRPStatechart statechart)
 	{
@@ -22,7 +23,7 @@ public class Statechart
 		this.root = statechart.getRootState();
 		this.elements = statechart.getElementsInDiagram();		
 		
-		states = new Vector<State>();
+		states = new HashMap<String, State>();
 		conditions = new Vector<Condition>();
 		nodes = new Vector<Node>();
 		transitions = new Vector<Transition>();
@@ -44,8 +45,8 @@ public class Statechart
 			if(element.getIsOfMetaClass("State") == 1)
 			{
 				IRPState irpState = (IRPState)element;
-				State state = new State(irpState);
-				states.add(state);
+				State state = new State(this, irpState);
+				states.put(irpState.getName(), state);
 				nodes.add(state);							
 			}
 			else if(element.getIsOfMetaClass("Condition") == 1)
@@ -70,11 +71,32 @@ public class Statechart
 	
 	public void initializeStates()
 	{
-		int depthInTree = 0;
+		Vector<State> queue = new Vector<State>();
 		
-		State state = states.firstElement();
-		state.setDepth(0);
-		state.print();
+		State rootState = states.get("ROOT");
+		queue.add(rootState);
+		rootState.setDepth(0);
+		
+		while(!queue.isEmpty())
+		{
+			State state = queue.firstElement();
+			queue.remove(0);
+			
+			Vector<State> subStates = state.getSubStates();
+			for(int index = 0; index < subStates.size(); index++)
+			{
+				State child = subStates.get(index);
+				child.setDepth(state.getDepth() + 1);
+				queue.add(child);
+			}
+		}
+	}
+	
+	/* Wrapper Functions */
+	public State getState(String stateName)
+	{
+		State state = states.get(stateName);
+		return state;
 	}
 	
 	/* Logging Functions */
@@ -97,4 +119,15 @@ public class Statechart
 	{
 		return transitions.size();
 	}
+	
+	public float getComplexity() 
+	{
+		return complexity;
+	}
+
+	public void setComplexity(float complexity) 
+	{
+		this.complexity = complexity;
+	}
+
 }
