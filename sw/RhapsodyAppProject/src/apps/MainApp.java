@@ -32,7 +32,18 @@ public class MainApp extends App
 			else
 			{
 				System.out.printf("Statechart is NOT Complex! (%f)\n", statechart.getComplexity());
-			}		
+			}	
+			
+			_2_TBSWDHStrategy strategyTBSWDH = new _2_TBSWDHStrategy();
+			if(strategyTBSWDH.control(statechart))
+			{
+				System.out.printf("Transition Between States with Different Hierarchy found!\n");
+			}
+			else
+			{
+				System.out.printf("Transition Between States with Different Hierarchy NOT found!\n");
+			}	
+		
 		}
 	}	
 	

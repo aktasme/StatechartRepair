@@ -6,13 +6,14 @@ import com.telelogic.rhapsody.core.*;
 
 public class State extends Node
 {
-	IRPState irpState;
 	Statechart statechart;
+	IRPState irpState;
 	
 	int depth = -1;
 	
 	public State(Statechart statechart, IRPState irpState)
 	{
+		super(statechart, irpState, NodeTypeEnum.NodeType_state);
 		this.statechart = statechart;
 		this.irpState = irpState;
 	}

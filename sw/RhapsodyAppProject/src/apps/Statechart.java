@@ -10,10 +10,17 @@ public class Statechart
 	IRPState root;
 	IRPCollection elements;
 	
-	HashMap<String ,State> states;
+	Vector<State> states;
+	HashMap<String, State> stateMap;
+	
 	Vector<Condition> conditions;
+	HashMap<String, Condition> conditionMap;
+	
 	Vector<Node> nodes;
+	HashMap<String, Node> nodeMap;
+	
 	Vector<Transition> transitions;
+	HashMap<String, Transition> transitionMap;
 
 	float complexity = 0;
 	
@@ -23,10 +30,17 @@ public class Statechart
 		this.root = statechart.getRootState();
 		this.elements = statechart.getElementsInDiagram();		
 		
-		states = new HashMap<String, State>();
+		states = new Vector<State>();
+		stateMap = new HashMap<String, State>();
+		
 		conditions = new Vector<Condition>();
+		conditionMap = new HashMap<String, Condition>();
+		
 		nodes = new Vector<Node>();
+		nodeMap = new HashMap<String, Node>();
+		
 		transitions = new Vector<Transition>();
+		transitionMap = new HashMap<String, Transition>();
 	}
 	
 	public void initialize()
@@ -46,21 +60,31 @@ public class Statechart
 			{
 				IRPState irpState = (IRPState)element;
 				State state = new State(this, irpState);
-				states.put(irpState.getName(), state);
-				nodes.add(state);							
+				
+				states.add(state);
+				stateMap.put(irpState.getName(), state);
+				
+				nodes.add(state);
+				nodeMap.put(irpState.getName(), state);
 			}
 			else if(element.getIsOfMetaClass("Condition") == 1)
 			{
 				IRPConnector irpConnector = (IRPConnector)element;
-				Condition condition = new Condition(irpConnector);
+				Condition condition = new Condition(this, irpConnector);
+				
 				conditions.add(condition);
-				nodes.add(condition);								
+				conditionMap.put(irpConnector.getName(), condition);
+				
+				nodes.add(condition);		
+				nodeMap.put(irpConnector.getName(), condition);
 			}
 			else if(element.getIsOfMetaClass("Transition") == 1)
 			{
 				IRPTransition irpTransition = (IRPTransition)element;
-				Transition transition = new Transition(irpTransition);
+				Transition transition = new Transition(this, irpTransition);
+				
 				transitions.add(transition);
+				transitionMap.put(irpTransition.getName(), transition);
 			}
 			else
 			{
@@ -73,7 +97,7 @@ public class Statechart
 	{
 		Vector<State> queue = new Vector<State>();
 		
-		State rootState = states.get("ROOT");
+		State rootState = stateMap.get("ROOT");
 		queue.add(rootState);
 		rootState.setDepth(0);
 		
@@ -93,10 +117,28 @@ public class Statechart
 	}
 	
 	/* Wrapper Functions */
-	public State getState(String stateName)
+	public State getState(String name)
 	{
-		State state = states.get(stateName);
+		State state = stateMap.get(name);
 		return state;
+	}
+	
+	public Condition getCondition(String name)
+	{
+		Condition condition = conditionMap.get(name);
+		return condition;
+	}
+	
+	public Node getNode(String name)
+	{
+		Node node = nodeMap.get(name);
+		return node;
+	}	
+	
+	public Transition getTransition(String name)
+	{
+		Transition transition = transitionMap.get(name);
+		return transition;
 	}
 	
 	/* Logging Functions */
@@ -129,5 +171,26 @@ public class Statechart
 	{
 		this.complexity = complexity;
 	}
+
+	public Vector<State> getStates() {
+		return states;
+	}
+
+	public void setStates(Vector<State> states) 
+	{
+		this.states = states;
+	}
+
+	public Vector<Transition> getTransitions() 
+	{
+		return transitions;
+	}
+
+	public void setTransitions(Vector<Transition> transitions) 
+	{
+		this.transitions = transitions;
+	}
+	
+	
 
 }

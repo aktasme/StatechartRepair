@@ -2,12 +2,44 @@ package apps;
 
 import com.telelogic.rhapsody.core.*;
 
-public class Transition
+public class Transition extends Element
 {
-	IRPTransition transition;
+	Statechart statechart;
+	IRPTransition irpTransition;
 	
-	public Transition(IRPTransition transition)
+	public Transition(Statechart statechart, IRPTransition irpTransition)
 	{
-		this.transition = transition;
+		this.statechart = statechart;
+		this.irpTransition = irpTransition;
 	}
+	
+	/* Wrapper Functions */
+	public int isDefaultTransition()
+	{
+		return irpTransition.isDefaultTransition();
+	}
+	
+	public Node getItsSource()
+	{
+		IRPStateVertex irpSource = irpTransition.getItsSource();
+		Node node = statechart.getNode(irpSource.getName());
+		return node;
+	}
+	
+	public Node getItsTarget()
+	{
+		IRPStateVertex irpSource = irpTransition.getItsTarget();
+		Node node = statechart.getNode(irpSource.getName());
+		return node;
+	}	
+	
+	/* Logging Functions */
+	@Override
+	public void print() 
+	{
+		super.print();
+		
+		System.out.printf("Transition:%s\n", irpTransition.getName());
+	}
+
 }
