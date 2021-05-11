@@ -473,6 +473,60 @@ bool evDE::isTypeOf(const short id) const {
     return (evDE_Default_id==id);
 }
 
+//## event evAC()
+evAC::evAC() {
+    setId(evAC_Default_id);
+}
+
+bool evAC::isTypeOf(const short id) const {
+    return (evAC_Default_id==id);
+}
+
+//## event evDB()
+evDB::evDB() {
+    setId(evDB_Default_id);
+}
+
+bool evDB::isTypeOf(const short id) const {
+    return (evDB_Default_id==id);
+}
+
+//## event evDF()
+evDF::evDF() {
+    setId(evDF_Default_id);
+}
+
+bool evDF::isTypeOf(const short id) const {
+    return (evDF_Default_id==id);
+}
+
+//## event evFB()
+evFB::evFB() {
+    setId(evFB_Default_id);
+}
+
+bool evFB::isTypeOf(const short id) const {
+    return (evFB_Default_id==id);
+}
+
+//## event evFG()
+evFG::evFG() {
+    setId(evFG_Default_id);
+}
+
+bool evFG::isTypeOf(const short id) const {
+    return (evFG_Default_id==id);
+}
+
+//## event evHE()
+evHE::evHE() {
+    setId(evHE_Default_id);
+}
+
+bool evHE::isTypeOf(const short id) const {
+    return (evHE_Default_id==id);
+}
+
 /*********************************************************************
 	File Path	: DefaultComponent\DefaultConfig\Default.cpp
 *********************************************************************/

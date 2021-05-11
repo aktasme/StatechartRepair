@@ -55,7 +55,7 @@ IOxfReactive::TakeEventStatus CSD_4::rootState_processEvent() {
                     rootState_active = B;
                     res = eventConsumed;
                 }
-            else if(IS_EVENT_TYPE_OF(evAC__1_ComplexStatechartDiagram_id))
+            else if(IS_EVENT_TYPE_OF(evAC_Default_id))
                 {
                     rootState_subState = C;
                     rootState_active = C;
@@ -115,7 +115,7 @@ IOxfReactive::TakeEventStatus CSD_4::rootState_processEvent() {
                     rootState_active = A;
                     res = eventConsumed;
                 }
-            else if(IS_EVENT_TYPE_OF(evDB__1_ComplexStatechartDiagram_id))
+            else if(IS_EVENT_TYPE_OF(evDB_Default_id))
                 {
                     rootState_subState = B;
                     rootState_active = B;

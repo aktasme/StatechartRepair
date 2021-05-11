@@ -11,13 +11,18 @@
 			<_id type="a">GUID a78ff901-06c2-4992-bcde-e77f5fbb7861</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">_2_TransitionBetweenStatesWithDifferentHierarchy</_name>
-			<_modifiedTimeWeak type="a">5.11.2020::13:57:42</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.11.2020::13:55:41</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.11.2020::15:18:8</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.11.2020::15:18:8</_modifiedTime>
 			<_lastID type="a">3</_lastID>
-			<weakCGTime type="a">5.11.2020::13:57:42</weakCGTime>
+			<weakCGTime type="a">5.11.2020::15:18:8</weakCGTime>
 			<strongCGTime type="a">5.2.2020::18:51:15</strongCGTime>
 			<_defaultComposite type="s">GUID d58c7423-02e2-4a91-8cad-b5933c614b33</_defaultComposite>
-			<_eventsBaseID type="a">25401</_eventsBaseID>
+			<_eventsBaseID type="a">-1</_eventsBaseID>
+			<Events type="c">
+				<IRPYRawContainer type="e">
+					<size type="a">0</size>
+				</IRPYRawContainer>
+			</Events>
 			<_configurationRelatedTime type="a">1.2.1990::0:0:0</_configurationRelatedTime>
 			<AggregatesList type="e">
 				<value>GUID d58c7423-02e2-4a91-8cad-b5933c614b33</value>
@@ -26,7 +31,6 @@
 				<value>GUID 5e5ab163-f1b0-4034-810f-def4f7e86794</value>
 				<value>GUID 8722cad4-d990-43d7-8517-412340327941</value>
 				<value>GUID 5a0aeb3a-2acc-4a8b-8e81-1b05beaf4e09</value>
-				<value>GUID e30c882f-7f4c-4204-9049-c2923e28d10e</value>
 			</AggregatesList>
 		</ISubsystem>
 		<IClass type="e">
@@ -1626,7 +1630,7 @@
 			<_id type="a">GUID 602e9d84-03c1-4cb9-8f4e-abfcae6937f9</_id>
 			<_myState type="a">8192</_myState>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::3:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_virtual type="a">0</_virtual>
 			<Args type="c">
 				<IRPYRawContainer type="e">
@@ -1647,7 +1651,7 @@
 			<_id type="a">GUID 23a55ca3-cb51-49b5-b823-f7c7b007f3ee</_id>
 			<_myState type="a">8192</_myState>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::3:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_virtual type="a">0</_virtual>
 			<Args type="c">
 				<IRPYRawContainer type="e">
@@ -1668,7 +1672,7 @@
 			<_id type="a">GUID 3a3fa1bc-c4fe-4713-a976-11c0dc5f22ef</_id>
 			<_myState type="a">8192</_myState>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::3:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_virtual type="a">0</_virtual>
 			<Args type="c">
 				<IRPYRawContainer type="e">
@@ -1701,7 +1705,7 @@
 			<_classModifier type="a">Unspecified</_classModifier>
 			<_defNumber type="a">5</_defNumber>
 			<_version type="a">5.11.2020::16:54:45</_version>
-			<_baseVersion type="a">1.1.1970::3:0:0</_baseVersion>
+			<_baseVersion type="a">1.2.1990::0:0:0</_baseVersion>
 			<_diagram type="s">GUID b3993f13-6411-4ccb-894f-93eb9b29369e</_diagram>
 			<AggregatesList type="e">
 				<value>GUID 0fb45f54-dd4c-4999-a364-9c1d5335d04e</value>
@@ -1736,7 +1740,7 @@
 		<ILabel type="e">
 			<_id type="a">GUID f082a65f-1032-426e-940d-8bb0e3469f08</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::3:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_itsTrigger>NULL</_itsTrigger>
 			<_itsGuard>NULL</_itsGuard>
 			<_itsAction>NULL</_itsAction>
@@ -1759,7 +1763,7 @@
 		<ILabel type="e">
 			<_id type="a">GUID b2659e08-cedb-474f-9729-003c54f8e7f7</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::3:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_itsTrigger>NULL</_itsTrigger>
 			<_itsGuard>NULL</_itsGuard>
 			<_itsAction>NULL</_itsAction>
@@ -1790,7 +1794,7 @@
 		<IInterfaceItemTrigger type="e">
 			<_id type="a">GUID 853eff97-67d7-4b78-88ee-9122627d13ff</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::3:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_body type="a">evBC</_body>
 			<_itsInterfaceItem type="r">
 				<IHandle type="e">
@@ -1820,7 +1824,7 @@
 		<ILabel type="e">
 			<_id type="a">GUID b4c2f4cc-3dac-4523-8d93-2ae2d7516710</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::3:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_itsTrigger>NULL</_itsTrigger>
 			<_itsGuard>NULL</_itsGuard>
 			<_itsAction>NULL</_itsAction>
@@ -1851,7 +1855,7 @@
 		<IInterfaceItemTrigger type="e">
 			<_id type="a">GUID c01ac87c-0661-4630-a95d-0e03399e5886</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::3:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_body type="a">evDE</_body>
 			<_itsInterfaceItem type="r">
 				<IHandle type="e">
@@ -1889,7 +1893,7 @@
 		<IInterfaceItemTrigger type="e">
 			<_id type="a">GUID 01651a60-c69f-4e12-b8ed-bf316fb69a52</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::3:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_body type="a">evEB</_body>
 			<_itsInterfaceItem type="r">
 				<IHandle type="e">
@@ -3024,6 +3028,7 @@
 			<AggregatesList type="e">
 				<value>GUID 7c5ea3a7-cc95-405e-ab1f-89229916a714</value>
 				<value>GUID 17e06f5b-dfe4-4a61-9d0a-c0bf7f5971dd</value>
+				<value>GUID b7f9b69b-4df2-4ba2-8f8a-25d4ae12ecf6</value>
 				<value>GUID 94730cab-2fba-4709-b862-2cd5f437b825</value>
 			</AggregatesList>
 		</IClass>
@@ -3031,7 +3036,7 @@
 			<_id type="a">GUID 7c5ea3a7-cc95-405e-ab1f-89229916a714</_id>
 			<_myState type="a">8192</_myState>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::3:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_virtual type="a">0</_virtual>
 			<Args type="c">
 				<IRPYRawContainer type="e">
@@ -3052,7 +3057,7 @@
 			<_id type="a">GUID 17e06f5b-dfe4-4a61-9d0a-c0bf7f5971dd</_id>
 			<_myState type="a">8192</_myState>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::3:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_virtual type="a">0</_virtual>
 			<Args type="c">
 				<IRPYRawContainer type="e">
@@ -3066,6 +3071,27 @@
 					<_hsubsystem type="a">Default</_hsubsystem>
 					<_hname type="a">evCB()</_hname>
 					<_hid type="a">GUID 16c7406c-87a8-4457-a2b6-1407afb81322</_hid>
+				</IHandle>
+			</_event>
+		</IReception>
+		<IReception type="e">
+			<_id type="a">GUID b7f9b69b-4df2-4ba2-8f8a-25d4ae12ecf6</_id>
+			<_myState type="a">8192</_myState>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">1.1.1970::3:0:0</_modifiedTime>
+			<_virtual type="a">0</_virtual>
+			<Args type="c">
+				<IRPYRawContainer type="e">
+					<size type="a">0</size>
+				</IRPYRawContainer>
+			</Args>
+			<_event type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IEvent</_hm2Class>
+					<_hfilename type="a">.\Default.sbsx</_hfilename>
+					<_hsubsystem type="a">Default</_hsubsystem>
+					<_hname type="a">evDE()</_hname>
+					<_hid type="a">GUID 132d1a05-6d33-43ed-916b-6f17a6bfb1c6</_hid>
 				</IHandle>
 			</_event>
 		</IReception>
@@ -3085,7 +3111,7 @@
 			<_classModifier type="a">Unspecified</_classModifier>
 			<_defNumber type="a">1</_defNumber>
 			<_version type="a">5.11.2020::16:54:59</_version>
-			<_baseVersion type="a">1.1.1970::3:0:0</_baseVersion>
+			<_baseVersion type="a">1.2.1990::0:0:0</_baseVersion>
 			<_diagram type="s">GUID 6a43c73b-7d74-45f7-9099-48803e98150c</_diagram>
 			<AggregatesList type="e">
 				<value>GUID ab4fd46c-6a11-405d-9446-d428ee7d0716</value>
@@ -4477,6 +4503,7 @@
 				<value>GUID 14a79baf-dffb-4c9b-a0e4-f9a735bf78cd</value>
 				<value>GUID 5cdb76ce-cadb-4afa-ba33-c1dc38a5958e</value>
 				<value>GUID 87584c94-4100-41d3-a28f-fbc43b308a3a</value>
+				<value>GUID fd2a6c44-f5d4-47c1-90ea-5fd926f6c5aa</value>
 				<value>GUID 00203ee8-73f4-4b8d-bc21-161d453b45cc</value>
 			</AggregatesList>
 		</IClass>
@@ -4484,7 +4511,7 @@
 			<_id type="a">GUID 7406f415-f48f-49e4-a757-7483e3845902</_id>
 			<_myState type="a">8192</_myState>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::3:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_virtual type="a">0</_virtual>
 			<Args type="c">
 				<IRPYRawContainer type="e">
@@ -4505,7 +4532,7 @@
 			<_id type="a">GUID 36f91295-4ef8-45a9-ab66-1afd26288821</_id>
 			<_myState type="a">8192</_myState>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::3:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_virtual type="a">0</_virtual>
 			<Args type="c">
 				<IRPYRawContainer type="e">
@@ -4515,6 +4542,9 @@
 			<_event type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IEvent</_hm2Class>
+					<_hfilename type="a">.\Default.sbsx</_hfilename>
+					<_hsubsystem type="a">Default</_hsubsystem>
+					<_hname type="a">evDF()</_hname>
 					<_hid type="a">GUID e30c882f-7f4c-4204-9049-c2923e28d10e</_hid>
 				</IHandle>
 			</_event>
@@ -4523,7 +4553,7 @@
 			<_id type="a">GUID 14a79baf-dffb-4c9b-a0e4-f9a735bf78cd</_id>
 			<_myState type="a">8192</_myState>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::3:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_virtual type="a">0</_virtual>
 			<Args type="c">
 				<IRPYRawContainer type="e">
@@ -4544,7 +4574,7 @@
 			<_id type="a">GUID 5cdb76ce-cadb-4afa-ba33-c1dc38a5958e</_id>
 			<_myState type="a">8192</_myState>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::3:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_virtual type="a">0</_virtual>
 			<Args type="c">
 				<IRPYRawContainer type="e">
@@ -4565,7 +4595,7 @@
 			<_id type="a">GUID 87584c94-4100-41d3-a28f-fbc43b308a3a</_id>
 			<_myState type="a">8192</_myState>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::3:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_virtual type="a">0</_virtual>
 			<Args type="c">
 				<IRPYRawContainer type="e">
@@ -4579,6 +4609,27 @@
 					<_hsubsystem type="a">Default</_hsubsystem>
 					<_hname type="a">evEB()</_hname>
 					<_hid type="a">GUID 4ff9ae5c-0d23-4ff0-a98e-a174c3edc891</_hid>
+				</IHandle>
+			</_event>
+		</IReception>
+		<IReception type="e">
+			<_id type="a">GUID fd2a6c44-f5d4-47c1-90ea-5fd926f6c5aa</_id>
+			<_myState type="a">8192</_myState>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">1.1.1970::3:0:0</_modifiedTime>
+			<_virtual type="a">0</_virtual>
+			<Args type="c">
+				<IRPYRawContainer type="e">
+					<size type="a">0</size>
+				</IRPYRawContainer>
+			</Args>
+			<_event type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IEvent</_hm2Class>
+					<_hfilename type="a">.\Default.sbsx</_hfilename>
+					<_hsubsystem type="a">Default</_hsubsystem>
+					<_hname type="a">evDE()</_hname>
+					<_hid type="a">GUID 132d1a05-6d33-43ed-916b-6f17a6bfb1c6</_hid>
 				</IHandle>
 			</_event>
 		</IReception>
@@ -4598,7 +4649,7 @@
 			<_classModifier type="a">Unspecified</_classModifier>
 			<_defNumber type="a">2</_defNumber>
 			<_version type="a">5.11.2020::16:57:44</_version>
-			<_baseVersion type="a">1.1.1970::3:0:0</_baseVersion>
+			<_baseVersion type="a">1.2.1990::0:0:0</_baseVersion>
 			<_diagram type="s">GUID 13306343-4ad3-4784-91e5-bb35250da662</_diagram>
 			<AggregatesList type="e">
 				<value>GUID 4742cc90-e5b4-4068-bcb8-b816f02c1fab</value>
@@ -4828,11 +4879,14 @@
 		<IInterfaceItemTrigger type="e">
 			<_id type="a">GUID 720d3c67-bd0c-4a07-b25f-289deb5eb7c9</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::3:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_body type="a">evDF</_body>
 			<_itsInterfaceItem type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IEvent</_hm2Class>
+					<_hfilename type="a">.\Default.sbsx</_hfilename>
+					<_hsubsystem type="a">Default</_hsubsystem>
+					<_hname type="a">evDF()</_hname>
 					<_hid type="a">GUID e30c882f-7f4c-4204-9049-c2923e28d10e</_hid>
 				</IHandle>
 			</_itsInterfaceItem>
@@ -4863,7 +4917,7 @@
 		<IInterfaceItemTrigger type="e">
 			<_id type="a">GUID 5d47574b-a06f-46f2-968a-4a85f4272bcb</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::3:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_body type="a">evFE</_body>
 			<_itsInterfaceItem type="r">
 				<IHandle type="e">
@@ -6281,19 +6335,6 @@
 			<m_nInheritanceMask type="a">0</m_nInheritanceMask>
 			<m_bShowName type="a">1</m_bShowName>
 		</CGITrans>
-		<IEvent type="e">
-			<_id type="a">GUID e30c882f-7f4c-4204-9049-c2923e28d10e</_id>
-			<_myState type="a">8192</_myState>
-			<_name type="a">evDF</_name>
-			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::3:0:0</_modifiedTime>
-			<_virtual type="a">0</_virtual>
-			<Args type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Args>
-		</IEvent>
 		
 	</RHAPSODY-MODEL>
 	<OslcLinks type="c">

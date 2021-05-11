@@ -14,8 +14,6 @@
 //## auto_generated
 #include <oxf\oxf.h>
 //## auto_generated
-#include "_1_ComplexStatechartDiagram.h"
-//## auto_generated
 #include <oxf\omreactive.h>
 //## auto_generated
 #include <oxf\state.h>

@@ -16,40 +16,7 @@
 			<isLoadOnDemand type="a">0</isLoadOnDemand>
 			<myViewsWithID type="c">
 				<IRPYRawContainer type="e">
-					<size type="a">5</size>
-					<CGEMdiDiagramParams type="e">
-						<_placement type="p">
-							<CCommon_WINDOWPLACEMENT type="e">
-								<m_nLength type="a">44</m_nLength>
-								<m_nFlags type="a">0</m_nFlags>
-								<m_showCmd type="a">1</m_showCmd>
-								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
-								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
-								<m_ptMaxPositionX type="a">-8</m_ptMaxPositionX>
-								<m_ptMaxPositionY type="a">-31</m_ptMaxPositionY>
-								<m_nLeft type="a">130</m_nLeft>
-								<m_nTop type="a">130</m_nTop>
-								<m_nRight type="a">1593</m_nRight>
-								<m_nBottom type="a">925</m_nBottom>
-							</CCommon_WINDOWPLACEMENT>
-						</_placement>
-						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
-						<_theDiagram type="r">
-							<IHandle type="e">
-								<_hm2Class type="a">IStateChartDiagram</_hm2Class>
-								<_hfilename type="a">.\StateRepair_rpy\_4_InvalidStateName.sbsx</_hfilename>
-								<_hsubsystem type="a">_4_InvalidStateName</_hsubsystem>
-								<_hclass type="a">ISN_1</_hclass>
-								<_hname type="a">StatechartDiagram</_hname>
-								<_hid type="a">GUID 6234da22-b1a3-4e93-a7f9-2162dea2ae9e</_hid>
-							</IHandle>
-						</_theDiagram>
-						<_UpLeft type="a">0 0 </_UpLeft>
-						<_DownRight type="a">1426 735 </_DownRight>
-						<m_nDiagramIndex type="a">4</m_nDiagramIndex>
-						<m_bIsActiveView type="a">0</m_bIsActiveView>
-					</CGEMdiDiagramParams>
-					
+					<size type="a">2</size>
 					<CGEMdiDiagramParams type="e">
 						<_placement type="p">
 							<CCommon_WINDOWPLACEMENT type="e">
@@ -62,89 +29,23 @@
 								<m_ptMaxPositionY type="a">-31</m_ptMaxPositionY>
 								<m_nLeft type="a">156</m_nLeft>
 								<m_nTop type="a">156</m_nTop>
-								<m_nRight type="a">1649</m_nRight>
-								<m_nBottom type="a">958</m_nBottom>
-							</CCommon_WINDOWPLACEMENT>
-						</_placement>
-						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
-						<_theDiagram type="r">
-							<IHandle type="e">
-								<_hm2Class type="a">IStateChartDiagram</_hm2Class>
-								<_hfilename type="a">.\StateRepair_rpy\_4_InvalidStateName.sbsx</_hfilename>
-								<_hsubsystem type="a">_4_InvalidStateName</_hsubsystem>
-								<_hclass type="a">ISN_2</_hclass>
-								<_hname type="a">StatechartDiagram</_hname>
-								<_hid type="a">GUID 69dc0278-03a5-49ee-8759-270d97cbbb6a</_hid>
-							</IHandle>
-						</_theDiagram>
-						<_UpLeft type="a">0 0 </_UpLeft>
-						<_DownRight type="a">1456 742 </_DownRight>
-						<m_nDiagramIndex type="a">3</m_nDiagramIndex>
-						<m_bIsActiveView type="a">0</m_bIsActiveView>
-					</CGEMdiDiagramParams>
-					
-					<CGEMdiDiagramParams type="e">
-						<_placement type="p">
-							<CCommon_WINDOWPLACEMENT type="e">
-								<m_nLength type="a">44</m_nLength>
-								<m_nFlags type="a">0</m_nFlags>
-								<m_showCmd type="a">1</m_showCmd>
-								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
-								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
-								<m_ptMaxPositionX type="a">-8</m_ptMaxPositionX>
-								<m_ptMaxPositionY type="a">-31</m_ptMaxPositionY>
-								<m_nLeft type="a">182</m_nLeft>
-								<m_nTop type="a">182</m_nTop>
 								<m_nRight type="a">1675</m_nRight>
-								<m_nBottom type="a">984</m_nBottom>
+								<m_nBottom type="a">908</m_nBottom>
 							</CCommon_WINDOWPLACEMENT>
 						</_placement>
 						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
 						<_theDiagram type="r">
 							<IHandle type="e">
 								<_hm2Class type="a">IStateChartDiagram</_hm2Class>
-								<_hfilename type="a">.\StateRepair_rpy\_4_InvalidStateName.sbsx</_hfilename>
-								<_hsubsystem type="a">_4_InvalidStateName</_hsubsystem>
-								<_hclass type="a">ISN_3</_hclass>
+								<_hfilename type="a">.\StateRepair_rpy\_7_NestedConditions.sbsx</_hfilename>
+								<_hsubsystem type="a">_7_NestedConditions</_hsubsystem>
+								<_hclass type="a">NC_1</_hclass>
 								<_hname type="a">StatechartDiagram</_hname>
-								<_hid type="a">GUID 0a9a8d95-11af-4629-bfb7-25cb439cd116</_hid>
+								<_hid type="a">GUID 200ab8a0-3104-4679-b0ba-b55b28fc9390</_hid>
 							</IHandle>
 						</_theDiagram>
 						<_UpLeft type="a">0 0 </_UpLeft>
-						<_DownRight type="a">1456 742 </_DownRight>
-						<m_nDiagramIndex type="a">2</m_nDiagramIndex>
-						<m_bIsActiveView type="a">0</m_bIsActiveView>
-					</CGEMdiDiagramParams>
-					
-					<CGEMdiDiagramParams type="e">
-						<_placement type="p">
-							<CCommon_WINDOWPLACEMENT type="e">
-								<m_nLength type="a">44</m_nLength>
-								<m_nFlags type="a">0</m_nFlags>
-								<m_showCmd type="a">1</m_showCmd>
-								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
-								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
-								<m_ptMaxPositionX type="a">-8</m_ptMaxPositionX>
-								<m_ptMaxPositionY type="a">-31</m_ptMaxPositionY>
-								<m_nLeft type="a">208</m_nLeft>
-								<m_nTop type="a">208</m_nTop>
-								<m_nRight type="a">1701</m_nRight>
-								<m_nBottom type="a">1010</m_nBottom>
-							</CCommon_WINDOWPLACEMENT>
-						</_placement>
-						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
-						<_theDiagram type="r">
-							<IHandle type="e">
-								<_hm2Class type="a">IStateChartDiagram</_hm2Class>
-								<_hfilename type="a">.\StateRepair_rpy\_4_InvalidStateName.sbsx</_hfilename>
-								<_hsubsystem type="a">_4_InvalidStateName</_hsubsystem>
-								<_hclass type="a">ISN_4</_hclass>
-								<_hname type="a">StatechartDiagram</_hname>
-								<_hid type="a">GUID fcff0c64-b673-4190-b3b6-b9de12a48c86</_hid>
-							</IHandle>
-						</_theDiagram>
-						<_UpLeft type="a">0 0 </_UpLeft>
-						<_DownRight type="a">1456 742 </_DownRight>
+						<_DownRight type="a">1482 692 </_DownRight>
 						<m_nDiagramIndex type="a">1</m_nDiagramIndex>
 						<m_bIsActiveView type="a">0</m_bIsActiveView>
 					</CGEMdiDiagramParams>
@@ -159,25 +60,25 @@
 								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
 								<m_ptMaxPositionX type="a">-8</m_ptMaxPositionX>
 								<m_ptMaxPositionY type="a">-31</m_ptMaxPositionY>
-								<m_nLeft type="a">234</m_nLeft>
-								<m_nTop type="a">234</m_nTop>
-								<m_nRight type="a">1727</m_nRight>
-								<m_nBottom type="a">1036</m_nBottom>
+								<m_nLeft type="a">182</m_nLeft>
+								<m_nTop type="a">182</m_nTop>
+								<m_nRight type="a">1701</m_nRight>
+								<m_nBottom type="a">934</m_nBottom>
 							</CCommon_WINDOWPLACEMENT>
 						</_placement>
 						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
 						<_theDiagram type="r">
 							<IHandle type="e">
 								<_hm2Class type="a">IStateChartDiagram</_hm2Class>
-								<_hfilename type="a">.\StateRepair_rpy\_4_InvalidStateName.sbsx</_hfilename>
-								<_hsubsystem type="a">_4_InvalidStateName</_hsubsystem>
-								<_hclass type="a">ISN_5</_hclass>
+								<_hfilename type="a">.\StateRepair_rpy\_7_NestedConditions.sbsx</_hfilename>
+								<_hsubsystem type="a">_7_NestedConditions</_hsubsystem>
+								<_hclass type="a">NC_2</_hclass>
 								<_hname type="a">StatechartDiagram</_hname>
-								<_hid type="a">GUID 7517ac29-9071-42c0-8be5-bb502e7e7c16</_hid>
+								<_hid type="a">GUID f55594f2-222b-4718-bd57-75385defcc33</_hid>
 							</IHandle>
 						</_theDiagram>
 						<_UpLeft type="a">0 0 </_UpLeft>
-						<_DownRight type="a">1836 1145 </_DownRight>
+						<_DownRight type="a">1836 1069 </_DownRight>
 						<m_nDiagramIndex type="a">0</m_nDiagramIndex>
 						<m_bIsActiveView type="a">1</m_bIsActiveView>
 					</CGEMdiDiagramParams>

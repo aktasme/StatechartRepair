@@ -117,6 +117,18 @@
 #define evBB_Default_id 18650
 
 #define evDE_Default_id 18651
+
+#define evAC_Default_id 18652
+
+#define evDB_Default_id 18653
+
+#define evDF_Default_id 18654
+
+#define evFB_Default_id 18655
+
+#define evFG_Default_id 18656
+
+#define evHE_Default_id 18657
 //#]
 
 //## package Default
@@ -881,6 +893,96 @@ public :
 
     //## auto_generated
     evDE();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+//## event evAC()
+class evAC : public OMEvent {
+    ////    Constructors and destructors    ////
+    
+public :
+
+    //## auto_generated
+    evAC();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+//## event evDB()
+class evDB : public OMEvent {
+    ////    Constructors and destructors    ////
+    
+public :
+
+    //## auto_generated
+    evDB();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+//## event evDF()
+class evDF : public OMEvent {
+    ////    Constructors and destructors    ////
+    
+public :
+
+    //## auto_generated
+    evDF();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+//## event evFB()
+class evFB : public OMEvent {
+    ////    Constructors and destructors    ////
+    
+public :
+
+    //## auto_generated
+    evFB();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+//## event evFG()
+class evFG : public OMEvent {
+    ////    Constructors and destructors    ////
+    
+public :
+
+    //## auto_generated
+    evFG();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+//## event evHE()
+class evHE : public OMEvent {
+    ////    Constructors and destructors    ////
+    
+public :
+
+    //## auto_generated
+    evHE();
     
     ////    Framework operations    ////
     

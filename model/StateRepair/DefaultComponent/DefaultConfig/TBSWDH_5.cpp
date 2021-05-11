@@ -70,7 +70,7 @@ IOxfReactive::TakeEventStatus TBSWDH_5::rootState_processEvent() {
                     rootState_active = E;
                     res = eventConsumed;
                 }
-            else if(IS_EVENT_TYPE_OF(evDF__2_TransitionBetweenStatesWithDifferentHierarchy_id))
+            else if(IS_EVENT_TYPE_OF(evDF_Default_id))
                 {
                     switch (A_subState) {
                         // State C

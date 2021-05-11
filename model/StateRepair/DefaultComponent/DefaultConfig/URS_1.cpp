@@ -75,9 +75,8 @@ IOxfReactive::TakeEventStatus URS_1::rootState_processEvent() {
         // State E
         case E:
         {
-            if(IS_EVENT_TYPE_OF(OMNullEventId))
+            if(IS_EVENT_TYPE_OF(evED_Default_id))
                 {
-                    popNullTransition();
                     A_subState = D;
                     rootState_active = D;
                     res = eventConsumed;
@@ -89,10 +88,8 @@ IOxfReactive::TakeEventStatus URS_1::rootState_processEvent() {
         // State F
         case F:
         {
-            if(IS_EVENT_TYPE_OF(OMNullEventId))
+            if(IS_EVENT_TYPE_OF(evFE_Default_id))
                 {
-                    popNullTransition();
-                    pushNullTransition();
                     A_subState = E;
                     rootState_active = E;
                     res = eventConsumed;
@@ -114,22 +111,6 @@ void URS_1::A_entDef() {
 }
 
 void URS_1::A_exit() {
-    switch (A_subState) {
-        // State E
-        case E:
-        {
-            popNullTransition();
-        }
-        break;
-        // State F
-        case F:
-        {
-            popNullTransition();
-        }
-        break;
-        default:
-            break;
-    }
     A_subState = OMNonState;
     
 }
