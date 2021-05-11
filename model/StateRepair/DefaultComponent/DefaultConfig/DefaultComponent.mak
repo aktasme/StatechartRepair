@@ -100,6 +100,10 @@ OBJS= \
   TWCWOE_4.obj \
   TWCWOE_5.obj \
   ISN_1.obj \
+  ISN_2.obj \
+  ISN_3.obj \
+  ISN_4.obj \
+  ISN_5.obj \
   IS_1.obj \
   URS_1.obj \
   NC_1.obj \
@@ -267,7 +271,7 @@ TWCWOE_3.obj : TWCWOE_3.cpp TWCWOE_3.h    Default.h
 
 
 
-TWCWOE_4.obj : TWCWOE_4.cpp TWCWOE_4.h    
+TWCWOE_4.obj : TWCWOE_4.cpp TWCWOE_4.h    Default.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"TWCWOE_4.obj" "TWCWOE_4.cpp" 
 
@@ -282,6 +286,30 @@ TWCWOE_5.obj : TWCWOE_5.cpp TWCWOE_5.h    Default.h
 ISN_1.obj : ISN_1.cpp ISN_1.h    Default.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"ISN_1.obj" "ISN_1.cpp" 
+
+
+
+ISN_2.obj : ISN_2.cpp ISN_2.h    
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"ISN_2.obj" "ISN_2.cpp" 
+
+
+
+ISN_3.obj : ISN_3.cpp ISN_3.h    
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"ISN_3.obj" "ISN_3.cpp" 
+
+
+
+ISN_4.obj : ISN_4.cpp ISN_4.h    
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"ISN_4.obj" "ISN_4.cpp" 
+
+
+
+ISN_5.obj : ISN_5.cpp ISN_5.h    
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"ISN_5.obj" "ISN_5.cpp" 
 
 
 
@@ -370,6 +398,10 @@ clean:
 	if exist TWCWOE_4.obj erase TWCWOE_4.obj
 	if exist TWCWOE_5.obj erase TWCWOE_5.obj
 	if exist ISN_1.obj erase ISN_1.obj
+	if exist ISN_2.obj erase ISN_2.obj
+	if exist ISN_3.obj erase ISN_3.obj
+	if exist ISN_4.obj erase ISN_4.obj
+	if exist ISN_5.obj erase ISN_5.obj
 	if exist IS_1.obj erase IS_1.obj
 	if exist URS_1.obj erase URS_1.obj
 	if exist NC_1.obj erase NC_1.obj
