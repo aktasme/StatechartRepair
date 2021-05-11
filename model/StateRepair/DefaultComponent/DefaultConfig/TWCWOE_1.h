@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: TWCWOE_1
-//!	Generated Date	: Sat, 2, May 2020  
+//!	Generated Date	: Mon, 11, May 2020  
 	File Path	: DefaultComponent\DefaultConfig\TWCWOE_1.h
 *********************************************************************/
 
@@ -36,10 +36,10 @@ public :
     ////    Additional operations    ////
     
     //## auto_generated
-    bool getIsAutoFocusFinished() const;
+    bool getX() const;
     
     //## auto_generated
-    void setIsAutoFocusFinished(bool p_isAutoFocusFinished);
+    void setX(bool p_x);
     
     //## auto_generated
     virtual bool startBehavior();
@@ -51,7 +51,7 @@ protected :
     
     ////    Attributes    ////
     
-    bool isAutoFocusFinished;		//## attribute isAutoFocusFinished
+    bool x;		//## attribute x
     
     ////    Framework operations    ////
 
@@ -67,20 +67,20 @@ public :
     //## statechart_method
     virtual IOxfReactive::TakeEventStatus rootState_processEvent();
     
-    // AutoFocus:
+    // A:
     //## statechart_method
-    inline bool AutoFocus_IN() const;
+    inline bool A_IN() const;
     
     //## statechart_method
-    void AutoFocus_entDef();
+    void A_entDef();
     
-    // Idle:
+    // C:
     //## statechart_method
-    inline bool Idle_IN() const;
+    inline bool C_IN() const;
     
-    // AutoFocusInProgress:
+    // B:
     //## statechart_method
-    inline bool AutoFocusInProgress_IN() const;
+    inline bool B_IN() const;
     
     ////    Framework    ////
 
@@ -89,16 +89,16 @@ protected :
 //#[ ignore
     enum TWCWOE_1_Enum {
         OMNonState = 0,
-        AutoFocus = 1,
-        Idle = 2,
-        AutoFocusInProgress = 3
+        A = 1,
+        C = 2,
+        B = 3
     };
     
     int rootState_subState;
     
     int rootState_active;
     
-    int AutoFocus_subState;
+    int A_subState;
 //#]
 };
 
@@ -106,16 +106,16 @@ inline bool TWCWOE_1::rootState_IN() const {
     return true;
 }
 
-inline bool TWCWOE_1::AutoFocus_IN() const {
-    return rootState_subState == AutoFocus;
+inline bool TWCWOE_1::A_IN() const {
+    return rootState_subState == A;
 }
 
-inline bool TWCWOE_1::Idle_IN() const {
-    return AutoFocus_subState == Idle;
+inline bool TWCWOE_1::C_IN() const {
+    return A_subState == C;
 }
 
-inline bool TWCWOE_1::AutoFocusInProgress_IN() const {
-    return AutoFocus_subState == AutoFocusInProgress;
+inline bool TWCWOE_1::B_IN() const {
+    return A_subState == B;
 }
 
 #endif

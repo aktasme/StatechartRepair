@@ -16,7 +16,7 @@
 			<isLoadOnDemand type="a">0</isLoadOnDemand>
 			<myViewsWithID type="c">
 				<IRPYRawContainer type="e">
-					<size type="a">4</size>
+					<size type="a">5</size>
 					<CGEMdiDiagramParams type="e">
 						<_placement type="p">
 							<CCommon_WINDOWPLACEMENT type="e">
@@ -27,59 +27,26 @@
 								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
 								<m_ptMaxPositionX type="a">-8</m_ptMaxPositionX>
 								<m_ptMaxPositionY type="a">-31</m_ptMaxPositionY>
-								<m_nLeft type="a">156</m_nLeft>
-								<m_nTop type="a">156</m_nTop>
-								<m_nRight type="a">1649</m_nRight>
-								<m_nBottom type="a">958</m_nBottom>
+								<m_nLeft type="a">104</m_nLeft>
+								<m_nTop type="a">104</m_nTop>
+								<m_nRight type="a">1567</m_nRight>
+								<m_nBottom type="a">899</m_nBottom>
 							</CCommon_WINDOWPLACEMENT>
 						</_placement>
 						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
 						<_theDiagram type="r">
 							<IHandle type="e">
 								<_hm2Class type="a">IStateChartDiagram</_hm2Class>
-								<_hfilename type="a">.\StateRepair_rpy\_2_TransitionBetweenStatesWithDifferentHierarchy.sbsx</_hfilename>
-								<_hsubsystem type="a">_2_TransitionBetweenStatesWithDifferentHierarchy</_hsubsystem>
-								<_hclass type="a">TBSWDH_1</_hclass>
+								<_hfilename type="a">.\StateRepair_rpy\_3_TransitionWithConditionWithoutEvent.sbsx</_hfilename>
+								<_hsubsystem type="a">_3_TransitionWithConditionWithoutEvent</_hsubsystem>
+								<_hclass type="a">TWCWOE_1</_hclass>
 								<_hname type="a">StatechartDiagram</_hname>
-								<_hid type="a">GUID 89d783e7-9147-41dd-b5e9-5e859018caa5</_hid>
-							</IHandle>
-						</_theDiagram>
-						<_UpLeft type="a">0 0 </_UpLeft>
-						<_DownRight type="a">1456 742 </_DownRight>
-						<m_nDiagramIndex type="a">2</m_nDiagramIndex>
-						<m_bIsActiveView type="a">0</m_bIsActiveView>
-					</CGEMdiDiagramParams>
-					
-					<CGEMdiDiagramParams type="e">
-						<_placement type="p">
-							<CCommon_WINDOWPLACEMENT type="e">
-								<m_nLength type="a">44</m_nLength>
-								<m_nFlags type="a">0</m_nFlags>
-								<m_showCmd type="a">1</m_showCmd>
-								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
-								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
-								<m_ptMaxPositionX type="a">-8</m_ptMaxPositionX>
-								<m_ptMaxPositionY type="a">-31</m_ptMaxPositionY>
-								<m_nLeft type="a">130</m_nLeft>
-								<m_nTop type="a">130</m_nTop>
-								<m_nRight type="a">1593</m_nRight>
-								<m_nBottom type="a">925</m_nBottom>
-							</CCommon_WINDOWPLACEMENT>
-						</_placement>
-						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
-						<_theDiagram type="r">
-							<IHandle type="e">
-								<_hm2Class type="a">IStateChartDiagram</_hm2Class>
-								<_hfilename type="a">.\StateRepair_rpy\_2_TransitionBetweenStatesWithDifferentHierarchy.sbsx</_hfilename>
-								<_hsubsystem type="a">_2_TransitionBetweenStatesWithDifferentHierarchy</_hsubsystem>
-								<_hclass type="a">TBSWDH_3</_hclass>
-								<_hname type="a">StatechartDiagram</_hname>
-								<_hid type="a">GUID b3993f13-6411-4ccb-894f-93eb9b29369e</_hid>
+								<_hid type="a">GUID 90a66308-fa63-4648-bd59-c41e90b07a32</_hid>
 							</IHandle>
 						</_theDiagram>
 						<_UpLeft type="a">0 0 </_UpLeft>
 						<_DownRight type="a">1426 735 </_DownRight>
-						<m_nDiagramIndex type="a">3</m_nDiagramIndex>
+						<m_nDiagramIndex type="a">4</m_nDiagramIndex>
 						<m_bIsActiveView type="a">0</m_bIsActiveView>
 					</CGEMdiDiagramParams>
 					
@@ -103,16 +70,16 @@
 						<_theDiagram type="r">
 							<IHandle type="e">
 								<_hm2Class type="a">IStateChartDiagram</_hm2Class>
-								<_hfilename type="a">.\StateRepair_rpy\_2_TransitionBetweenStatesWithDifferentHierarchy.sbsx</_hfilename>
-								<_hsubsystem type="a">_2_TransitionBetweenStatesWithDifferentHierarchy</_hsubsystem>
-								<_hclass type="a">TBSWDH_4</_hclass>
+								<_hfilename type="a">.\StateRepair_rpy\_3_TransitionWithConditionWithoutEvent.sbsx</_hfilename>
+								<_hsubsystem type="a">_3_TransitionWithConditionWithoutEvent</_hsubsystem>
+								<_hclass type="a">TWCWOE_2</_hclass>
 								<_hname type="a">StatechartDiagram</_hname>
-								<_hid type="a">GUID 6a43c73b-7d74-45f7-9099-48803e98150c</_hid>
+								<_hid type="a">GUID 3698c14c-9503-4461-b6eb-41842965341e</_hid>
 							</IHandle>
 						</_theDiagram>
 						<_UpLeft type="a">0 0 </_UpLeft>
 						<_DownRight type="a">1456 742 </_DownRight>
-						<m_nDiagramIndex type="a">1</m_nDiagramIndex>
+						<m_nDiagramIndex type="a">3</m_nDiagramIndex>
 						<m_bIsActiveView type="a">0</m_bIsActiveView>
 					</CGEMdiDiagramParams>
 					
@@ -126,27 +93,93 @@
 								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
 								<m_ptMaxPositionX type="a">-8</m_ptMaxPositionX>
 								<m_ptMaxPositionY type="a">-31</m_ptMaxPositionY>
-								<m_nLeft type="a">208</m_nLeft>
-								<m_nTop type="a">208</m_nTop>
-								<m_nRight type="a">1701</m_nRight>
-								<m_nBottom type="a">1010</m_nBottom>
+								<m_nLeft type="a">260</m_nLeft>
+								<m_nTop type="a">260</m_nTop>
+								<m_nRight type="a">1753</m_nRight>
+								<m_nBottom type="a">1062</m_nBottom>
 							</CCommon_WINDOWPLACEMENT>
 						</_placement>
 						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
 						<_theDiagram type="r">
 							<IHandle type="e">
 								<_hm2Class type="a">IStateChartDiagram</_hm2Class>
-								<_hfilename type="a">.\StateRepair_rpy\_2_TransitionBetweenStatesWithDifferentHierarchy.sbsx</_hfilename>
-								<_hsubsystem type="a">_2_TransitionBetweenStatesWithDifferentHierarchy</_hsubsystem>
-								<_hclass type="a">TBSWDH_5</_hclass>
+								<_hfilename type="a">.\StateRepair_rpy\_3_TransitionWithConditionWithoutEvent.sbsx</_hfilename>
+								<_hsubsystem type="a">_3_TransitionWithConditionWithoutEvent</_hsubsystem>
+								<_hclass type="a">TWCWOE_3</_hclass>
 								<_hname type="a">StatechartDiagram</_hname>
-								<_hid type="a">GUID 13306343-4ad3-4784-91e5-bb35250da662</_hid>
+								<_hid type="a">GUID 5efc2e49-b3ec-44df-b31a-4cadf4bcaf4a</_hid>
 							</IHandle>
 						</_theDiagram>
 						<_UpLeft type="a">0 0 </_UpLeft>
 						<_DownRight type="a">1836 1145 </_DownRight>
-						<m_nDiagramIndex type="a">0</m_nDiagramIndex>
+						<m_nDiagramIndex type="a">2</m_nDiagramIndex>
 						<m_bIsActiveView type="a">1</m_bIsActiveView>
+					</CGEMdiDiagramParams>
+					
+					<CGEMdiDiagramParams type="e">
+						<_placement type="p">
+							<CCommon_WINDOWPLACEMENT type="e">
+								<m_nLength type="a">44</m_nLength>
+								<m_nFlags type="a">0</m_nFlags>
+								<m_showCmd type="a">1</m_showCmd>
+								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
+								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
+								<m_ptMaxPositionX type="a">-8</m_ptMaxPositionX>
+								<m_ptMaxPositionY type="a">-31</m_ptMaxPositionY>
+								<m_nLeft type="a">286</m_nLeft>
+								<m_nTop type="a">286</m_nTop>
+								<m_nRight type="a">1779</m_nRight>
+								<m_nBottom type="a">1088</m_nBottom>
+							</CCommon_WINDOWPLACEMENT>
+						</_placement>
+						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
+						<_theDiagram type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">IStateChartDiagram</_hm2Class>
+								<_hfilename type="a">.\StateRepair_rpy\_3_TransitionWithConditionWithoutEvent.sbsx</_hfilename>
+								<_hsubsystem type="a">_3_TransitionWithConditionWithoutEvent</_hsubsystem>
+								<_hclass type="a">TWCWOE_4</_hclass>
+								<_hname type="a">StatechartDiagram</_hname>
+								<_hid type="a">GUID b41077b4-6824-416a-b9f5-3a4223663249</_hid>
+							</IHandle>
+						</_theDiagram>
+						<_UpLeft type="a">0 0 </_UpLeft>
+						<_DownRight type="a">1456 742 </_DownRight>
+						<m_nDiagramIndex type="a">1</m_nDiagramIndex>
+						<m_bIsActiveView type="a">0</m_bIsActiveView>
+					</CGEMdiDiagramParams>
+					
+					<CGEMdiDiagramParams type="e">
+						<_placement type="p">
+							<CCommon_WINDOWPLACEMENT type="e">
+								<m_nLength type="a">44</m_nLength>
+								<m_nFlags type="a">0</m_nFlags>
+								<m_showCmd type="a">1</m_showCmd>
+								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
+								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
+								<m_ptMaxPositionX type="a">-8</m_ptMaxPositionX>
+								<m_ptMaxPositionY type="a">-31</m_ptMaxPositionY>
+								<m_nLeft type="a">312</m_nLeft>
+								<m_nTop type="a">312</m_nTop>
+								<m_nRight type="a">1805</m_nRight>
+								<m_nBottom type="a">1114</m_nBottom>
+							</CCommon_WINDOWPLACEMENT>
+						</_placement>
+						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
+						<_theDiagram type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">IStateChartDiagram</_hm2Class>
+								<_hfilename type="a">.\StateRepair_rpy\_3_TransitionWithConditionWithoutEvent.sbsx</_hfilename>
+								<_hsubsystem type="a">_3_TransitionWithConditionWithoutEvent</_hsubsystem>
+								<_hclass type="a">TWCWOE_5</_hclass>
+								<_hname type="a">StatechartDiagram</_hname>
+								<_hid type="a">GUID 4f6e6562-937e-4e1e-9fa8-c88c56d082a4</_hid>
+							</IHandle>
+						</_theDiagram>
+						<_UpLeft type="a">0 0 </_UpLeft>
+						<_DownRight type="a">1456 742 </_DownRight>
+						<m_nDiagramIndex type="a">0</m_nDiagramIndex>
+						<m_bIsActiveView type="a">0</m_bIsActiveView>
 					</CGEMdiDiagramParams>
 					
 				</IRPYRawContainer>

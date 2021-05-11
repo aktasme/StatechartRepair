@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: TWCWOE_1
-//!	Generated Date	: Sat, 2, May 2020  
+//!	Generated Date	: Mon, 11, May 2020  
 	File Path	: DefaultComponent\DefaultConfig\TWCWOE_1.cpp
 *********************************************************************/
 
@@ -25,12 +25,12 @@ TWCWOE_1::TWCWOE_1(IOxfActive* theActiveContext) {
 TWCWOE_1::~TWCWOE_1() {
 }
 
-bool TWCWOE_1::getIsAutoFocusFinished() const {
-    return isAutoFocusFinished;
+bool TWCWOE_1::getX() const {
+    return x;
 }
 
-void TWCWOE_1::setIsAutoFocusFinished(bool p_isAutoFocusFinished) {
-    isAutoFocusFinished = p_isAutoFocusFinished;
+void TWCWOE_1::setX(bool p_x) {
+    x = p_x;
 }
 
 bool TWCWOE_1::startBehavior() {
@@ -42,43 +42,43 @@ bool TWCWOE_1::startBehavior() {
 void TWCWOE_1::initStatechart() {
     rootState_subState = OMNonState;
     rootState_active = OMNonState;
-    AutoFocus_subState = OMNonState;
+    A_subState = OMNonState;
 }
 
 void TWCWOE_1::rootState_entDef() {
     {
-        AutoFocus_entDef();
+        A_entDef();
     }
 }
 
 IOxfReactive::TakeEventStatus TWCWOE_1::rootState_processEvent() {
     IOxfReactive::TakeEventStatus res = eventNotConsumed;
     switch (rootState_active) {
-        // State Idle
-        case Idle:
+        // State B
+        case B:
         {
-            if(IS_EVENT_TYPE_OF(evStartAutoFocus_Default_id))
+            if(IS_EVENT_TYPE_OF(evBC_Default_id))
                 {
                     pushNullTransition();
-                    AutoFocus_subState = AutoFocusInProgress;
-                    rootState_active = AutoFocusInProgress;
+                    A_subState = C;
+                    rootState_active = C;
                     res = eventConsumed;
                 }
             
             
         }
         break;
-        // State AutoFocusInProgress
-        case AutoFocusInProgress:
+        // State C
+        case C:
         {
             if(IS_EVENT_TYPE_OF(OMNullEventId))
                 {
                     //## transition 0 
-                    if(isAutoFocusFinished)
+                    if(x == true)
                         {
                             popNullTransition();
-                            AutoFocus_subState = Idle;
-                            rootState_active = Idle;
+                            A_subState = B;
+                            rootState_active = B;
                             res = eventConsumed;
                         }
                 }
@@ -92,10 +92,10 @@ IOxfReactive::TakeEventStatus TWCWOE_1::rootState_processEvent() {
     return res;
 }
 
-void TWCWOE_1::AutoFocus_entDef() {
-    rootState_subState = AutoFocus;
-    AutoFocus_subState = Idle;
-    rootState_active = Idle;
+void TWCWOE_1::A_entDef() {
+    rootState_subState = A;
+    A_subState = B;
+    rootState_active = B;
 }
 
 /*********************************************************************

@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Default
-//!	Generated Date	: Sat, 2, May 2020  
+//!	Generated Date	: Mon, 11, May 2020  
 	File Path	: DefaultComponent\DefaultConfig\Default.h
 *********************************************************************/
 
@@ -85,6 +85,38 @@
 #define evIE_Default_id 18634
 
 #define evIG_Default_id 18635
+
+#define evAA_Default_id 18636
+
+#define evCC_Default_id 18637
+
+#define evC_Default_id 18638
+
+#define evB_Default_id 18639
+
+#define evAD_Default_id 18640
+
+#define evAB_Default_id 18641
+
+#define evAE_Default_id 18642
+
+#define evAF_Default_id 18643
+
+#define evBD_Default_id 18644
+
+#define evBF_Default_id 18645
+
+#define evCF_Default_id 18646
+
+#define evDA_Default_id 18647
+
+#define evED_Default_id 18648
+
+#define evBA_Default_id 18649
+
+#define evBB_Default_id 18650
+
+#define evDE_Default_id 18651
 //#]
 
 //## package Default
@@ -609,6 +641,246 @@ public :
 
     //## auto_generated
     evIG();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+//## event evAA()
+class evAA : public OMEvent {
+    ////    Constructors and destructors    ////
+    
+public :
+
+    //## auto_generated
+    evAA();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+//## event evCC()
+class evCC : public OMEvent {
+    ////    Constructors and destructors    ////
+    
+public :
+
+    //## auto_generated
+    evCC();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+//## event evC()
+class evC : public OMEvent {
+    ////    Constructors and destructors    ////
+    
+public :
+
+    //## auto_generated
+    evC();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+//## event evB()
+class evB : public OMEvent {
+    ////    Constructors and destructors    ////
+    
+public :
+
+    //## auto_generated
+    evB();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+//## event evAD()
+class evAD : public OMEvent {
+    ////    Constructors and destructors    ////
+    
+public :
+
+    //## auto_generated
+    evAD();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+//## event evAB()
+class evAB : public OMEvent {
+    ////    Constructors and destructors    ////
+    
+public :
+
+    //## auto_generated
+    evAB();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+//## event evAE()
+class evAE : public OMEvent {
+    ////    Constructors and destructors    ////
+    
+public :
+
+    //## auto_generated
+    evAE();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+//## event evAF()
+class evAF : public OMEvent {
+    ////    Constructors and destructors    ////
+    
+public :
+
+    //## auto_generated
+    evAF();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+//## event evBD()
+class evBD : public OMEvent {
+    ////    Constructors and destructors    ////
+    
+public :
+
+    //## auto_generated
+    evBD();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+//## event evBF()
+class evBF : public OMEvent {
+    ////    Constructors and destructors    ////
+    
+public :
+
+    //## auto_generated
+    evBF();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+//## event evCF()
+class evCF : public OMEvent {
+    ////    Constructors and destructors    ////
+    
+public :
+
+    //## auto_generated
+    evCF();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+//## event evDA()
+class evDA : public OMEvent {
+    ////    Constructors and destructors    ////
+    
+public :
+
+    //## auto_generated
+    evDA();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+//## event evED()
+class evED : public OMEvent {
+    ////    Constructors and destructors    ////
+    
+public :
+
+    //## auto_generated
+    evED();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+//## event evBA()
+class evBA : public OMEvent {
+    ////    Constructors and destructors    ////
+    
+public :
+
+    //## auto_generated
+    evBA();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+//## event evBB()
+class evBB : public OMEvent {
+    ////    Constructors and destructors    ////
+    
+public :
+
+    //## auto_generated
+    evBB();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+//## event evDE()
+class evDE : public OMEvent {
+    ////    Constructors and destructors    ////
+    
+public :
+
+    //## auto_generated
+    evDE();
     
     ////    Framework operations    ////
     

@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Default
-//!	Generated Date	: Sat, 2, May 2020  
+//!	Generated Date	: Mon, 11, May 2020  
 	File Path	: DefaultComponent\DefaultConfig\Default.cpp
 *********************************************************************/
 
@@ -327,6 +327,150 @@ evIG::evIG() {
 
 bool evIG::isTypeOf(const short id) const {
     return (evIG_Default_id==id);
+}
+
+//## event evAA()
+evAA::evAA() {
+    setId(evAA_Default_id);
+}
+
+bool evAA::isTypeOf(const short id) const {
+    return (evAA_Default_id==id);
+}
+
+//## event evCC()
+evCC::evCC() {
+    setId(evCC_Default_id);
+}
+
+bool evCC::isTypeOf(const short id) const {
+    return (evCC_Default_id==id);
+}
+
+//## event evC()
+evC::evC() {
+    setId(evC_Default_id);
+}
+
+bool evC::isTypeOf(const short id) const {
+    return (evC_Default_id==id);
+}
+
+//## event evB()
+evB::evB() {
+    setId(evB_Default_id);
+}
+
+bool evB::isTypeOf(const short id) const {
+    return (evB_Default_id==id);
+}
+
+//## event evAD()
+evAD::evAD() {
+    setId(evAD_Default_id);
+}
+
+bool evAD::isTypeOf(const short id) const {
+    return (evAD_Default_id==id);
+}
+
+//## event evAB()
+evAB::evAB() {
+    setId(evAB_Default_id);
+}
+
+bool evAB::isTypeOf(const short id) const {
+    return (evAB_Default_id==id);
+}
+
+//## event evAE()
+evAE::evAE() {
+    setId(evAE_Default_id);
+}
+
+bool evAE::isTypeOf(const short id) const {
+    return (evAE_Default_id==id);
+}
+
+//## event evAF()
+evAF::evAF() {
+    setId(evAF_Default_id);
+}
+
+bool evAF::isTypeOf(const short id) const {
+    return (evAF_Default_id==id);
+}
+
+//## event evBD()
+evBD::evBD() {
+    setId(evBD_Default_id);
+}
+
+bool evBD::isTypeOf(const short id) const {
+    return (evBD_Default_id==id);
+}
+
+//## event evBF()
+evBF::evBF() {
+    setId(evBF_Default_id);
+}
+
+bool evBF::isTypeOf(const short id) const {
+    return (evBF_Default_id==id);
+}
+
+//## event evCF()
+evCF::evCF() {
+    setId(evCF_Default_id);
+}
+
+bool evCF::isTypeOf(const short id) const {
+    return (evCF_Default_id==id);
+}
+
+//## event evDA()
+evDA::evDA() {
+    setId(evDA_Default_id);
+}
+
+bool evDA::isTypeOf(const short id) const {
+    return (evDA_Default_id==id);
+}
+
+//## event evED()
+evED::evED() {
+    setId(evED_Default_id);
+}
+
+bool evED::isTypeOf(const short id) const {
+    return (evED_Default_id==id);
+}
+
+//## event evBA()
+evBA::evBA() {
+    setId(evBA_Default_id);
+}
+
+bool evBA::isTypeOf(const short id) const {
+    return (evBA_Default_id==id);
+}
+
+//## event evBB()
+evBB::evBB() {
+    setId(evBB_Default_id);
+}
+
+bool evBB::isTypeOf(const short id) const {
+    return (evBB_Default_id==id);
+}
+
+//## event evDE()
+evDE::evDE() {
+    setId(evDE_Default_id);
+}
+
+bool evDE::isTypeOf(const short id) const {
+    return (evDE_Default_id==id);
 }
 
 /*********************************************************************

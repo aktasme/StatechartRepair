@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: URS_1
-//!	Generated Date	: Sat, 2, May 2020  
+//!	Generated Date	: Mon, 11, May 2020  
 	File Path	: DefaultComponent\DefaultConfig\URS_1.h
 *********************************************************************/
 
@@ -64,6 +64,17 @@ public :
     //## statechart_method
     void A_entDef();
     
+    //## statechart_method
+    void A_exit();
+    
+    // F:
+    //## statechart_method
+    inline bool F_IN() const;
+    
+    // E:
+    //## statechart_method
+    inline bool E_IN() const;
+    
     // D:
     //## statechart_method
     inline bool D_IN() const;
@@ -84,9 +95,11 @@ protected :
     enum URS_1_Enum {
         OMNonState = 0,
         A = 1,
-        D = 2,
-        C = 3,
-        B = 4
+        F = 2,
+        E = 3,
+        D = 4,
+        C = 5,
+        B = 6
     };
     
     int rootState_subState;
@@ -103,6 +116,14 @@ inline bool URS_1::rootState_IN() const {
 
 inline bool URS_1::A_IN() const {
     return rootState_subState == A;
+}
+
+inline bool URS_1::F_IN() const {
+    return A_subState == F;
+}
+
+inline bool URS_1::E_IN() const {
+    return A_subState == E;
 }
 
 inline bool URS_1::D_IN() const {

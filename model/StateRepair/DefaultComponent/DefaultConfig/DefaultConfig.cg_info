@@ -1,11 +1,19 @@
 I-Logix-RPY-Archive version 8.15.0 * 9841247
 
 - m_fileModifyTime = { IRPYRawContainer 
-	- size = 20;
+	- size = 46;
 	- value = "DefaultComponent\\DefaultConfig\\CSD_1.cpp" 5.2.2020::19:24:3
-	"DefaultComponent\\DefaultConfig\\CSD_1.h" 5.2.2020::19:24:3
-	"DefaultComponent\\DefaultConfig\\Default.cpp" 5.2.2020::19:24:3
-	"DefaultComponent\\DefaultConfig\\Default.h" 5.2.2020::19:24:3
+	"DefaultComponent\\DefaultConfig\\CSD_1.h" 5.11.2020::14:4:6
+	"DefaultComponent\\DefaultConfig\\CSD_2.cpp" 5.11.2020::14:4:6
+	"DefaultComponent\\DefaultConfig\\CSD_2.h" 5.11.2020::14:4:6
+	"DefaultComponent\\DefaultConfig\\CSD_3.cpp" 5.11.2020::14:4:6
+	"DefaultComponent\\DefaultConfig\\CSD_3.h" 5.11.2020::14:4:6
+	"DefaultComponent\\DefaultConfig\\CSD_4.cpp" 5.11.2020::14:4:6
+	"DefaultComponent\\DefaultConfig\\CSD_4.h" 5.11.2020::14:4:6
+	"DefaultComponent\\DefaultConfig\\CSD_5.cpp" 5.11.2020::14:4:6
+	"DefaultComponent\\DefaultConfig\\CSD_5.h" 5.11.2020::14:4:6
+	"DefaultComponent\\DefaultConfig\\Default.cpp" 5.11.2020::14:4:6
+	"DefaultComponent\\DefaultConfig\\Default.h" 5.11.2020::14:4:6
 	"DefaultComponent\\DefaultConfig\\ISN_1.cpp" 5.2.2020::19:24:3
 	"DefaultComponent\\DefaultConfig\\ISN_1.h" 5.2.2020::19:24:3
 	"DefaultComponent\\DefaultConfig\\IS_1.cpp" 5.2.2020::19:29:33
@@ -13,15 +21,33 @@ I-Logix-RPY-Archive version 8.15.0 * 9841247
 	"DefaultComponent\\DefaultConfig\\NC_1.cpp" 5.2.2020::19:37:21
 	"DefaultComponent\\DefaultConfig\\NC_1.h" 5.2.2020::19:36:31
 	"DefaultComponent\\DefaultConfig\\TBSWDH_1.cpp" 5.2.2020::19:24:3
-	"DefaultComponent\\DefaultConfig\\TBSWDH_1.h" 5.2.2020::19:24:3
+	"DefaultComponent\\DefaultConfig\\TBSWDH_1.h" 5.11.2020::14:4:6
 	"DefaultComponent\\DefaultConfig\\TBSWDH_2.cpp" 5.2.2020::19:24:3
-	"DefaultComponent\\DefaultConfig\\TBSWDH_2.h" 5.2.2020::19:24:3
-	"DefaultComponent\\DefaultConfig\\TWCWOE_1.cpp" 5.2.2020::19:24:3
-	"DefaultComponent\\DefaultConfig\\TWCWOE_1.h" 5.2.2020::19:24:3
-	"DefaultComponent\\DefaultConfig\\UNS_1.cpp" 5.2.2020::19:29:33
-	"DefaultComponent\\DefaultConfig\\UNS_1.h" 5.2.2020::19:29:33
-	"DefaultComponent\\DefaultConfig\\URS_1.cpp" 5.2.2020::19:36:31
-	"DefaultComponent\\DefaultConfig\\URS_1.h" 5.2.2020::19:36:31
+	"DefaultComponent\\DefaultConfig\\TBSWDH_2.h" 5.11.2020::14:4:6
+	"DefaultComponent\\DefaultConfig\\TBSWDH_3.cpp" 5.11.2020::14:4:6
+	"DefaultComponent\\DefaultConfig\\TBSWDH_3.h" 5.11.2020::14:4:6
+	"DefaultComponent\\DefaultConfig\\TBSWDH_4.cpp" 5.11.2020::14:4:6
+	"DefaultComponent\\DefaultConfig\\TBSWDH_4.h" 5.11.2020::14:4:6
+	"DefaultComponent\\DefaultConfig\\TBSWDH_5.cpp" 5.11.2020::14:4:6
+	"DefaultComponent\\DefaultConfig\\TBSWDH_5.h" 5.11.2020::14:4:6
+	"DefaultComponent\\DefaultConfig\\TWCWOE_1.cpp" 5.11.2020::14:4:6
+	"DefaultComponent\\DefaultConfig\\TWCWOE_1.h" 5.11.2020::14:4:6
+	"DefaultComponent\\DefaultConfig\\TWCWOE_2.cpp" 5.11.2020::14:19:35
+	"DefaultComponent\\DefaultConfig\\TWCWOE_2.h" 5.11.2020::14:19:35
+	"DefaultComponent\\DefaultConfig\\TWCWOE_3.cpp" 5.11.2020::14:21:33
+	"DefaultComponent\\DefaultConfig\\TWCWOE_3.h" 5.11.2020::14:19:35
+	"DefaultComponent\\DefaultConfig\\TWCWOE_4.cpp" 5.11.2020::14:21:33
+	"DefaultComponent\\DefaultConfig\\TWCWOE_4.h" 5.11.2020::14:19:35
+	"DefaultComponent\\DefaultConfig\\TWCWOE_5.cpp" 5.11.2020::14:19:35
+	"DefaultComponent\\DefaultConfig\\TWCWOE_5.h" 5.11.2020::14:19:35
+	"DefaultComponent\\DefaultConfig\\UNS_1.cpp" 5.11.2020::14:4:6
+	"DefaultComponent\\DefaultConfig\\UNS_1.h" 5.11.2020::14:4:6
+	"DefaultComponent\\DefaultConfig\\URS_1.cpp" 5.11.2020::14:4:6
+	"DefaultComponent\\DefaultConfig\\URS_1.h" 5.11.2020::14:4:6
+	"DefaultComponent\\DefaultConfig\\_1_ComplexStatechartDiagram.cpp" 5.11.2020::14:4:6
+	"DefaultComponent\\DefaultConfig\\_1_ComplexStatechartDiagram.h" 5.11.2020::14:4:6
+	"DefaultComponent\\DefaultConfig\\_2_TransitionBetweenStatesWithDifferentHierarchy.cpp" 5.11.2020::14:4:6
+	"DefaultComponent\\DefaultConfig\\_2_TransitionBetweenStatesWithDifferentHierarchy.h" 5.11.2020::14:4:6
 	
 }
 - m_saveUnitAndOwnerSaveUnit = { IRPYRawContainer 
@@ -38,14 +64,14 @@ I-Logix-RPY-Archive version 8.15.0 * 9841247
 	"GUID ff29f7ed-650e-4c99-a93c-5095623a1ee5" "GUID dd3a83ec-04ca-4555-8614-5df00e063c79"
 	
 }
-- size = 11;
+- size = 24;
 - hElement = { IHandle 
 	- _m2Class = "ISubsystem";
 	- _filename = ".\\..\\..\\StateRepair_rpy\\Default.sbsx";
 	- _name = "Default";
 	- _id = GUID 865860c4-50dc-4974-8cba-496c4922be72;
 }
-- genTime = 5.2.2020::19:24:3;
+- genTime = 5.11.2020::14:4:6;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = ".\\..\\..\\StateRepair_rpy\\_4_InvalidStateName.sbsx";
@@ -53,7 +79,14 @@ I-Logix-RPY-Archive version 8.15.0 * 9841247
 	- _name = "ISN_1";
 	- _id = GUID 192966ab-e886-4f0d-b996-c45df58028be;
 }
-- genTime = 5.2.2020::19:37:21;
+- genTime = 5.11.2020::14:21:33;
+- hElement = { IHandle 
+	- _m2Class = "ISubsystem";
+	- _filename = ".\\..\\..\\StateRepair_rpy\\_1_ComplexStatechartDiagram.sbsx";
+	- _name = "_1_ComplexStatechartDiagram";
+	- _id = GUID e83826f1-aa21-4ebc-bb81-aaf0d6083267;
+}
+- genTime = 5.11.2020::14:21:33;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = ".\\..\\..\\StateRepair_rpy\\_2_TransitionBetweenStatesWithDifferentHierarchy.sbsx";
@@ -61,7 +94,7 @@ I-Logix-RPY-Archive version 8.15.0 * 9841247
 	- _name = "TBSWDH_1";
 	- _id = GUID dba83570-adc0-4d8c-b929-434cd83f4c5a;
 }
-- genTime = 5.2.2020::19:37:21;
+- genTime = 5.11.2020::14:21:33;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = ".\\..\\..\\StateRepair_rpy\\_5_IsolatedState.sbsx";
@@ -69,7 +102,23 @@ I-Logix-RPY-Archive version 8.15.0 * 9841247
 	- _name = "IS_1";
 	- _id = GUID 2b4bdb23-16b9-443f-910b-01328455a6c1;
 }
-- genTime = 5.2.2020::19:36:31;
+- genTime = 5.11.2020::14:4:6;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\StateRepair_rpy\\_1_ComplexStatechartDiagram.sbsx";
+	- _subsystem = "_1_ComplexStatechartDiagram";
+	- _name = "CSD_2";
+	- _id = GUID 45949770-ba3b-41ac-9385-4fbcb792c9a3;
+}
+- genTime = 5.11.2020::14:4:6;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\StateRepair_rpy\\_3_TransitionWithConditionWithoutEvent.sbsx";
+	- _subsystem = "_3_TransitionWithConditionWithoutEvent";
+	- _name = "TWCWOE_4";
+	- _id = GUID b1ecb09a-9ef5-47aa-8ec5-70532f8cf0a3;
+}
+- genTime = 5.11.2020::14:21:33;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = ".\\..\\..\\StateRepair_rpy\\_3_TransitionWithConditionWithoutEvent.sbsx";
@@ -77,7 +126,7 @@ I-Logix-RPY-Archive version 8.15.0 * 9841247
 	- _name = "TWCWOE_1";
 	- _id = GUID 68b77732-3fe5-4412-9b01-9368ed1750ef;
 }
-- genTime = 5.2.2020::19:37:21;
+- genTime = 5.11.2020::14:21:33;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = ".\\..\\..\\StateRepair_rpy\\_7_NestedConditions.sbsx";
@@ -85,14 +134,30 @@ I-Logix-RPY-Archive version 8.15.0 * 9841247
 	- _name = "NC_1";
 	- _id = GUID c645e7e1-061c-45df-b51e-190d467201f5;
 }
-- genTime = 5.2.2020::19:37:21;
+- genTime = 5.11.2020::14:4:6;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\StateRepair_rpy\\_2_TransitionBetweenStatesWithDifferentHierarchy.sbsx";
+	- _subsystem = "_2_TransitionBetweenStatesWithDifferentHierarchy";
+	- _name = "TBSWDH_3";
+	- _id = GUID 5e5ab163-f1b0-4034-810f-def4f7e86794;
+}
+- genTime = 5.11.2020::14:4:6;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\StateRepair_rpy\\_3_TransitionWithConditionWithoutEvent.sbsx";
+	- _subsystem = "_3_TransitionWithConditionWithoutEvent";
+	- _name = "TWCWOE_2";
+	- _id = GUID 0c4e12c7-336b-48c1-84e7-f9d719e9f80c;
+}
+- genTime = 5.11.2020::14:19:35;
 - hElement = { IHandle 
 	- _m2Class = "ICodeGenConfigInfo";
 	- _filename = ".\\..\\..\\StateRepair_rpy\\DefaultComponent.cmpx";
 	- _name = "DefaultComponent\\DefaultConfig";
 	- _id = GUID fb6aff62-4381-49b2-ba3e-74313d67a17f;
 }
-- genTime = 5.2.2020::19:37:21;
+- genTime = 5.11.2020::14:21:33;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = ".\\..\\..\\StateRepair_rpy\\_8_UnnecessaryState.sbsx";
@@ -100,7 +165,7 @@ I-Logix-RPY-Archive version 8.15.0 * 9841247
 	- _name = "UNS_1";
 	- _id = GUID 871f9933-3361-4633-bbb6-6f8bd4ccdfd2;
 }
-- genTime = 5.2.2020::19:29:33;
+- genTime = 5.11.2020::14:4:6;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = ".\\..\\..\\StateRepair_rpy\\_2_TransitionBetweenStatesWithDifferentHierarchy.sbsx";
@@ -108,7 +173,7 @@ I-Logix-RPY-Archive version 8.15.0 * 9841247
 	- _name = "TBSWDH_2";
 	- _id = GUID 2042fe61-91f9-4b1c-b53e-9eb8611c2460;
 }
-- genTime = 5.2.2020::19:37:21;
+- genTime = 5.11.2020::14:21:33;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = ".\\..\\..\\StateRepair_rpy\\_6_UnreachableState.sbsx";
@@ -116,7 +181,39 @@ I-Logix-RPY-Archive version 8.15.0 * 9841247
 	- _name = "URS_1";
 	- _id = GUID 04dcb456-71d3-40cb-89ce-14068458df07;
 }
-- genTime = 5.2.2020::19:36:31;
+- genTime = 5.11.2020::14:4:6;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\StateRepair_rpy\\_3_TransitionWithConditionWithoutEvent.sbsx";
+	- _subsystem = "_3_TransitionWithConditionWithoutEvent";
+	- _name = "TWCWOE_5";
+	- _id = GUID 95aafc8a-f812-4655-88c1-1ca5fdada42d;
+}
+- genTime = 5.11.2020::14:19:35;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\StateRepair_rpy\\_3_TransitionWithConditionWithoutEvent.sbsx";
+	- _subsystem = "_3_TransitionWithConditionWithoutEvent";
+	- _name = "TWCWOE_3";
+	- _id = GUID 5d4b2c9d-9bfe-44a6-b90d-95b89f60f8d9;
+}
+- genTime = 5.11.2020::14:21:33;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\StateRepair_rpy\\_1_ComplexStatechartDiagram.sbsx";
+	- _subsystem = "_1_ComplexStatechartDiagram";
+	- _name = "CSD_4";
+	- _id = GUID cccac020-a020-4e10-acb5-b52f70aabe5e;
+}
+- genTime = 5.11.2020::14:4:6;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\StateRepair_rpy\\_2_TransitionBetweenStatesWithDifferentHierarchy.sbsx";
+	- _subsystem = "_2_TransitionBetweenStatesWithDifferentHierarchy";
+	- _name = "TBSWDH_5";
+	- _id = GUID 5a0aeb3a-2acc-4a8b-8e81-1b05beaf4e09;
+}
+- genTime = 5.11.2020::14:4:6;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = ".\\..\\..\\StateRepair_rpy\\_1_ComplexStatechartDiagram.sbsx";
@@ -124,5 +221,36 @@ I-Logix-RPY-Archive version 8.15.0 * 9841247
 	- _name = "CSD_1";
 	- _id = GUID 7f66c8f5-2d5a-4796-ba10-3439a05dbc27;
 }
-- genTime = 5.2.2020::19:37:21;
+- genTime = 5.11.2020::14:21:33;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\StateRepair_rpy\\_2_TransitionBetweenStatesWithDifferentHierarchy.sbsx";
+	- _subsystem = "_2_TransitionBetweenStatesWithDifferentHierarchy";
+	- _name = "TBSWDH_4";
+	- _id = GUID 8722cad4-d990-43d7-8517-412340327941;
+}
+- genTime = 5.11.2020::14:4:6;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\StateRepair_rpy\\_1_ComplexStatechartDiagram.sbsx";
+	- _subsystem = "_1_ComplexStatechartDiagram";
+	- _name = "CSD_5";
+	- _id = GUID 3dc4faee-3399-493e-857c-73ef4b798d04;
+}
+- genTime = 5.11.2020::14:4:6;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\StateRepair_rpy\\_1_ComplexStatechartDiagram.sbsx";
+	- _subsystem = "_1_ComplexStatechartDiagram";
+	- _name = "CSD_3";
+	- _id = GUID 3caf7e02-eb63-4ecb-93b1-188034596c6c;
+}
+- genTime = 5.11.2020::14:4:6;
+- hElement = { IHandle 
+	- _m2Class = "ISubsystem";
+	- _filename = ".\\..\\..\\StateRepair_rpy\\_2_TransitionBetweenStatesWithDifferentHierarchy.sbsx";
+	- _name = "_2_TransitionBetweenStatesWithDifferentHierarchy";
+	- _id = GUID a78ff901-06c2-4992-bcde-e77f5fbb7861;
+}
+- genTime = 5.11.2020::14:21:33;
 

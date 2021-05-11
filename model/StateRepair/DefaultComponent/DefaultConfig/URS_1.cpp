@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: URS_1
-//!	Generated Date	: Sat, 2, May 2020  
+//!	Generated Date	: Mon, 11, May 2020  
 	File Path	: DefaultComponent\DefaultConfig\URS_1.cpp
 *********************************************************************/
 
@@ -72,6 +72,35 @@ IOxfReactive::TakeEventStatus URS_1::rootState_processEvent() {
             
         }
         break;
+        // State E
+        case E:
+        {
+            if(IS_EVENT_TYPE_OF(OMNullEventId))
+                {
+                    popNullTransition();
+                    A_subState = D;
+                    rootState_active = D;
+                    res = eventConsumed;
+                }
+            
+            
+        }
+        break;
+        // State F
+        case F:
+        {
+            if(IS_EVENT_TYPE_OF(OMNullEventId))
+                {
+                    popNullTransition();
+                    pushNullTransition();
+                    A_subState = E;
+                    rootState_active = E;
+                    res = eventConsumed;
+                }
+            
+            
+        }
+        break;
         default:
             break;
     }
@@ -82,6 +111,27 @@ void URS_1::A_entDef() {
     rootState_subState = A;
     A_subState = B;
     rootState_active = B;
+}
+
+void URS_1::A_exit() {
+    switch (A_subState) {
+        // State E
+        case E:
+        {
+            popNullTransition();
+        }
+        break;
+        // State F
+        case F:
+        {
+            popNullTransition();
+        }
+        break;
+        default:
+            break;
+    }
+    A_subState = OMNonState;
+    
 }
 
 /*********************************************************************

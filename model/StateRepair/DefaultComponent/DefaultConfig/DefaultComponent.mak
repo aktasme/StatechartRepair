@@ -85,15 +85,28 @@ ADDITIONAL_OBJS=
 
 OBJS= \
   CSD_1.obj \
+  CSD_2.obj \
+  CSD_3.obj \
+  CSD_4.obj \
+  CSD_5.obj \
   TBSWDH_1.obj \
   TBSWDH_2.obj \
+  TBSWDH_3.obj \
+  TBSWDH_4.obj \
+  TBSWDH_5.obj \
   TWCWOE_1.obj \
+  TWCWOE_2.obj \
+  TWCWOE_3.obj \
+  TWCWOE_4.obj \
+  TWCWOE_5.obj \
   ISN_1.obj \
   IS_1.obj \
   URS_1.obj \
   NC_1.obj \
   UNS_1.obj \
-  Default.obj
+  Default.obj \
+  _1_ComplexStatechartDiagram.obj \
+  _2_TransitionBetweenStatesWithDifferentHierarchy.obj
 
 
 
@@ -176,27 +189,93 @@ SOCK_LIB=
 
 
 
-CSD_1.obj : CSD_1.cpp CSD_1.h    Default.h 
+CSD_1.obj : CSD_1.cpp CSD_1.h    _1_ComplexStatechartDiagram.h Default.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"CSD_1.obj" "CSD_1.cpp" 
 
 
 
-TBSWDH_1.obj : TBSWDH_1.cpp TBSWDH_1.h    Default.h 
+CSD_2.obj : CSD_2.cpp CSD_2.h    _1_ComplexStatechartDiagram.h Default.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"CSD_2.obj" "CSD_2.cpp" 
+
+
+
+CSD_3.obj : CSD_3.cpp CSD_3.h    _1_ComplexStatechartDiagram.h Default.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"CSD_3.obj" "CSD_3.cpp" 
+
+
+
+CSD_4.obj : CSD_4.cpp CSD_4.h    _1_ComplexStatechartDiagram.h Default.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"CSD_4.obj" "CSD_4.cpp" 
+
+
+
+CSD_5.obj : CSD_5.cpp CSD_5.h    _1_ComplexStatechartDiagram.h Default.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"CSD_5.obj" "CSD_5.cpp" 
+
+
+
+TBSWDH_1.obj : TBSWDH_1.cpp TBSWDH_1.h    _2_TransitionBetweenStatesWithDifferentHierarchy.h Default.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"TBSWDH_1.obj" "TBSWDH_1.cpp" 
 
 
 
-TBSWDH_2.obj : TBSWDH_2.cpp TBSWDH_2.h    Default.h 
+TBSWDH_2.obj : TBSWDH_2.cpp TBSWDH_2.h    _2_TransitionBetweenStatesWithDifferentHierarchy.h Default.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"TBSWDH_2.obj" "TBSWDH_2.cpp" 
+
+
+
+TBSWDH_3.obj : TBSWDH_3.cpp TBSWDH_3.h    _2_TransitionBetweenStatesWithDifferentHierarchy.h Default.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"TBSWDH_3.obj" "TBSWDH_3.cpp" 
+
+
+
+TBSWDH_4.obj : TBSWDH_4.cpp TBSWDH_4.h    _2_TransitionBetweenStatesWithDifferentHierarchy.h Default.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"TBSWDH_4.obj" "TBSWDH_4.cpp" 
+
+
+
+TBSWDH_5.obj : TBSWDH_5.cpp TBSWDH_5.h    _2_TransitionBetweenStatesWithDifferentHierarchy.h Default.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"TBSWDH_5.obj" "TBSWDH_5.cpp" 
 
 
 
 TWCWOE_1.obj : TWCWOE_1.cpp TWCWOE_1.h    Default.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"TWCWOE_1.obj" "TWCWOE_1.cpp" 
+
+
+
+TWCWOE_2.obj : TWCWOE_2.cpp TWCWOE_2.h    
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"TWCWOE_2.obj" "TWCWOE_2.cpp" 
+
+
+
+TWCWOE_3.obj : TWCWOE_3.cpp TWCWOE_3.h    Default.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"TWCWOE_3.obj" "TWCWOE_3.cpp" 
+
+
+
+TWCWOE_4.obj : TWCWOE_4.cpp TWCWOE_4.h    
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"TWCWOE_4.obj" "TWCWOE_4.cpp" 
+
+
+
+TWCWOE_5.obj : TWCWOE_5.cpp TWCWOE_5.h    Default.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"TWCWOE_5.obj" "TWCWOE_5.cpp" 
 
 
 
@@ -224,7 +303,7 @@ NC_1.obj : NC_1.cpp NC_1.h
 
 
 
-UNS_1.obj : UNS_1.cpp UNS_1.h    
+UNS_1.obj : UNS_1.cpp UNS_1.h    Default.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"UNS_1.obj" "UNS_1.cpp" 
 
@@ -233,6 +312,18 @@ UNS_1.obj : UNS_1.cpp UNS_1.h
 Default.obj : Default.cpp Default.h    
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Default.obj" "Default.cpp" 
+
+
+
+_1_ComplexStatechartDiagram.obj : _1_ComplexStatechartDiagram.cpp _1_ComplexStatechartDiagram.h    CSD_1.h CSD_2.h CSD_3.h CSD_4.h CSD_5.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"_1_ComplexStatechartDiagram.obj" "_1_ComplexStatechartDiagram.cpp" 
+
+
+
+_2_TransitionBetweenStatesWithDifferentHierarchy.obj : _2_TransitionBetweenStatesWithDifferentHierarchy.cpp _2_TransitionBetweenStatesWithDifferentHierarchy.h    TBSWDH_1.h TBSWDH_2.h TBSWDH_3.h TBSWDH_4.h TBSWDH_5.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"_2_TransitionBetweenStatesWithDifferentHierarchy.obj" "_2_TransitionBetweenStatesWithDifferentHierarchy.cpp" 
 
 
 
@@ -264,15 +355,28 @@ $(TARGET_NAME)$(LIB_EXT) : $(OBJS) $(ADDITIONAL_OBJS) DefaultComponent.mak
 clean:
 	@echo Cleanup
 	if exist CSD_1.obj erase CSD_1.obj
+	if exist CSD_2.obj erase CSD_2.obj
+	if exist CSD_3.obj erase CSD_3.obj
+	if exist CSD_4.obj erase CSD_4.obj
+	if exist CSD_5.obj erase CSD_5.obj
 	if exist TBSWDH_1.obj erase TBSWDH_1.obj
 	if exist TBSWDH_2.obj erase TBSWDH_2.obj
+	if exist TBSWDH_3.obj erase TBSWDH_3.obj
+	if exist TBSWDH_4.obj erase TBSWDH_4.obj
+	if exist TBSWDH_5.obj erase TBSWDH_5.obj
 	if exist TWCWOE_1.obj erase TWCWOE_1.obj
+	if exist TWCWOE_2.obj erase TWCWOE_2.obj
+	if exist TWCWOE_3.obj erase TWCWOE_3.obj
+	if exist TWCWOE_4.obj erase TWCWOE_4.obj
+	if exist TWCWOE_5.obj erase TWCWOE_5.obj
 	if exist ISN_1.obj erase ISN_1.obj
 	if exist IS_1.obj erase IS_1.obj
 	if exist URS_1.obj erase URS_1.obj
 	if exist NC_1.obj erase NC_1.obj
 	if exist UNS_1.obj erase UNS_1.obj
 	if exist Default.obj erase Default.obj
+	if exist _1_ComplexStatechartDiagram.obj erase _1_ComplexStatechartDiagram.obj
+	if exist _2_TransitionBetweenStatesWithDifferentHierarchy.obj erase _2_TransitionBetweenStatesWithDifferentHierarchy.obj
 	if exist $(TARGET_MAIN)$(OBJ_EXT) erase $(TARGET_MAIN)$(OBJ_EXT)
 	if exist *$(OBJ_EXT) erase *$(OBJ_EXT)
 	if exist $(TARGET_NAME).pdb erase $(TARGET_NAME).pdb
