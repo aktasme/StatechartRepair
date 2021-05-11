@@ -57,20 +57,12 @@ IOxfReactive::TakeEventStatus UNS_1::rootState_processEvent() {
                 {
                     res = eventConsumed;
                 }
-            else if(IS_EVENT_TYPE_OF(evAB_Default_id))
+            else if(IS_EVENT_TYPE_OF(OMNullEventId))
                 {
                     popNullTransition();
                     pushNullTransition();
                     rootState_subState = B;
                     rootState_active = B;
-                    res = eventConsumed;
-                }
-            else if(IS_EVENT_TYPE_OF(OMNullEventId))
-                {
-                    popNullTransition();
-                    pushNullTransition();
-                    rootState_subState = E;
-                    rootState_active = E;
                     res = eventConsumed;
                 }
             
@@ -79,7 +71,7 @@ IOxfReactive::TakeEventStatus UNS_1::rootState_processEvent() {
         // State B
         case B:
         {
-            if(IS_EVENT_TYPE_OF(evBC_Default_id))
+            if(IS_EVENT_TYPE_OF(OMNullEventId))
                 {
                     popNullTransition();
                     rootState_subState = C;
@@ -87,13 +79,6 @@ IOxfReactive::TakeEventStatus UNS_1::rootState_processEvent() {
                     //#[ state C.(Entry) 
                     printf("B: Enter!\n");
                     //#]
-                    res = eventConsumed;
-                }
-            else if(IS_EVENT_TYPE_OF(OMNullEventId))
-                {
-                    popNullTransition();
-                    rootState_subState = D;
-                    rootState_active = D;
                     res = eventConsumed;
                 }
             
@@ -104,20 +89,6 @@ IOxfReactive::TakeEventStatus UNS_1::rootState_processEvent() {
         {
             if(IS_EVENT_TYPE_OF(evCC_Default_id))
                 {
-                    res = eventConsumed;
-                }
-            
-        }
-        break;
-        // State E
-        case E:
-        {
-            if(IS_EVENT_TYPE_OF(OMNullEventId))
-                {
-                    popNullTransition();
-                    pushNullTransition();
-                    rootState_subState = B;
-                    rootState_active = B;
                     res = eventConsumed;
                 }
             

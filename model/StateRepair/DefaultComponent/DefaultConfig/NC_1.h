@@ -36,10 +36,10 @@ public :
     ////    Additional operations    ////
     
     //## auto_generated
-    int getA() const;
+    int getX() const;
     
     //## auto_generated
-    void setA(int p_a);
+    void setX(int p_x);
     
     //## auto_generated
     virtual bool startBehavior();
@@ -51,7 +51,7 @@ protected :
     
     ////    Attributes    ////
     
-    int a;		//## attribute a
+    int x;		//## attribute x
     
     ////    Framework operations    ////
 

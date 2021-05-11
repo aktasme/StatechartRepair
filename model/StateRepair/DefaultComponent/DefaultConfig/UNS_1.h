@@ -57,14 +57,6 @@ public :
     //## statechart_method
     virtual IOxfReactive::TakeEventStatus rootState_processEvent();
     
-    // E:
-    //## statechart_method
-    inline bool E_IN() const;
-    
-    // D:
-    //## statechart_method
-    inline bool D_IN() const;
-    
     // C:
     //## statechart_method
     inline bool C_IN() const;
@@ -84,11 +76,9 @@ protected :
 //#[ ignore
     enum UNS_1_Enum {
         OMNonState = 0,
-        E = 1,
-        D = 2,
-        C = 3,
-        B = 4,
-        A = 5
+        C = 1,
+        B = 2,
+        A = 3
     };
     
     int rootState_subState;
@@ -99,14 +89,6 @@ protected :
 
 inline bool UNS_1::rootState_IN() const {
     return true;
-}
-
-inline bool UNS_1::E_IN() const {
-    return rootState_subState == E;
-}
-
-inline bool UNS_1::D_IN() const {
-    return rootState_subState == D;
 }
 
 inline bool UNS_1::C_IN() const {

@@ -23,12 +23,12 @@ NC_1::NC_1(IOxfActive* theActiveContext) {
 NC_1::~NC_1() {
 }
 
-int NC_1::getA() const {
-    return a;
+int NC_1::getX() const {
+    return x;
 }
 
-void NC_1::setA(int p_a) {
-    a = p_a;
+void NC_1::setX(int p_x) {
+    x = p_x;
 }
 
 bool NC_1::startBehavior() {
@@ -57,7 +57,7 @@ IOxfReactive::TakeEventStatus NC_1::rootState_processEvent() {
             if(IS_EVENT_TYPE_OF(OMNullEventId))
                 {
                     //## transition 2 
-                    if(a==0)
+                    if(x == 0)
                         {
                             popNullTransition();
                             A_subState = C;
@@ -67,7 +67,7 @@ IOxfReactive::TakeEventStatus NC_1::rootState_processEvent() {
                     else
                         {
                             //## transition 4 
-                            if(a==1)
+                            if(x == 1)
                                 {
                                     popNullTransition();
                                     A_subState = D;
@@ -77,7 +77,7 @@ IOxfReactive::TakeEventStatus NC_1::rootState_processEvent() {
                             else
                                 {
                                     //## transition 6 
-                                    if(a==2)
+                                    if(x == 2)
                                         {
                                             popNullTransition();
                                             A_subState = E;

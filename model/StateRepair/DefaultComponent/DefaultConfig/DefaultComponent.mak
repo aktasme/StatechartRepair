@@ -115,7 +115,15 @@ OBJS= \
   URS_4.obj \
   URS_5.obj \
   NC_1.obj \
+  NC_2.obj \
+  NC_3.obj \
+  NC_4.obj \
+  NC_5.obj \
   UNS_1.obj \
+  UNS_2.obj \
+  UNS_3.obj \
+  UNS_4.obj \
+  UNS_5.obj \
   Default.obj
 
 
@@ -367,13 +375,13 @@ URS_3.obj : URS_3.cpp URS_3.h    Default.h
 
 
 
-URS_4.obj : URS_4.cpp URS_4.h    
+URS_4.obj : URS_4.cpp URS_4.h    Default.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"URS_4.obj" "URS_4.cpp" 
 
 
 
-URS_5.obj : URS_5.cpp URS_5.h    
+URS_5.obj : URS_5.cpp URS_5.h    Default.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"URS_5.obj" "URS_5.cpp" 
 
@@ -385,9 +393,57 @@ NC_1.obj : NC_1.cpp NC_1.h
 
 
 
+NC_2.obj : NC_2.cpp NC_2.h    Default.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"NC_2.obj" "NC_2.cpp" 
+
+
+
+NC_3.obj : NC_3.cpp NC_3.h    Default.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"NC_3.obj" "NC_3.cpp" 
+
+
+
+NC_4.obj : NC_4.cpp NC_4.h    Default.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"NC_4.obj" "NC_4.cpp" 
+
+
+
+NC_5.obj : NC_5.cpp NC_5.h    Default.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"NC_5.obj" "NC_5.cpp" 
+
+
+
 UNS_1.obj : UNS_1.cpp UNS_1.h    Default.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"UNS_1.obj" "UNS_1.cpp" 
+
+
+
+UNS_2.obj : UNS_2.cpp UNS_2.h    Default.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"UNS_2.obj" "UNS_2.cpp" 
+
+
+
+UNS_3.obj : UNS_3.cpp UNS_3.h    Default.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"UNS_3.obj" "UNS_3.cpp" 
+
+
+
+UNS_4.obj : UNS_4.cpp UNS_4.h    Default.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"UNS_4.obj" "UNS_4.cpp" 
+
+
+
+UNS_5.obj : UNS_5.cpp UNS_5.h    Default.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"UNS_5.obj" "UNS_5.cpp" 
 
 
 
@@ -455,7 +511,15 @@ clean:
 	if exist URS_4.obj erase URS_4.obj
 	if exist URS_5.obj erase URS_5.obj
 	if exist NC_1.obj erase NC_1.obj
+	if exist NC_2.obj erase NC_2.obj
+	if exist NC_3.obj erase NC_3.obj
+	if exist NC_4.obj erase NC_4.obj
+	if exist NC_5.obj erase NC_5.obj
 	if exist UNS_1.obj erase UNS_1.obj
+	if exist UNS_2.obj erase UNS_2.obj
+	if exist UNS_3.obj erase UNS_3.obj
+	if exist UNS_4.obj erase UNS_4.obj
+	if exist UNS_5.obj erase UNS_5.obj
 	if exist Default.obj erase Default.obj
 	if exist $(TARGET_MAIN)$(OBJ_EXT) erase $(TARGET_MAIN)$(OBJ_EXT)
 	if exist *$(OBJ_EXT) erase *$(OBJ_EXT)
