@@ -22,7 +22,7 @@ public class _2_TBSWDHStrategy implements StrategyBase
 	@Override
 	public boolean control(Statechart statechart) 
 	{
-		System.out.println("Control Transition Between States with Different Hierarchy");
+		System.out.printf("  [Control] Transition Between States with Different Hierarchy:");
 		
 		boolean bReturn = false;
 		Vector<Transition> transitions = statechart.getTransitions();
@@ -45,11 +45,19 @@ public class _2_TBSWDHStrategy implements StrategyBase
 					if(sourceState.getDepth() != targetState.getDepth())
 					{
 						transitionsFound.add(transition);
-						System.out.printf("  Found Transition source:%s target:%s\n", sourceState.getName(), targetState.getName());
 						bReturn = true;
 					}
 				}
 			}
+		}
+		
+		if(bReturn)
+		{
+			System.out.printf("Found! (%d)\n", transitionsFound.size());		
+		}
+		else
+		{
+			System.out.printf("NOT Found!\n");
 		}
 		
 		return bReturn;

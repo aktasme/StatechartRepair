@@ -1,14 +1,21 @@
 package apps;
 
 import java.util.Vector;
+import java.io.File;
 import java.util.HashMap;
 import com.telelogic.rhapsody.core.*;
 
 public class Statechart
 {
-	IRPStatechart statechart;
-	IRPState root;
-	IRPCollection elements;
+	final String ExportPath = "D:\\GitHub\\StatechartRepair\\doc\\exports\\";
+	final String ExportExt = ".emf";
+
+	
+	IRPPackage irpPackage;
+	IRPClass irpClass;
+	IRPStatechart irpStatechart;
+	IRPState irpRoot;
+	IRPCollection irpElements;
 	
 	Vector<State> states;
 	HashMap<String, State> stateMap;
@@ -24,12 +31,14 @@ public class Statechart
 
 	float complexity = 0;
 	
-	public Statechart(IRPStatechart statechart)
+	public Statechart(IRPStatechart irpStatechart)
 	{
-		this.statechart = statechart;
-		this.root = statechart.getRootState();
-		this.elements = statechart.getElementsInDiagram();		
-		
+		this.irpStatechart = irpStatechart;
+		this.irpRoot = irpStatechart.getRootState();
+		this.irpElements = irpStatechart.getElementsInDiagram();
+		this.irpClass = (IRPClass)irpStatechart.getItsClass();
+		this.irpPackage = (IRPPackage)irpClass.getOwner();
+				
 		states = new Vector<State>();
 		stateMap = new HashMap<String, State>();
 		
@@ -47,15 +56,15 @@ public class Statechart
 	{
 		findElements();
 		initializeStates();
-		
+		export();
 		print();
 	}
 	
 	public void findElements()
 	{		
-		for(int index = 1; index <= elements.getCount(); index++)
+		for(int index = 1; index <= irpElements.getCount(); index++)
 		{
-			IRPModelElement element = (IRPModelElement)elements.getItem(index);
+			IRPModelElement element = (IRPModelElement)irpElements.getItem(index);
 			if(element.getIsOfMetaClass("State") == 1)
 			{
 				IRPState irpState = (IRPState)element;
@@ -116,6 +125,22 @@ public class Statechart
 		}
 	}
 	
+	/* Helper Functions */
+	public void export()
+	{
+		String folderName = ExportPath + irpPackage.getName(); 
+		String exportName = folderName + "\\" + irpClass.getName() + ExportExt;
+		
+		File folder = new File(folderName);
+		if(!folder.exists())
+		{
+			folder.mkdirs();
+		}
+		
+		irpStatechart.getPicture(exportName);
+		System.out.printf("  Export %s to %s\n", irpClass.getName(), exportName);	
+	}
+	
 	/* Wrapper Functions */
 	public State getState(String name)
 	{
@@ -144,7 +169,7 @@ public class Statechart
 	/* Logging Functions */
 	public void print()
 	{
-		System.out.printf("Statechart %s:\n", statechart.getName());
+		System.out.printf("\nStatechart %s:\n", irpClass.getName());
 		System.out.printf("  #Nodes: %d\n", nodes.size());
 		System.out.printf("  #States: %d\n", states.size());
 		System.out.printf("  #Conditions: %d\n", conditions.size());

@@ -15,6 +15,8 @@ public class _1_CSDStrategy implements StrategyBase
 	@Override
 	public boolean control(Statechart statechart) 
 	{
+		System.out.printf("  [Control] Complex Statechart Diagram: ");
+
 		boolean bReturn = false;
 		
 		complexity = (float)statechart.getTransitionCount() / (float)statechart.getStateCount();
@@ -22,6 +24,11 @@ public class _1_CSDStrategy implements StrategyBase
 		if(complexity >= COMPLEXITY_THRESHOLD)
 		{
 			bReturn = true;
+			System.out.printf("True! (%f)\n", complexity);
+		}
+		else
+		{
+			System.out.printf("False! (%f)\n", complexity);			
 		}
 		
 		statechart.setComplexity(complexity);
