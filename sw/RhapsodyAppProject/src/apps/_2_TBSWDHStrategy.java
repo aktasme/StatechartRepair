@@ -2,9 +2,14 @@ package apps;
 
 import java.util.Iterator;
 import java.util.Vector;
-
 import apps.Node.NodeTypeEnum;
 
+/**
+ * @author mehmetaktas
+ * 
+ * Transition Between States with Different Hierarchy
+ *
+ */
 public class _2_TBSWDHStrategy implements StrategyBase 
 {
 	Vector<Transition> transitionsFound;

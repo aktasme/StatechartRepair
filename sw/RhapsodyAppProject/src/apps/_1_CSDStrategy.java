@@ -1,5 +1,11 @@
 package apps;
 
+/**
+ * @author mehmetaktas
+ *
+ * Complex Statechart Diagram
+ * 
+ */
 public class _1_CSDStrategy implements StrategyBase
 {
 	final float COMPLEXITY_THRESHOLD = 2;
