@@ -20,11 +20,10 @@ public class _5_ISAntiPattern implements AntiPatternBase
 		statesFound = new Vector<State>();
 	}
 
-
 	@Override
 	public boolean control(Statechart statechart) 
 	{
-		System.out.printf("  [Control] Invalid State Name: ");
+		System.out.printf("  [Control] Isolated State: ");
 
 		boolean bReturn = false;
 		

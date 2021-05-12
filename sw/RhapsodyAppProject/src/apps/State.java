@@ -15,7 +15,7 @@ public class State extends Node
 	{
 		super(statechart, irpState, NodeTypeEnum.NodeType_state);
 		this.statechart = statechart;
-		this.irpState = irpState;
+		this.irpState = irpState;		
 	}
 
 	/* Wrapper Functions */
@@ -32,6 +32,13 @@ public class State extends Node
 		}
 		
 		return subStates;
+	}
+	
+	public Vector<Transition> getInTransitions()
+	{
+		Vector<Transition> inTransitions = new Vector<Transition>();
+		
+		return inTransitions;
 	}
 	
 	/* Logging Functions */

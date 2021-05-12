@@ -11,18 +11,13 @@
 			<_id type="a">GUID e83826f1-aa21-4ebc-bb81-aaf0d6083267</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">_1_ComplexStatechartDiagram</_name>
-			<_modifiedTimeWeak type="a">5.11.2020::15:18:2</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">5.12.2020::13:41:44</_modifiedTimeWeak>
 			<_modifiedTime type="a">5.11.2020::15:18:2</_modifiedTime>
 			<_lastID type="a">4</_lastID>
-			<weakCGTime type="a">5.11.2020::15:18:2</weakCGTime>
+			<weakCGTime type="a">5.12.2020::13:41:44</weakCGTime>
 			<strongCGTime type="a">5.2.2020::18:19:45</strongCGTime>
 			<_defaultComposite type="s">GUID c3620f15-a6a3-45dc-9c20-c3c239123efa</_defaultComposite>
 			<_eventsBaseID type="a">-1</_eventsBaseID>
-			<Events type="c">
-				<IRPYRawContainer type="e">
-					<size type="a">0</size>
-				</IRPYRawContainer>
-			</Events>
 			<_configurationRelatedTime type="a">1.2.1990::0:0:0</_configurationRelatedTime>
 			<AggregatesList type="e">
 				<value>GUID c3620f15-a6a3-45dc-9c20-c3c239123efa</value>
@@ -4830,10 +4825,10 @@
 			<_id type="a">GUID 45949770-ba3b-41ac-9385-4fbcb792c9a3</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">CSD_2</_name>
-			<_modifiedTimeWeak type="a">5.11.2020::13:24:10</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">5.12.2020::13:41:44</_modifiedTimeWeak>
 			<_modifiedTime type="a">5.11.2020::13:23:55</_modifiedTime>
 			<_lastID type="a">2</_lastID>
-			<weakCGTime type="a">5.11.2020::13:24:10</weakCGTime>
+			<weakCGTime type="a">5.12.2020::13:41:44</weakCGTime>
 			<strongCGTime type="a">5.11.2020::13:17:29</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
@@ -4979,10 +4974,10 @@
 			<_id type="a">GUID e6011c67-0c03-4965-9763-38916c02940b</_id>
 			<_myState type="a">10240</_myState>
 			<_name type="a">statechart_0</_name>
-			<_modifiedTimeWeak type="a">5.11.2020::13:24:10</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">5.12.2020::13:41:44</_modifiedTimeWeak>
 			<_modifiedTime type="a">5.11.2020::13:24:10</_modifiedTime>
 			<_lastID type="a">14</_lastID>
-			<weakCGTime type="a">5.11.2020::13:24:10</weakCGTime>
+			<weakCGTime type="a">5.12.2020::13:41:44</weakCGTime>
 			<strongCGTime type="a">5.11.2020::13:17:29</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
@@ -4990,7 +4985,7 @@
 			</_itsStateChart>
 			<_classModifier type="a">Unspecified</_classModifier>
 			<_defNumber type="a">3</_defNumber>
-			<_version type="a">5.11.2020::16:24:29</_version>
+			<_version type="a">5.12.2020::16:41:44</_version>
 			<_baseVersion type="a">1.2.1990::0:0:0</_baseVersion>
 			<_diagram type="s">GUID 4ca3f80f-7911-45da-a93b-2b43a9c3e1c2</_diagram>
 			<AggregatesList type="e">
@@ -5511,9 +5506,9 @@
 			</IPropertyContainer>
 			</_properties>
 			<_name type="a">statechartdiagram_0</_name>
-			<_modifiedTimeWeak type="a">5.11.2020::13:23:55</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">5.12.2020::13:41:44</_modifiedTimeWeak>
 			<_modifiedTime type="a">5.11.2020::13:24:10</_modifiedTime>
-			<_lastModifiedTime type="a">5.11.2020::13:24:29</_lastModifiedTime>
+			<_lastModifiedTime type="a">5.12.2020::13:41:44</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -6285,12 +6280,11 @@
 					<m_nOrientationCtrlPt type="a">0</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_rpn>
-			<m_arrow type="a">2 516 498  515 498  </m_arrow>
 			<m_anglePoint1 type="a">0 0 </m_anglePoint1>
 			<m_anglePoint2 type="a">0 0 </m_anglePoint2>
 			<m_line_style type="a">6</m_line_style>
 			<m_SourcePort type="a">548 1060 </m_SourcePort>
-			<m_TargetPort type="a">11 0 </m_TargetPort>
+			<m_TargetPort type="a">12 0 </m_TargetPort>
 			<m_pInheritsFrom type="r">
 				<IHandle type="e">
 				</IHandle>
