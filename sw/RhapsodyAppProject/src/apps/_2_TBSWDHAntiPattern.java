@@ -10,11 +10,11 @@ import apps.Node.NodeTypeEnum;
  * Transition Between States with Different Hierarchy
  *
  */
-public class _2_TBSWDHStrategy implements StrategyBase 
+public class _2_TBSWDHAntiPattern implements AntiPatternBase 
 {
 	Vector<Transition> transitionsFound;
 	
-	public _2_TBSWDHStrategy() 
+	public _2_TBSWDHAntiPattern() 
 	{
 		transitionsFound = new Vector<Transition>();
 	}

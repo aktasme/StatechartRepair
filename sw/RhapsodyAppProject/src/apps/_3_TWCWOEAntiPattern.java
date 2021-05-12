@@ -10,11 +10,11 @@ import com.telelogic.rhapsody.core.*;
  * Transition with Condition without Event
  *
  */
-public class _3_TWCWOEStrategy implements StrategyBase
+public class _3_TWCWOEAntiPattern implements AntiPatternBase
 {
 	Vector<Transition> transitionsFound;
 
-	public _3_TWCWOEStrategy() 
+	public _3_TWCWOEAntiPattern() 
 	{
 		transitionsFound = new Vector<Transition>();
 	}

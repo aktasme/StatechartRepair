@@ -3,10 +3,10 @@ package apps;
 /**
  * @author mehmetaktas
  * 
- * Unnecessary State
+ * Unreachable State
  *
  */
-public class _8_UNSStrategy implements StrategyBase
+public class _6_URSAntiPattern implements AntiPatternBase
 {
 
 	@Override

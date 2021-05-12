@@ -6,7 +6,7 @@ package apps;
  * Nested Conditions
  *
  */
-public class _7_NCStrategy implements StrategyBase
+public class _7_NCAntiPattern implements AntiPatternBase
 {
 
 	@Override

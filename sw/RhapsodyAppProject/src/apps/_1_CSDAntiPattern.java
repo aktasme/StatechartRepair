@@ -6,7 +6,7 @@ package apps;
  * Complex Statechart Diagram
  * 
  */
-public class _1_CSDStrategy implements StrategyBase
+public class _1_CSDAntiPattern implements AntiPatternBase
 {
 	final float COMPLEXITY_THRESHOLD = 2;
 	

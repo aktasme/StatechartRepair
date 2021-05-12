@@ -7,7 +7,7 @@ import com.telelogic.rhapsody.core.*;
 
 public class MainApp extends App 
 {
-	Vector<StrategyBase> strategies;
+	Vector<AntiPatternBase> antiPatterns;
 	
 	/*
 	* This method is called on invoking an app inside Rhapsody.
@@ -21,6 +21,8 @@ public class MainApp extends App
 		
 		if(selected.getIsOfMetaClass("Project") == 1)
 		{
+			/* Control the strategies for all statecharts in selected Project */
+			
 			IRPProject irpProject = (IRPProject)selected;
 			
 			IRPCollection irpPackages = irpProject.getPackages();
@@ -41,6 +43,8 @@ public class MainApp extends App
 		}
 		else if(selected.getIsOfMetaClass("Statechart") == 1)
 		{
+			/* Control the strategies for only selected statechart */
+			
 			IRPStatechart irpStatechart = (IRPStatechart)selected;
 			
 			/* Create and initialize Statechart class object */
@@ -67,26 +71,41 @@ public class MainApp extends App
 	/* Helper functions */
 	public void createStrategies()
 	{
-		strategies = new Vector<StrategyBase>();
-		StrategyBase strategy = null;
+		antiPatterns = new Vector<AntiPatternBase>();
+		AntiPatternBase antiPattern = null;
 		
-		strategy = new _1_CSDStrategy();
-		strategies.add(strategy);
+		antiPattern = new _1_CSDAntiPattern();
+		antiPatterns.add(antiPattern);
 		
-		strategy = new _2_TBSWDHStrategy();
-		strategies.add(strategy);	
+		antiPattern = new _2_TBSWDHAntiPattern();
+		antiPatterns.add(antiPattern);	
 	
-		strategy = new _3_TWCWOEStrategy();
-		strategies.add(strategy);	
+		antiPattern = new _3_TWCWOEAntiPattern();
+		antiPatterns.add(antiPattern);
+		
+		antiPattern = new _4_ISNAntiPattern();
+		antiPatterns.add(antiPattern);
+		
+		antiPattern = new _5_ISAntiPattern();
+		antiPatterns.add(antiPattern);
+		
+		antiPattern = new _6_URSAntiPattern();
+		antiPatterns.add(antiPattern);
+		
+		antiPattern = new _7_NCAntiPattern();
+		antiPatterns.add(antiPattern);		
+		
+		antiPattern = new _8_UNSAntiPattern();
+		antiPatterns.add(antiPattern);
 	}
 	
 	public void controlStatechart(Statechart statechart)
 	{
-		Iterator<StrategyBase> iter = strategies.iterator();
+		Iterator<AntiPatternBase> iter = antiPatterns.iterator();
 		
 		while(iter.hasNext())
 		{
-			StrategyBase strategy = iter.next();
+			AntiPatternBase strategy = iter.next();
 			strategy.control(statechart);
 		}
 	}

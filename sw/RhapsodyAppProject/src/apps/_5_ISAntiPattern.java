@@ -2,20 +2,30 @@ package apps;
 
 import java.util.Iterator;
 import java.util.Vector;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * @author mehmetaktas
  * 
- * Invalid State Name
+ * Isolated State
  *
  */
-public class _4_ISNStrategy implements StrategyBase 
+public class _5_ISAntiPattern implements AntiPatternBase
 {
 	Vector<State> statesFound;
+	
+	public _5_ISAntiPattern()
+	{
+		statesFound = new Vector<State>();
+	}
+
 
 	@Override
 	public boolean control(Statechart statechart) 
 	{
+		System.out.printf("  [Control] Invalid State Name: ");
+
 		boolean bReturn = false;
 		
 		Vector<State> states = statechart.getStates();
@@ -24,7 +34,15 @@ public class _4_ISNStrategy implements StrategyBase
 		while(iter.hasNext())
 		{
 			State state = iter.next();		
-			String stateName = state.getName();
+		}
+		
+		if(bReturn)
+		{
+			System.out.printf("Found! (%d)\n", statesFound.size());		
+		}
+		else
+		{
+			System.out.printf("NOT Found!\n");
 		}
 		
 		return bReturn;
