@@ -56,7 +56,7 @@ public class _2_TBSWDHStrategy implements StrategyBase
 	}
 
 	@Override
-	public boolean Repair(Statechart statechart) 
+	public boolean repair(Statechart statechart) 
 	{
 		// TODO Auto-generated method stub
 		return false;

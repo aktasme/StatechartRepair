@@ -31,7 +31,17 @@ public class Transition extends Element
 		IRPStateVertex irpSource = irpTransition.getItsTarget();
 		Node node = statechart.getNode(irpSource.getName());
 		return node;
-	}	
+	}
+	
+	public IRPGuard getItsGuard()
+	{
+		return irpTransition.getItsGuard();
+	}
+	
+	public IRPTrigger getItsTrigger()
+	{
+		return irpTransition.getItsTrigger();
+	}
 	
 	/* Logging Functions */
 	@Override

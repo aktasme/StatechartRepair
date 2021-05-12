@@ -30,7 +30,7 @@ public class _1_CSDStrategy implements StrategyBase
 	}
 
 	@Override
-	public boolean Repair(Statechart statechart) 
+	public boolean repair(Statechart statechart) 
 	{
 		/* State machine optimization and minimization algorithm can be used for complex statechart diagrams. */
 		/* In this work no solution is recommended for this type of diagrams. */
