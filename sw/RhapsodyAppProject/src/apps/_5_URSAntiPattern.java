@@ -9,11 +9,11 @@ import java.util.Vector;
  * Unreachable State
  *
  */
-public class _6_URSAntiPattern implements AntiPatternBase
+public class _5_URSAntiPattern implements AntiPatternBase
 {
 	Vector<State> statesFound;
 	
-	public _6_URSAntiPattern()
+	public _5_URSAntiPattern()
 	{
 		statesFound = new Vector<State>();
 	}

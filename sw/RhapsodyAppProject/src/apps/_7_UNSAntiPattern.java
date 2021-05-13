@@ -3,10 +3,10 @@ package apps;
 /**
  * @author mehmetaktas
  * 
- * Nested Conditions
+ * Unnecessary State
  *
  */
-public class _7_NCAntiPattern implements AntiPatternBase
+public class _7_UNSAntiPattern implements AntiPatternBase
 {
 
 	@Override

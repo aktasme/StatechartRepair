@@ -86,16 +86,13 @@ public class MainApp extends App
 		antiPattern = new _4_ISNAntiPattern();
 		antiPatterns.add(antiPattern);
 		
-		antiPattern = new _5_ISAntiPattern();
+		antiPattern = new _5_URSAntiPattern();
 		antiPatterns.add(antiPattern);
 		
-		antiPattern = new _6_URSAntiPattern();
-		antiPatterns.add(antiPattern);
-		
-		antiPattern = new _7_NCAntiPattern();
+		antiPattern = new _6_NCAntiPattern();
 		antiPatterns.add(antiPattern);		
 		
-		antiPattern = new _8_UNSAntiPattern();
+		antiPattern = new _7_UNSAntiPattern();
 		antiPatterns.add(antiPattern);
 	}
 	
