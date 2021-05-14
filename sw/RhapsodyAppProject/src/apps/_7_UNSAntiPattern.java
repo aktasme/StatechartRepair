@@ -22,7 +22,7 @@ public class _7_UNSAntiPattern implements AntiPatternBase
 	@Override
 	public boolean control(Statechart statechart) 
 	{
-		System.out.printf("  [Control] Unreachable State: ");
+		System.out.printf("  [Control] Unnecessary State: ");
 
 		boolean bReturn = false;
 		
@@ -41,9 +41,8 @@ public class _7_UNSAntiPattern implements AntiPatternBase
 			boolean hasNoInternalTransition = (internalTransitions.size() == 0);
 			boolean isInTransitionsEventEmpty = isTransitionsEventsEmpty(inTransitions);
 			boolean isOutTransitionsEventEmpty = isTransitionsEventsEmpty(outTransitions);
-			
-			
-			if(hasNoAction && hasNoInternalTransition && isInTransitionsEventEmpty && isOutTransitionsEventEmpty)
+					
+			if(!state.isRoot() && hasNoAction && hasNoInternalTransition && isInTransitionsEventEmpty && isOutTransitionsEventEmpty)
 			{
 				statesFound.add(state);
 				bReturn = true;

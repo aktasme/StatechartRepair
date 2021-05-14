@@ -9,6 +9,7 @@ public class Transition extends Element
 	
 	public Transition(Statechart statechart, IRPTransition irpTransition)
 	{
+		super(irpTransition);
 		this.statechart = statechart;
 		this.irpTransition = irpTransition;
 	}

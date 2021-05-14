@@ -17,6 +17,7 @@ public class Node extends Element
 	
 	public Node(Statechart statechart, IRPStateVertex irpStateVertex, NodeTypeEnum type)
 	{
+		super(irpStateVertex);
 		this.statechart = statechart;
 		this.irpStateVertex = irpStateVertex;
 		this.type = type;

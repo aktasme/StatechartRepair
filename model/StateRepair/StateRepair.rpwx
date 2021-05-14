@@ -16,73 +16,7 @@
 			<isLoadOnDemand type="a">0</isLoadOnDemand>
 			<myViewsWithID type="c">
 				<IRPYRawContainer type="e">
-					<size type="a">3</size>
-					<CGEMdiDiagramParams type="e">
-						<_placement type="p">
-							<CCommon_WINDOWPLACEMENT type="e">
-								<m_nLength type="a">44</m_nLength>
-								<m_nFlags type="a">0</m_nFlags>
-								<m_showCmd type="a">1</m_showCmd>
-								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
-								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
-								<m_ptMaxPositionX type="a">-8</m_ptMaxPositionX>
-								<m_ptMaxPositionY type="a">-31</m_ptMaxPositionY>
-								<m_nLeft type="a">26</m_nLeft>
-								<m_nTop type="a">26</m_nTop>
-								<m_nRight type="a">717</m_nRight>
-								<m_nBottom type="a">541</m_nBottom>
-							</CCommon_WINDOWPLACEMENT>
-						</_placement>
-						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
-						<_theDiagram type="r">
-							<IHandle type="e">
-								<_hm2Class type="a">IStateChartDiagram</_hm2Class>
-								<_hfilename type="a">.\StateRepair_rpy\_5_IsolatedState.sbsx</_hfilename>
-								<_hsubsystem type="a">Candidates::_5_IsolatedState</_hsubsystem>
-								<_hclass type="a">IS_1</_hclass>
-								<_hname type="a">StatechartDiagram</_hname>
-								<_hid type="a">GUID bae8215b-efdd-4bdb-b2a0-7c2bbc7a4574</_hid>
-							</IHandle>
-						</_theDiagram>
-						<_UpLeft type="a">79 0 </_UpLeft>
-						<_DownRight type="a">733 455 </_DownRight>
-						<m_nDiagramIndex type="a">2</m_nDiagramIndex>
-						<m_bIsActiveView type="a">0</m_bIsActiveView>
-					</CGEMdiDiagramParams>
-					
-					<CGEMdiDiagramParams type="e">
-						<_placement type="p">
-							<CCommon_WINDOWPLACEMENT type="e">
-								<m_nLength type="a">44</m_nLength>
-								<m_nFlags type="a">0</m_nFlags>
-								<m_showCmd type="a">1</m_showCmd>
-								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
-								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
-								<m_ptMaxPositionX type="a">-8</m_ptMaxPositionX>
-								<m_ptMaxPositionY type="a">-31</m_ptMaxPositionY>
-								<m_nLeft type="a">52</m_nLeft>
-								<m_nTop type="a">52</m_nTop>
-								<m_nRight type="a">1068</m_nRight>
-								<m_nBottom type="a">548</m_nBottom>
-							</CCommon_WINDOWPLACEMENT>
-						</_placement>
-						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
-						<_theDiagram type="r">
-							<IHandle type="e">
-								<_hm2Class type="a">IStateChartDiagram</_hm2Class>
-								<_hfilename type="a">.\StateRepair_rpy\_5_IsolatedState.sbsx</_hfilename>
-								<_hsubsystem type="a">Candidates::_5_IsolatedState</_hsubsystem>
-								<_hclass type="a">IS_2</_hclass>
-								<_hname type="a">StatechartDiagram</_hname>
-								<_hid type="a">GUID 67ca5bd9-e61f-4918-a748-54498878e01a</_hid>
-							</IHandle>
-						</_theDiagram>
-						<_UpLeft type="a">0 0 </_UpLeft>
-						<_DownRight type="a">979 436 </_DownRight>
-						<m_nDiagramIndex type="a">1</m_nDiagramIndex>
-						<m_bIsActiveView type="a">0</m_bIsActiveView>
-					</CGEMdiDiagramParams>
-					
+					<size type="a">1</size>
 					<CGEMdiDiagramParams type="e">
 						<_placement type="p">
 							<CCommon_WINDOWPLACEMENT type="e">
@@ -93,21 +27,21 @@
 								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
 								<m_ptMaxPositionX type="a">-8</m_ptMaxPositionX>
 								<m_ptMaxPositionY type="a">-31</m_ptMaxPositionY>
-								<m_nLeft type="a">52</m_nLeft>
-								<m_nTop type="a">52</m_nTop>
-								<m_nRight type="a">1068</m_nRight>
-								<m_nBottom type="a">548</m_nBottom>
+								<m_nLeft type="a">0</m_nLeft>
+								<m_nTop type="a">0</m_nTop>
+								<m_nRight type="a">1012</m_nRight>
+								<m_nBottom type="a">515</m_nBottom>
 							</CCommon_WINDOWPLACEMENT>
 						</_placement>
 						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
 						<_theDiagram type="r">
 							<IHandle type="e">
 								<_hm2Class type="a">IStateChartDiagram</_hm2Class>
-								<_hfilename type="a">.\StateRepair_rpy\_1_ComplexStatechartDiagram.sbsx</_hfilename>
-								<_hsubsystem type="a">_1_ComplexStatechartDiagram</_hsubsystem>
-								<_hclass type="a">CSD_2</_hclass>
+								<_hfilename type="a">.\StateRepair_rpy\_7_UnnecessaryState.sbsx</_hfilename>
+								<_hsubsystem type="a">_7_UnnecessaryState</_hsubsystem>
+								<_hclass type="a">UNS_1</_hclass>
 								<_hname type="a">StatechartDiagram</_hname>
-								<_hid type="a">GUID 4ca3f80f-7911-45da-a93b-2b43a9c3e1c2</_hid>
+								<_hid type="a">GUID 0c61b9a8-c2e3-44f1-96d0-8208312c76d7</_hid>
 							</IHandle>
 						</_theDiagram>
 						<_UpLeft type="a">0 0 </_UpLeft>

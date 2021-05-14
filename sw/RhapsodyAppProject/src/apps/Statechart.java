@@ -75,6 +75,17 @@ public class Statechart
 				
 				nodes.add(state);
 				nodeMap.put(irpState.getName(), state);
+				
+				/* Internal transitions are not included in elements */
+				/* Create extra transitions for them */
+				IRPCollection irpTransitions =  irpState.getInternalTransitions();
+				for(int tIndex = 1; tIndex < irpTransitions.getCount() + 1; tIndex++)
+				{
+					IRPTransition irpTransition = (IRPTransition)irpTransitions.getItem(tIndex);
+					Transition transition = new Transition(this, irpTransition);
+					transitions.add(transition);
+					transitionMap.put(irpTransition.getName(), transition);
+				}
 			}
 			else if(element.getIsOfMetaClass("Condition") == 1)
 			{
@@ -97,6 +108,7 @@ public class Statechart
 			}
 			else
 			{
+				System.out.printf("findElements(): ignored element: MetaClass:%s Name:%s\n", element.getMetaClass(), element.getName());
 				/* Do not count other type of elements for now */
 			}						
 		}	

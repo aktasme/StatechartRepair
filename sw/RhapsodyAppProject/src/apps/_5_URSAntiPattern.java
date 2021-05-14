@@ -32,7 +32,7 @@ public class _5_URSAntiPattern implements AntiPatternBase
 		{
 			State state = iter.next();	
 			Vector<Transition> inTransitions = state.getInTransitions();
-			if(inTransitions.size() == 0)
+			if(!state.isRoot() && inTransitions.size() == 0)
 			{
 				statesFound.add(state);
 				bReturn = true;

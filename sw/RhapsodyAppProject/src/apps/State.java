@@ -8,6 +8,7 @@ public class State extends Node
 {
 	Statechart statechart;
 	IRPState irpState;
+	boolean isRoot;
 	
 	int depth = -1;
 	
@@ -15,7 +16,8 @@ public class State extends Node
 	{
 		super(statechart, irpState, NodeTypeEnum.NodeType_state);
 		this.statechart = statechart;
-		this.irpState = irpState;		
+		this.irpState = irpState;
+		this.isRoot = (irpState.isRoot() == 1);
 	}
 
 	/* Wrapper Functions */
@@ -43,7 +45,15 @@ public class State extends Node
 		{
 			IRPTransition irpTransition = (IRPTransition)irpTransitions.getItem(index);
 			Transition transition = statechart.getTransition(irpTransition.getName());
-			inTransitions.add(transition);
+			
+			if(transition != null)
+			{
+				inTransitions.add(transition);
+			}
+			else
+			{
+				System.out.printf("State:%s Transition:%s getInTransitions() null pointer\n", irpState.getName(), irpTransition.getName());
+			}
 		}	
 		
 		return inTransitions;
@@ -58,7 +68,14 @@ public class State extends Node
 		{
 			IRPTransition irpTransition = (IRPTransition)irpTransitions.getItem(index);
 			Transition transition = statechart.getTransition(irpTransition.getName());
-			outTransitions.add(transition);
+			if(transition != null)
+			{
+				outTransitions.add(transition);
+			}
+			else
+			{
+				System.out.printf("State:%s Transition:%s getOutTransitions() null pointer\n", irpState.getName(), irpTransition.getName());
+			}				
 		}	
 		
 		return outTransitions;
@@ -73,7 +90,15 @@ public class State extends Node
 		{
 			IRPTransition irpTransition = (IRPTransition)irpTransitions.getItem(index);
 			Transition transition = statechart.getTransition(irpTransition.getName());
-			internalTransitions.add(transition);
+
+			if(transition != null)
+			{
+				internalTransitions.add(transition);
+			}
+			else
+			{
+				System.out.printf("State:%s Transition:%s getInternalTransitions() null pointer\n", irpState.getName(), irpTransition.getName());
+			}				
 		}	
 		
 		return internalTransitions;
@@ -107,5 +132,14 @@ public class State extends Node
 	public void setDepth(int depth) 
 	{
 		this.depth = depth;
+	}
+
+	public boolean isRoot() {
+		return isRoot;
+	}
+
+	public void setRoot(boolean isRoot) 
+	{
+		this.isRoot = isRoot;
 	}
 }

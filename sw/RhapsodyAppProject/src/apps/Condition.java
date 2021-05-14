@@ -5,12 +5,12 @@ import com.telelogic.rhapsody.core.*;
 public class Condition extends Node
 {
 	Statechart statechart;
-	IRPConnector connector;
+	IRPConnector irpConnector;
 	
-	public Condition(Statechart statechart, IRPConnector connector)
+	public Condition(Statechart statechart, IRPConnector irpConnector)
 	{
-		super(statechart, connector, NodeTypeEnum.NodeType_condition);
+		super(statechart, irpConnector, NodeTypeEnum.NodeType_condition);
 		this.statechart = statechart;
-		this.connector = connector;
+		this.irpConnector = irpConnector;
 	}
 }
