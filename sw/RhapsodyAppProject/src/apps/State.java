@@ -49,6 +49,46 @@ public class State extends Node
 		return inTransitions;
 	}
 	
+	public Vector<Transition> getOutTransitions()
+	{
+		Vector<Transition> outTransitions = new Vector<Transition>();
+		
+		IRPCollection irpTransitions =  irpState.getOutTransitions();
+		for(int index = 1; index < irpTransitions.getCount() + 1; index++)
+		{
+			IRPTransition irpTransition = (IRPTransition)irpTransitions.getItem(index);
+			Transition transition = statechart.getTransition(irpTransition.getName());
+			outTransitions.add(transition);
+		}	
+		
+		return outTransitions;
+	}
+	
+	public Vector<Transition> getInternalTransitions()
+	{
+		Vector<Transition> internalTransitions = new Vector<Transition>();
+		
+		IRPCollection irpTransitions =  irpState.getInternalTransitions();
+		for(int index = 1; index < irpTransitions.getCount() + 1; index++)
+		{
+			IRPTransition irpTransition = (IRPTransition)irpTransitions.getItem(index);
+			Transition transition = statechart.getTransition(irpTransition.getName());
+			internalTransitions.add(transition);
+		}	
+		
+		return internalTransitions;
+	}
+	
+	public String getEntryAction()
+	{
+		return irpState.getEntryAction();
+	}
+	
+	public String getExitAction()
+	{
+		return irpState.getExitAction();
+	}
+
 	/* Logging Functions */
 	@Override
 	public void print() 

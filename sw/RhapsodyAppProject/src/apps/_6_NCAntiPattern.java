@@ -3,9 +3,6 @@ package apps;
 import java.util.Iterator;
 import java.util.Vector;
 
-import com.telelogic.rhapsody.core.IRPGuard;
-import com.telelogic.rhapsody.core.IRPTrigger;
-
 import apps.Node.NodeTypeEnum;
 
 /**
