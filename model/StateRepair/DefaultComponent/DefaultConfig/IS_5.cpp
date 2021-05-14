@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: IS_5
-//!	Generated Date	: Mon, 11, May 2020  
+//!	Generated Date	: Thu, 14, May 2020  
 	File Path	: DefaultComponent\DefaultConfig\IS_5.cpp
 *********************************************************************/
 
@@ -14,7 +14,7 @@
 #include "IS_5.h"
 //## event evAB()
 #include "Default.h"
-//## package _5_IsolatedState
+//## package Candidates::_5_IsolatedState
 
 //## class IS_5
 IS_5::IS_5(IOxfActive* theActiveContext) {

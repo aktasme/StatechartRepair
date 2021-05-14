@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: IS_3
-//!	Generated Date	: Mon, 11, May 2020  
+//!	Generated Date	: Thu, 14, May 2020  
 	File Path	: DefaultComponent\DefaultConfig\IS_3.cpp
 *********************************************************************/
 
@@ -12,7 +12,7 @@
 #include <oxf\omthread.h>
 //## auto_generated
 #include "IS_3.h"
-//## package _5_IsolatedState
+//## package Candidates::_5_IsolatedState
 
 //## class IS_3
 IS_3::IS_3(IOxfActive* theActiveContext) {

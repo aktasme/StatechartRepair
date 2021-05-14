@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: IS_4
-//!	Generated Date	: Mon, 11, May 2020  
+//!	Generated Date	: Thu, 14, May 2020  
 	File Path	: DefaultComponent\DefaultConfig\IS_4.cpp
 *********************************************************************/
 
@@ -14,7 +14,7 @@
 #include "IS_4.h"
 //## event evAC()
 #include "Default.h"
-//## package _5_IsolatedState
+//## package Candidates::_5_IsolatedState
 
 //## class IS_4
 IS_4::IS_4(IOxfActive* theActiveContext) {

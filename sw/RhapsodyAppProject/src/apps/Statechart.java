@@ -56,8 +56,8 @@ public class Statechart
 	{
 		findElements();
 		initializeStates();
-		export();
 		print();
+		export();
 	}
 	
 	public void findElements()

@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: NC_5
-//!	Generated Date	: Mon, 11, May 2020  
+//!	Generated Date	: Thu, 14, May 2020  
 	File Path	: DefaultComponent\DefaultConfig\NC_5.h
 *********************************************************************/
 
@@ -19,7 +19,7 @@
 #include <oxf\state.h>
 //## auto_generated
 #include <oxf\event.h>
-//## package _7_NestedConditions
+//## package _6_NestedConditions
 
 //## class NC_5
 class NC_5 : public OMReactive {

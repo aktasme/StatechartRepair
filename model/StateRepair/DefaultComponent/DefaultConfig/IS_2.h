@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: IS_2
-//!	Generated Date	: Mon, 11, May 2020  
+//!	Generated Date	: Thu, 14, May 2020  
 	File Path	: DefaultComponent\DefaultConfig\IS_2.h
 *********************************************************************/
 
@@ -19,7 +19,7 @@
 #include <oxf\state.h>
 //## auto_generated
 #include <oxf\event.h>
-//## package _5_IsolatedState
+//## package Candidates::_5_IsolatedState
 
 //## class IS_2
 class IS_2 : public OMReactive {
