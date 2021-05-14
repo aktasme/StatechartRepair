@@ -11,9 +11,9 @@
 			<_id type="a">GUID 083fa868-339b-4442-bb89-b3d657a25625</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">Candidates</_name>
-			<_modifiedTimeWeak type="a">5.14.2020::9:13:44</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">5.14.2020::17:0:37</_modifiedTimeWeak>
 			<_modifiedTime type="a">5.14.2020::9:13:44</_modifiedTime>
-			<weakCGTime type="a">5.14.2020::9:13:44</weakCGTime>
+			<weakCGTime type="a">5.14.2020::17:0:37</weakCGTime>
 			<strongCGTime type="a">5.2.2020::19:23:26</strongCGTime>
 			<_defaultComposite type="s">GUID 30b84819-c984-4818-aa17-2b6a823beaac</_defaultComposite>
 			<_eventsBaseID type="a">-1</_eventsBaseID>
@@ -47,9 +47,9 @@
 			<_id type="a">GUID 395d245a-e23c-4cdd-ad1c-3e39ae9b13aa</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">NonDeterminism</_name>
-			<_modifiedTimeWeak type="a">4.7.2021::14:14:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.2.2020::19:23:30</_modifiedTime>
-			<_lastID type="a">1</_lastID>
+			<_modifiedTimeWeak type="a">5.14.2020::17:0:37</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.14.2020::17:0:37</_modifiedTime>
+			<_lastID type="a">2</_lastID>
 			<weakCGTime type="a">4.7.2021::14:14:0</weakCGTime>
 			<strongCGTime type="a">5.2.2020::19:23:30</strongCGTime>
 			<_itsStateChart type="r">

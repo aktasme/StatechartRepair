@@ -54,6 +54,7 @@ public class Statechart
 	
 	public void initialize()
 	{
+		copyStatechart();
 		findElements();
 		initializeStates();
 		print();
@@ -137,6 +138,14 @@ public class Statechart
 		}
 	}
 	
+	public void copyStatechart()
+	{
+		irpClass.addStatechart();
+		IRPStatechart newIRPStatechart = (IRPStatechart)irpClass.getBehavioralDiagrams().getItem(2);
+		
+		newIRPStatechart = irpStatechart;
+	}
+	
 	/* Helper Functions */
 	public void export()
 	{
@@ -209,7 +218,8 @@ public class Statechart
 		this.complexity = complexity;
 	}
 
-	public Vector<State> getStates() {
+	public Vector<State> getStates() 
+	{
 		return states;
 	}
 
