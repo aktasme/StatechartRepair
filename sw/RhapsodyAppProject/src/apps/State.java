@@ -24,7 +24,7 @@ public class State extends Node
 		Vector<State> subStates = new Vector<State>();
 		
 		IRPCollection irpSubStates = irpState.getSubStates();
-		for(int index = 1; index < irpSubStates.getCount()+1; index++)
+		for(int index = 1; index < irpSubStates.getCount() + 1; index++)
 		{
 			IRPState irpState = (IRPState)irpSubStates.getItem(index);
 			State state = statechart.getState(irpState.getName());
@@ -37,6 +37,14 @@ public class State extends Node
 	public Vector<Transition> getInTransitions()
 	{
 		Vector<Transition> inTransitions = new Vector<Transition>();
+		
+		IRPCollection irpTransitions =  irpState.getInTransitions();
+		for(int index = 1; index < irpTransitions.getCount() + 1; index++)
+		{
+			IRPTransition irpTransition = (IRPTransition)irpTransitions.getItem(index);
+			Transition transition = statechart.getTransition(irpTransition.getName());
+			inTransitions.add(transition);
+		}	
 		
 		return inTransitions;
 	}

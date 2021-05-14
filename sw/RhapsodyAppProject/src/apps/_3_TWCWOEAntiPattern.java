@@ -22,7 +22,7 @@ public class _3_TWCWOEAntiPattern implements AntiPatternBase
 	@Override
 	public boolean control(Statechart statechart) 
 	{
-		System.out.printf("  [Control] Transition with Condition without Event:");
+		System.out.printf("  [Control] Transition with Condition without Event: ");
 
 		boolean bReturn = false;
 		Vector<Transition> transitions = statechart.getTransitions();

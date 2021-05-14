@@ -30,7 +30,13 @@ public class _5_URSAntiPattern implements AntiPatternBase
 		
 		while(iter.hasNext())
 		{
-			State state = iter.next();		
+			State state = iter.next();	
+			Vector<Transition> inTransitions = state.getInTransitions();
+			if(inTransitions.size() == 0)
+			{
+				statesFound.add(state);
+				bReturn = true;
+			}
 		}
 		
 		if(bReturn)

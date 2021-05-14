@@ -22,7 +22,7 @@ public class _2_TBSWDHAntiPattern implements AntiPatternBase
 	@Override
 	public boolean control(Statechart statechart) 
 	{
-		System.out.printf("  [Control] Transition Between States with Different Hierarchy:");
+		System.out.printf("  [Control] Transition Between States with Different Hierarchy: ");
 		
 		boolean bReturn = false;
 		Vector<Transition> transitions = statechart.getTransitions();
