@@ -7,10 +7,11 @@ import com.telelogic.rhapsody.core.*;
 
 public class Statechart
 {
+	final String RepairedPath = "D:\\GitHub\\StatechartRepair\\model\\Repaired\\";
 	final String ExportPath = "D:\\GitHub\\StatechartRepair\\doc\\exports\\";
 	final String ExportExt = ".emf";
 
-	
+	IRPApplication rhapsody;
 	IRPPackage irpPackage;
 	IRPClass irpClass;
 	IRPStatechart irpStatechart;
@@ -31,8 +32,9 @@ public class Statechart
 
 	float complexity = 0;
 	
-	public Statechart(IRPStatechart irpStatechart)
+	public Statechart(IRPApplication rhapsody, IRPStatechart irpStatechart)
 	{
+		this.rhapsody = rhapsody;
 		this.irpStatechart = irpStatechart;
 		this.irpRoot = irpStatechart.getRootState();
 		this.irpElements = irpStatechart.getElementsInDiagram();
@@ -54,7 +56,6 @@ public class Statechart
 	
 	public void initialize()
 	{
-		copyStatechart();
 		findElements();
 		initializeStates();
 		print();
@@ -137,15 +138,7 @@ public class Statechart
 			}
 		}
 	}
-	
-	public void copyStatechart()
-	{
-		irpClass.addStatechart();
-		IRPStatechart newIRPStatechart = (IRPStatechart)irpClass.getBehavioralDiagrams().getItem(2);
 		
-		newIRPStatechart = irpStatechart;
-	}
-	
 	/* Helper Functions */
 	public void export()
 	{

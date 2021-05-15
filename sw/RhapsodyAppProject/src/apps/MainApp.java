@@ -7,6 +7,8 @@ import com.telelogic.rhapsody.core.*;
 
 public class MainApp extends App 
 {
+	final String TargetProjectName = "AutoRepaired";
+	
 	Vector<AntiPatternBase> antiPatterns;
 	
 	/*
@@ -20,22 +22,22 @@ public class MainApp extends App
 		createStrategies();
 		
 		if(selected.getIsOfMetaClass("Project") == 1)
-		{
-			/* Control the strategies for all statecharts in selected Project */
+		{		
+			/* Copy project to a new project for working on it without changing original one */
+			IRPProject targetProject = copyProject(rhapsody, selected);
 			
-			IRPProject irpProject = (IRPProject)selected;
-			
-			IRPCollection irpPackages = irpProject.getPackages();
-			for(int packageIndex = 1; packageIndex <= irpPackages.getCount(); packageIndex++)
+			/* Work on target project */
+			IRPCollection targetProjectPackages = targetProject.getPackages();
+			for(int packageIndex = 1; packageIndex <= targetProjectPackages.getCount(); packageIndex++)
 			{
-				IRPPackage irpPackage = (IRPPackage)irpPackages.getItem(packageIndex);				
+				IRPPackage irpPackage = (IRPPackage)targetProjectPackages.getItem(packageIndex);				
 				IRPCollection irpClasses = irpPackage.getClasses();
 				for(int classIndex = 1; classIndex <= irpClasses.getCount(); classIndex++)
 				{
 					IRPClass irpClass = (IRPClass)irpClasses.getItem(classIndex);					
 					IRPStatechart irpStatechart = irpClass.getStatechart();
 					
-					Statechart statechart = new Statechart(irpStatechart);
+					Statechart statechart = new Statechart(rhapsody, irpStatechart);
 					statechart.initialize();
 					controlStatechart(statechart);	
 				}
@@ -48,7 +50,7 @@ public class MainApp extends App
 			IRPStatechart irpStatechart = (IRPStatechart)selected;
 			
 			/* Create and initialize Statechart class object */
-			Statechart statechart = new Statechart(irpStatechart);
+			Statechart statechart = new Statechart(rhapsody, irpStatechart);
 			statechart.initialize();
 			controlStatechart(statechart);								
 		}
@@ -94,6 +96,67 @@ public class MainApp extends App
 		
 		antiPattern = new _7_UNSAntiPattern();
 		antiPatterns.add(antiPattern);
+	}
+	
+	public IRPProject copyProject(IRPApplication rhapsody, IRPModelElement selected)
+	{
+		IRPProject targetProject = null;
+		
+		IRPCollection projects = rhapsody.getProjects();
+		if(projects.getCount() == 1)
+		{
+			/* Create target project */
+			IRPProject sourceProject = (IRPProject)selected;
+			System.out.printf("Source Project: %s\n", sourceProject.getName());
+			
+			String projectPath = sourceProject.getCurrentDirectory();
+			String repairedProjectPath = projectPath + "_" + TargetProjectName;
+			
+			rhapsody.createAndInsertProject(repairedProjectPath, TargetProjectName);
+			projects = rhapsody.getProjects();
+			targetProject = (IRPProject)projects.getItem(2);
+			
+			IRPCollection sourceProjectPackages = sourceProject.getPackages();
+			for(int packageIndex = 1; packageIndex <= sourceProjectPackages.getCount(); packageIndex++)
+			{
+				boolean copyPackage = false;
+				IRPPackage irpPackage = (IRPPackage)sourceProjectPackages.getItem(packageIndex);
+				IRPCollection irpClasses = irpPackage.getClasses();			
+				for(int classIndex = 1; classIndex <= irpClasses.getCount(); classIndex++)
+				{
+					IRPClass irpClass = (IRPClass)irpClasses.getItem(classIndex);					
+					IRPStatechart irpStatechart = irpClass.getStatechart();
+					
+					if(irpStatechart != null)
+					{
+						copyPackage = true;
+						break;
+					}
+				}
+			
+				if(copyPackage)
+				{
+					irpPackage.copyToAnotherProject(targetProject);
+				}
+			}
+		}
+		else
+		{
+			/* Find Target Project */
+			for(int projectIndex = 1; projectIndex <= projects.getCount(); projectIndex++)
+			{
+				IRPProject project = (IRPProject)projects.getItem(projectIndex);
+			
+				if(project.getName().equals(TargetProjectName))
+				{
+					targetProject = project;
+				}
+			}
+		}
+		
+		System.out.printf("Target Project: %s\n", targetProject.getName());
+		
+		return targetProject;
 	}
 	
 	public void controlStatechart(Statechart statechart)

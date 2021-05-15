@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RhapsodyArchive>
+	<MagicNumber></MagicNumber>
+	<CODE-PAGE>1254</CODE-PAGE>
+	<version>100.840.0</version>
+	<lang>C++</lang>
+	<BuildNo>9841247</BuildNo>
+	
+	<RHAPSODY-MODEL>
+	<IWorkspace type="e">
+			<m_SavedActiveProjectsName type="a">AutoRepaired</m_SavedActiveProjectsName>
+			<_id type="a">GUID a7bf8444-7bd7-467f-b807-d57745af87c2</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">Projects</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.15.2020::15:57:10</_modifiedTime>
+			<AggregatesList type="e">
+				<value>GUID dd3a83ec-04ca-4555-8614-5df00e063c79</value>
+				<value>GUID 784a68ed-2783-47f4-a015-c71c6e600f29</value>
+			</AggregatesList>
+		</IWorkspace>
+		<IProject type="e">
+			<fileName type="a">StateRepair</fileName>
+			<_persistAs type="a">D:\GitHub\StatechartRepair\model\StateRepair</_persistAs>
+			<_id type="a">GUID dd3a83ec-04ca-4555-8614-5df00e063c79</_id>
+		</IProject>
+		<IProject type="e">
+			<fileName type="a">AutoRepaired</fileName>
+			<_persistAs type="a">D:\GitHub\StatechartRepair\model\StateRepair_AutoRepaired</_persistAs>
+			<_id type="a">GUID 784a68ed-2783-47f4-a015-c71c6e600f29</_id>
+		</IProject>
+		
+	</RHAPSODY-MODEL>
+	<OslcLinks type="c">
+		<IRPYRawContainer type="e">
+			<size type="a">0</size>
+		</IRPYRawContainer>
+	</OslcLinks>
+
+<INCLUDES-RHAPSODY-INDEX>false</INCLUDES-RHAPSODY-INDEX>
+</RhapsodyArchive>
+
