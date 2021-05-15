@@ -7,7 +7,7 @@ import com.telelogic.rhapsody.core.*;
 
 public class Statechart
 {
-	final String RepairedPath = "D:\\GitHub\\StatechartRepair\\model\\Repaired\\";
+
 	final String ExportPath = "D:\\GitHub\\StatechartRepair\\doc\\exports\\";
 	final String ExportExt = ".emf";
 
