@@ -8,11 +8,11 @@
 	
 	<RHAPSODY-MODEL>
 	<IProject type="e">
-			<_id type="a">GUID 784a68ed-2783-47f4-a015-c71c6e600f29</_id>
+			<_id type="a">GUID c8000250-42f5-4bda-aec0-074be33ed51f</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">AutoRepaired</_name>
-			<_modifiedTimeWeak type="a">5.15.2020::15:57:10</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.15.2020::15:57:10</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.16.2020::15:7:51</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.16.2020::15:7:51</_modifiedTime>
 			<_UserColors type="w">
 				<IRPYRawContainer type="e">
 					<size type="a">16</size>
@@ -38,14 +38,14 @@
 				<ISubsystemHandle type="e">
 					<_hm2Class type="a">ISubsystem</_hm2Class>
 					<_hname type="a">Default</_hname>
-					<_hid type="a">GUID aa5b4653-9adc-4e76-a1d7-4e347fe03745</_hid>
+					<_hid type="a">GUID 2155ec25-2140-40a6-956d-dc0f099c3dff</_hid>
 				</ISubsystemHandle>
 			</_defaultSubsystem>
 			<_component type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IComponent</_hm2Class>
 					<_hname type="a">DefaultComponent</_hname>
-					<_hid type="a">GUID 3a01a35b-428d-44d2-8010-723fc3a76be6</_hid>
+					<_hid type="a">GUID adaddae6-a2b7-4d4c-8cbb-2a240fb0a114</_hid>
 				</IHandle>
 			</_component>
 			<Multiplicities type="c">
@@ -90,7 +90,7 @@
 				</IRPYRawContainer>
 			</mapAssociationsToRemove>
 			<AggregatesList type="e">
-				<value>GUID aa5b4653-9adc-4e76-a1d7-4e347fe03745</value>
+				<value>GUID 2155ec25-2140-40a6-956d-dc0f099c3dff</value>
 				<value>GUID e83826f1-aa21-4ebc-bb81-aaf0d6083267</value>
 				<value>GUID a78ff901-06c2-4992-bcde-e77f5fbb7861</value>
 				<value>GUID ff29f7ed-650e-4c99-a93c-5095623a1ee5</value>
@@ -98,13 +98,12 @@
 				<value>GUID 450791d4-3b60-46df-86ae-f4192eee1c0b</value>
 				<value>GUID 1ae91ca2-3599-44c0-a926-34d5b56611dc</value>
 				<value>GUID 97266355-d7a7-4b32-80f8-0f85960164b3</value>
-				<value>GUID 083fa868-339b-4442-bb89-b3d657a25625</value>
-				<value>GUID 3a01a35b-428d-44d2-8010-723fc3a76be6</value>
+				<value>GUID adaddae6-a2b7-4d4c-8cbb-2a240fb0a114</value>
 			</AggregatesList>
 		</IProject>
 		<ISubsystem type="e">
 			<fileName type="a">Default</fileName>
-			<_id type="a">GUID aa5b4653-9adc-4e76-a1d7-4e347fe03745</_id>
+			<_id type="a">GUID 2155ec25-2140-40a6-956d-dc0f099c3dff</_id>
 		</ISubsystem>
 		<ISubsystem type="e">
 			<fileName type="a">_1_ComplexStatechartDiagram</fileName>
@@ -134,13 +133,9 @@
 			<fileName type="a">_6_NestedConditions</fileName>
 			<_id type="a">GUID 97266355-d7a7-4b32-80f8-0f85960164b3</_id>
 		</ISubsystem>
-		<ISubsystem type="e">
-			<fileName type="a">Candidates</fileName>
-			<_id type="a">GUID 083fa868-339b-4442-bb89-b3d657a25625</_id>
-		</ISubsystem>
 		<IComponent type="e">
 			<fileName type="a">DefaultComponent</fileName>
-			<_id type="a">GUID 3a01a35b-428d-44d2-8010-723fc3a76be6</_id>
+			<_id type="a">GUID adaddae6-a2b7-4d4c-8cbb-2a240fb0a114</_id>
 		</IComponent>
 		
 	</RHAPSODY-MODEL>

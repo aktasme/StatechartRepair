@@ -6,7 +6,7 @@ package apps;
  * Complex Statechart Diagram
  * 
  */
-public class _1_CSDAntiPattern implements AntiPatternBase
+public class _1_CSDAntiPattern extends AntiPatternBase
 {
 	final float COMPLEXITY_THRESHOLD = 2;
 	
@@ -15,8 +15,6 @@ public class _1_CSDAntiPattern implements AntiPatternBase
 	@Override
 	public boolean control(Statechart statechart) 
 	{
-		System.out.printf("  [Control] Complex Statechart Diagram: ");
-
 		boolean bReturn = false;
 		
 		complexity = (float)statechart.getTransitionCount() / (float)statechart.getStateCount();
@@ -24,14 +22,10 @@ public class _1_CSDAntiPattern implements AntiPatternBase
 		if(complexity >= COMPLEXITY_THRESHOLD)
 		{
 			bReturn = true;
-			System.out.printf("True! (%f)\n", complexity);
-		}
-		else
-		{
-			System.out.printf("False! (%f)\n", complexity);			
 		}
 		
 		statechart.setComplexity(complexity);
+		statechart.setCSD(bReturn);
 		
 		return bReturn;
 	}

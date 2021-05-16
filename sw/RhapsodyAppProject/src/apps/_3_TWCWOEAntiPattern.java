@@ -10,7 +10,7 @@ import com.telelogic.rhapsody.core.*;
  * Transition with Condition without Event
  *
  */
-public class _3_TWCWOEAntiPattern implements AntiPatternBase
+public class _3_TWCWOEAntiPattern extends AntiPatternBase
 {
 	Vector<Transition> transitionsFound;
 
@@ -22,8 +22,6 @@ public class _3_TWCWOEAntiPattern implements AntiPatternBase
 	@Override
 	public boolean control(Statechart statechart) 
 	{
-		System.out.printf("  [Control] Transition with Condition without Event: ");
-
 		boolean bReturn = false;
 		Vector<Transition> transitions = statechart.getTransitions();
 		Iterator<Transition> iter = transitions.iterator();
@@ -41,14 +39,7 @@ public class _3_TWCWOEAntiPattern implements AntiPatternBase
 			}			
 		}
 		
-		if(bReturn)
-		{
-			System.out.printf("Found! (%d)\n", transitionsFound.size());		
-		}
-		else
-		{
-			System.out.printf("NOT Found!\n");
-		}
+		statechart.setTWCWOE(bReturn);
 		
 		return bReturn;
 	}

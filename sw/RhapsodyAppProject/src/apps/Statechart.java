@@ -5,9 +5,8 @@ import java.io.File;
 import java.util.HashMap;
 import com.telelogic.rhapsody.core.*;
 
-public class Statechart
+public class Statechart extends Element
 {
-
 	final String ExportPath = "D:\\GitHub\\StatechartRepair\\doc\\exports\\";
 	final String ExportExt = ".emf";
 
@@ -32,8 +31,18 @@ public class Statechart
 
 	float complexity = 0;
 	
+	boolean isCSD = false;
+	boolean isTBSWDH = false;
+	boolean isTWCWOE = false;
+	boolean isISN = false;
+	boolean isURS = false;
+	boolean isNC = false;
+	boolean isUNS = false;
+	
 	public Statechart(IRPApplication rhapsody, IRPStatechart irpStatechart)
 	{
+		super(irpStatechart);
+		
 		this.rhapsody = rhapsody;
 		this.irpStatechart = irpStatechart;
 		this.irpRoot = irpStatechart.getRootState();
@@ -58,8 +67,23 @@ public class Statechart
 	{
 		findElements();
 		initializeStates();
-		print();
+		//print();
 		export();
+	}
+	
+	public void reset()
+	{
+		states.clear();
+		stateMap.clear();
+		conditions.clear();
+		conditionMap.clear();
+		nodes.clear();
+		nodeMap.clear();
+		transitions.clear();
+		transitionMap.clear();
+		
+		findElements();
+		initializeStates();
 	}
 	
 	public void findElements()
@@ -134,6 +158,12 @@ public class Statechart
 			{
 				State child = subStates.get(index);
 				child.setDepth(state.getDepth() + 1);
+				
+				if(subStates.size() == 1)
+				{
+					child.setDefault(true);
+				}
+						
 				queue.add(child);
 			}
 		}
@@ -152,7 +182,7 @@ public class Statechart
 		}
 		
 		irpStatechart.getPicture(exportName);
-		System.out.printf("  Export %s to %s\n", irpClass.getName(), exportName);	
+		//System.out.printf("  Export %s to %s\n", irpClass.getName(), exportName);	
 	}
 	
 	/* Wrapper Functions */
@@ -180,16 +210,30 @@ public class Statechart
 		return transition;
 	}
 	
-	/* Logging Functions */
-	public void print()
+	public void deleteState(State state)
 	{
-		System.out.printf("\nStatechart %s:\n", irpClass.getName());
-		System.out.printf("  #Nodes: %d\n", nodes.size());
-		System.out.printf("  #States: %d\n", states.size());
-		System.out.printf("  #Conditions: %d\n", conditions.size());
-		System.out.printf("  #Transitions: %d\n", transitions.size());
+		irpStatechart.deleteState(state.getIrpState());
+		states.remove(state);
+		stateMap.remove(state.getName());
 	}
 	
+	public void deleteTransition(Transition transition)
+	{
+		transitions.remove(transition);
+		transitionMap.remove(transition.getName());
+	}
+		
+	/* Logging Functions */
+	@Override
+	public String toPrintableString() 
+	{
+		String mainProperties = String.format("%-10s: %2d %2d %2d %2d", irpClass.getName(), nodes.size(), states.size(), conditions.size(), transitions.size());
+		String antiPatternProperties = String.format(" | %s %s %s %s %s %s %s", toString(isCSD), toString(isTBSWDH), toString(isTWCWOE), toString(isISN), toString(isURS), toString(isNC), toString(isUNS));
+		String extraProperties = String.format(" | %10f", complexity);
+		printableString = mainProperties + antiPatternProperties + extraProperties;
+		return printableString;
+	}
+
 	/* Getters and Setters */
 	public int getStateCount() 
 	{
@@ -230,7 +274,74 @@ public class Statechart
 	{
 		this.transitions = transitions;
 	}
-	
-	
 
+	public boolean isCSD() 
+	{
+		return isCSD;
+	}
+
+	public void setCSD(boolean isCSD) 
+	{
+		this.isCSD = isCSD;
+	}
+
+	public boolean isTBSWDH()
+	{
+		return isTBSWDH;
+	}
+
+	public void setTBSWDH(boolean isTBSWDH) 
+	{
+		this.isTBSWDH = isTBSWDH;
+	}
+
+	public boolean isTWCWOE() 
+	{
+		return isTWCWOE;
+	}
+
+	public void setTWCWOE(boolean isTWCWOE) 
+	{
+		this.isTWCWOE = isTWCWOE;
+	}
+
+	public boolean isISN() 
+	{
+		return isISN;
+	}
+
+	public void setISN(boolean isISN) 
+	{
+		this.isISN = isISN;
+	}
+
+	public boolean isURS() 
+	{
+		return isURS;
+	}
+
+	public void setURS(boolean isURS) 
+	{
+		this.isURS = isURS;
+	}
+
+	public boolean isNC() 
+	{
+		return isNC;
+	}
+
+	public void setNC(boolean isNC) 
+	{
+		this.isNC = isNC;
+	}
+
+	public boolean isUNS() 
+	{
+		return isUNS;
+	}
+
+	public void setUNS(boolean isUNS) 
+	{
+		this.isUNS = isUNS;
+	}
 }

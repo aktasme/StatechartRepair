@@ -12,6 +12,7 @@ public class Transition extends Element
 		super(irpTransition);
 		this.statechart = statechart;
 		this.irpTransition = irpTransition;
+		this.name = irpTransition.getName();
 	}
 	
 	/* Wrapper Functions */
@@ -43,7 +44,27 @@ public class Transition extends Element
 	{
 		return irpTransition.getItsTrigger();
 	}
+		
+	public String getName() 
+	{
+		return name;
+	}
+
+	public void setName(String name) 
+	{
+		this.name = name;
+	}
 	
+	public IRPTransition getIrpTransition() 
+	{
+		return irpTransition;
+	}
+
+	public void setIrpTransition(IRPTransition irpTransition) 
+	{
+		this.irpTransition = irpTransition;
+	}
+
 	/* Logging Functions */
 	@Override
 	public void print() 

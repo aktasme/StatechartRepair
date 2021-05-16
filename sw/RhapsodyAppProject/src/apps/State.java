@@ -1,23 +1,23 @@
 package apps;
 
+import java.util.Iterator;
 import java.util.Vector;
-
 import com.telelogic.rhapsody.core.*;
 
 public class State extends Node
 {
-	Statechart statechart;
 	IRPState irpState;
 	boolean isRoot;
+	boolean isDefault;
 	
 	int depth = -1;
 	
 	public State(Statechart statechart, IRPState irpState)
 	{
 		super(statechart, irpState, NodeTypeEnum.NodeType_state);
-		this.statechart = statechart;
 		this.irpState = irpState;
 		this.isRoot = (irpState.isRoot() == 1);
+		this.isDefault = false;
 	}
 
 	/* Wrapper Functions */
@@ -26,7 +26,7 @@ public class State extends Node
 		Vector<State> subStates = new Vector<State>();
 		
 		IRPCollection irpSubStates = irpState.getSubStates();
-		for(int index = 1; index < irpSubStates.getCount() + 1; index++)
+		for(int index = 1; index <= irpSubStates.getCount(); index++)
 		{
 			IRPState irpState = (IRPState)irpSubStates.getItem(index);
 			State state = statechart.getState(irpState.getName());
@@ -41,7 +41,7 @@ public class State extends Node
 		Vector<Transition> inTransitions = new Vector<Transition>();
 		
 		IRPCollection irpTransitions =  irpState.getInTransitions();
-		for(int index = 1; index < irpTransitions.getCount() + 1; index++)
+		for(int index = 1; index <= irpTransitions.getCount(); index++)
 		{
 			IRPTransition irpTransition = (IRPTransition)irpTransitions.getItem(index);
 			Transition transition = statechart.getTransition(irpTransition.getName());
@@ -64,7 +64,7 @@ public class State extends Node
 		Vector<Transition> outTransitions = new Vector<Transition>();
 		
 		IRPCollection irpTransitions =  irpState.getOutTransitions();
-		for(int index = 1; index < irpTransitions.getCount() + 1; index++)
+		for(int index = 1; index <= irpTransitions.getCount(); index++)
 		{
 			IRPTransition irpTransition = (IRPTransition)irpTransitions.getItem(index);
 			Transition transition = statechart.getTransition(irpTransition.getName());
@@ -86,7 +86,7 @@ public class State extends Node
 		Vector<Transition> internalTransitions = new Vector<Transition>();
 		
 		IRPCollection irpTransitions =  irpState.getInternalTransitions();
-		for(int index = 1; index < irpTransitions.getCount() + 1; index++)
+		for(int index = 1; index <= irpTransitions.getCount(); index++)
 		{
 			IRPTransition irpTransition = (IRPTransition)irpTransitions.getItem(index);
 			Transition transition = statechart.getTransition(irpTransition.getName());
@@ -113,7 +113,29 @@ public class State extends Node
 	{
 		return irpState.getExitAction();
 	}
-
+	
+	public void deleteTransitions()
+	{
+		Vector<Transition> internalTransitions = getInternalTransitions();
+		Vector<Transition> inTransitions = getInTransitions();
+		Vector<Transition> outTransitions = getOutTransitions();
+		
+		deleteTransitions(internalTransitions);
+		deleteTransitions(inTransitions);
+		deleteTransitions(outTransitions);
+	}
+	
+	public void deleteTransitions(Vector<Transition> transitions)
+	{
+		Iterator<Transition> iter = transitions.iterator();
+		while(iter.hasNext())
+		{
+			Transition transition = iter.next();
+			irpState.deleteTransition(transition.getIrpTransition());
+			statechart.deleteTransition(transition);
+		}
+	}
+	
 	/* Logging Functions */
 	@Override
 	public void print() 
@@ -141,5 +163,25 @@ public class State extends Node
 	public void setRoot(boolean isRoot) 
 	{
 		this.isRoot = isRoot;
+	}
+
+	public IRPState getIrpState() 
+	{
+		return irpState;
+	}
+
+	public void setIrpState(IRPState irpState) 
+	{
+		this.irpState = irpState;
+	}
+
+	public boolean isDefault() 
+	{
+		return isDefault;
+	}
+
+	public void setDefault(boolean isDefault) 
+	{
+		this.isDefault = isDefault;
 	}
 }

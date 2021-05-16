@@ -11,7 +11,7 @@ import apps.Node.NodeTypeEnum;
  * Nested Conditions
  *
  */
-public class _6_NCAntiPattern implements AntiPatternBase
+public class _6_NCAntiPattern extends AntiPatternBase
 {
 	Vector<Transition> transitionsFound;
 
@@ -23,8 +23,6 @@ public class _6_NCAntiPattern implements AntiPatternBase
 	@Override
 	public boolean control(Statechart statechart) 
 	{
-		System.out.printf("  [Control] Nested Conditions: ");
-
 		boolean bReturn = false;
 		Vector<Transition> transitions = statechart.getTransitions();
 		Iterator<Transition> iter = transitions.iterator();
@@ -43,15 +41,8 @@ public class _6_NCAntiPattern implements AntiPatternBase
 			}			
 		}
 		
-		if(bReturn)
-		{
-			System.out.printf("Found! (%d)\n", transitionsFound.size());		
-		}
-		else
-		{
-			System.out.printf("NOT Found!\n");
-		}
-		
+		statechart.setNC(bReturn);
+				
 		return bReturn;
 	}
 

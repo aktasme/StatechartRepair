@@ -11,8 +11,8 @@
 			<_id type="a">GUID dd3a83ec-04ca-4555-8614-5df00e063c79</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">StateRepair</_name>
-			<_modifiedTimeWeak type="a">5.14.2020::9:13:44</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.14.2020::9:13:44</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.16.2020::15:7:25</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.16.2020::15:7:25</_modifiedTime>
 			<_lastID type="a">9</_lastID>
 			<_UserColors type="w">
 				<IRPYRawContainer type="e">
@@ -96,7 +96,6 @@
 				<value>GUID 450791d4-3b60-46df-86ae-f4192eee1c0b</value>
 				<value>GUID 1ae91ca2-3599-44c0-a926-34d5b56611dc</value>
 				<value>GUID 97266355-d7a7-4b32-80f8-0f85960164b3</value>
-				<value>GUID 083fa868-339b-4442-bb89-b3d657a25625</value>
 				<value>GUID 6701f63c-49d2-41f6-a58d-ebe89b8066a0</value>
 				<value>GUID cc21df0a-2a59-40bd-b3a3-7f3ac021355d</value>
 			</AggregatesList>
@@ -142,10 +141,6 @@
 		<ISubsystem type="e">
 			<fileName type="a">_6_NestedConditions</fileName>
 			<_id type="a">GUID 97266355-d7a7-4b32-80f8-0f85960164b3</_id>
-		</ISubsystem>
-		<ISubsystem type="e">
-			<fileName type="a">Candidates</fileName>
-			<_id type="a">GUID 083fa868-339b-4442-bb89-b3d657a25625</_id>
 		</ISubsystem>
 		<IDiagram type="e">
 			<_id type="a">GUID 6701f63c-49d2-41f6-a58d-ebe89b8066a0</_id>

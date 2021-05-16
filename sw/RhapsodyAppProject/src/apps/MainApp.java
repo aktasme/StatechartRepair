@@ -5,7 +5,7 @@ import java.util.Iterator;
 import com.ibm.rhapsody.apps.*;
 import com.telelogic.rhapsody.core.*;
 
-public class MainApp extends App 
+public class MainApp extends App
 {
 	final String TargetProjectName = "AutoRepaired";
 	
@@ -20,6 +20,7 @@ public class MainApp extends App
 	{
 		/* Create all strategies */
 		createStrategies();
+		print();
 		
 		if(selected.getIsOfMetaClass("Project") == 1)
 		{		
@@ -39,7 +40,8 @@ public class MainApp extends App
 					
 					Statechart statechart = new Statechart(rhapsody, irpStatechart);
 					statechart.initialize();
-					controlStatechart(statechart);	
+					runAntiPattern(statechart);	
+					statechart.print();
 				}
 			}			
 		}
@@ -52,7 +54,8 @@ public class MainApp extends App
 			/* Create and initialize Statechart class object */
 			Statechart statechart = new Statechart(rhapsody, irpStatechart);
 			statechart.initialize();
-			controlStatechart(statechart);								
+			runAntiPattern(statechart);	
+			statechart.print();
 		}
 		else
 		{
@@ -107,7 +110,6 @@ public class MainApp extends App
 		{
 			/* Create target project */
 			IRPProject sourceProject = (IRPProject)selected;
-			System.out.printf("Source Project: %s\n", sourceProject.getName());
 			
 			String projectPath = sourceProject.getCurrentDirectory();
 			String repairedProjectPath = projectPath + "_" + TargetProjectName;
@@ -154,19 +156,23 @@ public class MainApp extends App
 			}
 		}
 		
-		System.out.printf("Target Project: %s\n", targetProject.getName());
-		
 		return targetProject;
 	}
 	
-	public void controlStatechart(Statechart statechart)
+	public void runAntiPattern(Statechart statechart)
 	{
 		Iterator<AntiPatternBase> iter = antiPatterns.iterator();
 		
 		while(iter.hasNext())
 		{
 			AntiPatternBase strategy = iter.next();
-			strategy.control(statechart);
+			strategy.run(statechart);
 		}
+	}
+	
+	/* Logging functions */
+	public void print()
+	{
+		System.out.printf("%-10s: #N #S #C #T | 1 2 3 4 5 6 7 | %-10s\n", "Name", "Complexity");
 	}
 }

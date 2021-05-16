@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
  * Invalid State Name
  *
  */
-public class _4_ISNAntiPattern implements AntiPatternBase 
+public class _4_ISNAntiPattern extends AntiPatternBase 
 {
 	Vector<State> statesFound;
 	
@@ -24,8 +24,6 @@ public class _4_ISNAntiPattern implements AntiPatternBase
 	@Override
 	public boolean control(Statechart statechart) 
 	{
-		System.out.printf("  [Control] Invalid State Name: ");
-
 		boolean bReturn = false;
 		
 		Vector<State> states = statechart.getStates();
@@ -46,14 +44,7 @@ public class _4_ISNAntiPattern implements AntiPatternBase
 			}
 		}
 		
-		if(bReturn)
-		{
-			System.out.printf("Found! (%d)\n", statesFound.size());		
-		}
-		else
-		{
-			System.out.printf("NOT Found!\n");
-		}
+		statechart.setISN(bReturn);
 		
 		return bReturn;
 	}

@@ -10,7 +10,7 @@ import apps.Node.NodeTypeEnum;
  * Transition Between States with Different Hierarchy
  *
  */
-public class _2_TBSWDHAntiPattern implements AntiPatternBase 
+public class _2_TBSWDHAntiPattern extends AntiPatternBase 
 {
 	Vector<Transition> transitionsFound;
 	
@@ -22,8 +22,6 @@ public class _2_TBSWDHAntiPattern implements AntiPatternBase
 	@Override
 	public boolean control(Statechart statechart) 
 	{
-		System.out.printf("  [Control] Transition Between States with Different Hierarchy: ");
-		
 		boolean bReturn = false;
 		Vector<Transition> transitions = statechart.getTransitions();
 		Iterator<Transition> iter = transitions.iterator();
@@ -51,14 +49,7 @@ public class _2_TBSWDHAntiPattern implements AntiPatternBase
 			}
 		}
 		
-		if(bReturn)
-		{
-			System.out.printf("Found! (%d)\n", transitionsFound.size());		
-		}
-		else
-		{
-			System.out.printf("NOT Found!\n");
-		}
+		statechart.setTBSWDH(bReturn);
 		
 		return bReturn;
 	}

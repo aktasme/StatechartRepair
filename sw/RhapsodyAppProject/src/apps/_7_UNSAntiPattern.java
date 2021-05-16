@@ -10,7 +10,7 @@ import com.telelogic.rhapsody.core.IRPTrigger;
  * Unnecessary State
  *
  */
-public class _7_UNSAntiPattern implements AntiPatternBase
+public class _7_UNSAntiPattern extends AntiPatternBase
 {
 	Vector<State> statesFound;
 	
@@ -22,8 +22,6 @@ public class _7_UNSAntiPattern implements AntiPatternBase
 	@Override
 	public boolean control(Statechart statechart) 
 	{
-		System.out.printf("  [Control] Unnecessary State: ");
-
 		boolean bReturn = false;
 		
 		Vector<State> states = statechart.getStates();
@@ -49,14 +47,7 @@ public class _7_UNSAntiPattern implements AntiPatternBase
 			}
 		}
 		
-		if(bReturn)
-		{
-			System.out.printf("Found! (%d)\n", statesFound.size());		
-		}
-		else
-		{
-			System.out.printf("NOT Found!\n");
-		}
+		statechart.setUNS(bReturn);
 		
 		return bReturn;
 	}
