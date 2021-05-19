@@ -22,7 +22,11 @@ public class _5_URSAntiPattern extends AntiPatternBase
 	public void run(Statechart statechart) 
 	{
 		statesFound.clear();
-		super.run(statechart);
+		
+		if(control(statechart))
+		{
+			//repair(statechart);
+		}
 	}
 
 	@Override
@@ -52,7 +56,6 @@ public class _5_URSAntiPattern extends AntiPatternBase
 	@Override
 	public boolean repair(Statechart statechart) 
 	{
-		System.out.printf(" Repaired!\n");
 		boolean bReturn = false;
 		
 		Iterator<State> iter = statesFound.iterator();
@@ -62,7 +65,8 @@ public class _5_URSAntiPattern extends AntiPatternBase
 			state.deleteTransitions();
 			statechart.deleteState(state);
 		}
-
+		
+		statesFound.clear();
 		return bReturn;
 	}
 

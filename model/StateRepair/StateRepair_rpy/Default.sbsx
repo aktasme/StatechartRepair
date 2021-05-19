@@ -11,10 +11,10 @@
 			<_id type="a">GUID 865860c4-50dc-4974-8cba-496c4922be72</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">Default</_name>
-			<_modifiedTimeWeak type="a">5.11.2020::15:34:51</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.11.2020::15:34:51</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.19.2020::13:49:26</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.19.2020::13:49:26</_modifiedTime>
 			<_lastID type="a">7</_lastID>
-			<weakCGTime type="a">5.11.2020::15:34:51</weakCGTime>
+			<weakCGTime type="a">5.19.2020::13:49:26</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
 			<_defaultComposite type="s">GUID 8a46589c-cc7d-4908-af4c-9c7cc6939faa</_defaultComposite>
 			<_eventsBaseID type="a">18601</_eventsBaseID>
@@ -78,6 +78,7 @@
 				<value>GUID 86739d6c-e277-4872-af01-878fb2c54f98</value>
 				<value>GUID db80a247-5f08-48f2-ae36-e816258b5091</value>
 				<value>GUID 02fab4c5-b491-42ae-8e57-9b9eb842a550</value>
+				<value>GUID 27fda003-b8ff-4e02-a284-8be2b69326c3</value>
 			</AggregatesList>
 		</ISubsystem>
 		<IClass type="e">
@@ -828,6 +829,19 @@
 			<_name type="a">evHE</_name>
 			<_modifiedTimeWeak type="a">5.11.2020::15:34:51</_modifiedTimeWeak>
 			<_modifiedTime type="a">5.11.2020::15:34:51</_modifiedTime>
+			<_virtual type="a">0</_virtual>
+			<Args type="c">
+				<IRPYRawContainer type="e">
+					<size type="a">0</size>
+				</IRPYRawContainer>
+			</Args>
+		</IEvent>
+		<IEvent type="e">
+			<_id type="a">GUID 27fda003-b8ff-4e02-a284-8be2b69326c3</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">evHC</_name>
+			<_modifiedTimeWeak type="a">5.19.2020::13:49:26</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.19.2020::13:49:26</_modifiedTime>
 			<_virtual type="a">0</_virtual>
 			<Args type="c">
 				<IRPYRawContainer type="e">

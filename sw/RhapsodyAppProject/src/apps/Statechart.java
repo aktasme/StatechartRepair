@@ -31,6 +31,8 @@ public class Statechart extends Element
 
 	float complexity = 0;
 	
+	String className;
+	
 	boolean isCSD = false;
 	boolean isTBSWDH = false;
 	boolean isTWCWOE = false;
@@ -49,6 +51,7 @@ public class Statechart extends Element
 		this.irpElements = irpStatechart.getElementsInDiagram();
 		this.irpClass = (IRPClass)irpStatechart.getItsClass();
 		this.irpPackage = (IRPPackage)irpClass.getOwner();
+		this.className = irpClass.getName();
 				
 		states = new Vector<State>();
 		stateMap = new HashMap<String, State>();
@@ -134,7 +137,7 @@ public class Statechart extends Element
 			}
 			else
 			{
-				System.out.printf("findElements(): ignored element: MetaClass:%s Name:%s\n", element.getMetaClass(), element.getName());
+				//System.out.printf("findElements(): ignored element: MetaClass:%s Name:%s\n", element.getMetaClass(), element.getName());
 				/* Do not count other type of elements for now */
 			}						
 		}	
@@ -145,13 +148,23 @@ public class Statechart extends Element
 		Vector<State> queue = new Vector<State>();
 		
 		State rootState = stateMap.get("ROOT");
+		rootState.setDepth(0);		
+		rootState.setDefault(true);
 		queue.add(rootState);
-		rootState.setDepth(0);
+
 		
 		while(!queue.isEmpty())
 		{
 			State state = queue.firstElement();
 			queue.remove(0);
+			
+			/* If the state has default transition, it is default state */
+			Transition defaultTransition = state.getDefaultTransition(); 
+			if(defaultTransition != null)
+			{
+				State subState = (State)defaultTransition.getItsTarget();
+				subState.setDefault(true);
+			}
 			
 			Vector<State> subStates = state.getSubStates();
 			for(int index = 0; index < subStates.size(); index++)
@@ -161,6 +174,7 @@ public class Statechart extends Element
 				
 				if(subStates.size() == 1)
 				{
+					/* If the state is only state of its parent, it is default state */
 					child.setDefault(true);
 				}
 						

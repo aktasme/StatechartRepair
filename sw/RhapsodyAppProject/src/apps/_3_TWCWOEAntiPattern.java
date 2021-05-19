@@ -4,6 +4,8 @@ import java.util.Iterator;
 import java.util.Vector;
 import com.telelogic.rhapsody.core.*;
 
+import apps.Node.NodeTypeEnum;
+
 /**
  * @author mehmetaktas
  * 
@@ -32,7 +34,8 @@ public class _3_TWCWOEAntiPattern extends AntiPatternBase
 			
 			IRPGuard irpGuard = transition.getItsGuard();
 			IRPTrigger irpTrigger = transition.getItsTrigger();
-			if(irpGuard != null && irpTrigger == null)
+			Node sourceNode = transition.getItsSource();
+			if(irpGuard != null && irpTrigger == null && sourceNode.getType() != NodeTypeEnum.NodeType_condition)
 			{
 				transitionsFound.add(transition);
 				bReturn = true;				

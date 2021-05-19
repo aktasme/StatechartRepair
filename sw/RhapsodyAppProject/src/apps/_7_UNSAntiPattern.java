@@ -4,6 +4,8 @@ import java.util.Iterator;
 import java.util.Vector;
 import com.telelogic.rhapsody.core.IRPTrigger;
 
+import apps.Node.NodeTypeEnum;
+
 /**
  * @author mehmetaktas
  * 
@@ -40,7 +42,7 @@ public class _7_UNSAntiPattern extends AntiPatternBase
 			boolean isInTransitionsEventEmpty = isTransitionsEventsEmpty(inTransitions);
 			boolean isOutTransitionsEventEmpty = isTransitionsEventsEmpty(outTransitions);
 					
-			if(!state.isRoot() && hasNoAction && hasNoInternalTransition && isInTransitionsEventEmpty && isOutTransitionsEventEmpty)
+			if(!state.isRoot() && !state.isDefault() && hasNoAction && hasNoInternalTransition && isInTransitionsEventEmpty && isOutTransitionsEventEmpty)
 			{
 				statesFound.add(state);
 				bReturn = true;
@@ -68,9 +70,10 @@ public class _7_UNSAntiPattern extends AntiPatternBase
 		
 		while(iter.hasNext())
 		{
-			Transition transition = iter.next();
+			Transition transition = iter.next();			
+			Node sourceNode = transition.getItsSource();
 			IRPTrigger irpTrigger = transition.getItsTrigger();
-			if(irpTrigger != null)
+			if(sourceNode.getType() == NodeTypeEnum.NodeType_condition || irpTrigger != null)
 			{
 				bReturn = false;
 			}	

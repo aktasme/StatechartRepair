@@ -11,10 +11,10 @@
 			<_id type="a">GUID 97266355-d7a7-4b32-80f8-0f85960164b3</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">_6_NestedConditions</_name>
-			<_modifiedTimeWeak type="a">5.14.2020::9:13:55</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">5.19.2020::13:21:30</_modifiedTimeWeak>
 			<_modifiedTime type="a">5.14.2020::9:13:55</_modifiedTime>
 			<_lastID type="a">5</_lastID>
-			<weakCGTime type="a">5.14.2020::9:13:55</weakCGTime>
+			<weakCGTime type="a">5.19.2020::13:21:30</weakCGTime>
 			<strongCGTime type="a">5.14.2020::9:13:55</strongCGTime>
 			<_defaultComposite type="s">GUID d72c07b2-4e97-4770-8b9c-acacec517da2</_defaultComposite>
 			<_eventsBaseID type="a">-1</_eventsBaseID>
@@ -3188,7 +3188,7 @@
 			<_id type="a">GUID 3b6bc861-4603-49b4-9f1a-9c89f3193fb3</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">NC_3</_name>
-			<_modifiedTimeWeak type="a">5.11.2021::15:46:26</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">5.11.2021::15:51:4</_modifiedTimeWeak>
 			<_modifiedTime type="a">5.11.2020::16:9:26</_modifiedTime>
 			<_lastID type="a">1</_lastID>
 			<weakCGTime type="a">5.11.2021::15:51:4</weakCGTime>
@@ -6344,7 +6344,7 @@
 			<_id type="a">GUID 1103679b-309b-421e-afa5-7c8f3770a456</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">NC_5</_name>
-			<_modifiedTimeWeak type="a">5.11.2021::15:46:26</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">5.19.2020::13:21:50</_modifiedTimeWeak>
 			<_modifiedTime type="a">5.11.2020::16:2:44</_modifiedTime>
 			<_lastID type="a">1</_lastID>
 			<weakCGTime type="a">5.11.2021::15:46:26</weakCGTime>
@@ -6429,10 +6429,10 @@
 			<_id type="a">GUID adb7cfbc-de7d-46ee-8e75-f74b4973c1b3</_id>
 			<_myState type="a">10240</_myState>
 			<_name type="a">statechart_0</_name>
-			<_modifiedTimeWeak type="a">5.11.2020::16:2:50</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">5.19.2020::13:21:50</_modifiedTimeWeak>
 			<_modifiedTime type="a">5.11.2020::16:2:44</_modifiedTime>
 			<_lastID type="a">14</_lastID>
-			<weakCGTime type="a">5.11.2020::16:2:50</weakCGTime>
+			<weakCGTime type="a">5.19.2020::13:21:50</weakCGTime>
 			<strongCGTime type="a">5.11.2020::15:57:47</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
@@ -6440,7 +6440,7 @@
 			</_itsStateChart>
 			<_classModifier type="a">Unspecified</_classModifier>
 			<_defNumber type="a">7</_defNumber>
-			<_version type="a">5.11.2020::19:2:50</_version>
+			<_version type="a">5.19.2020::16:21:58</_version>
 			<_baseVersion type="a">1.2.1990::0:0:0</_baseVersion>
 			<_diagram type="s">GUID 3d7863ee-7dca-41d7-877d-e45c20b5c188</_diagram>
 			<AggregatesList type="e">
@@ -6532,8 +6532,9 @@
 			<_id type="a">GUID 1a73e5f5-4fb4-4755-aa47-f450750b481a</_id>
 			<_myState type="a">2048</_myState>
 			<_name type="a">defaulttransition_5</_name>
-			<_modifiedTimeWeak type="a">5.11.2020::15:59:40</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.11.2020::15:59:40</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.19.2020::13:21:50</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.19.2020::13:21:50</_modifiedTime>
+			<_errorStatus type="a">ErrorItem</_errorStatus>
 			<_itsTarget type="s">GUID 5ba1e255-a1bc-4c89-b575-c2af2e325f55</_itsTarget>
 			<_staticReaction type="a">0</_staticReaction>
 			<_itsSource type="s"></_itsSource>
@@ -6554,9 +6555,9 @@
 			<_id type="a">GUID f04168ee-727f-4be2-9e51-e49113dcc8c1</_id>
 			<_myState type="a">2048</_myState>
 			<_name type="a">transition_6</_name>
-			<_modifiedTimeWeak type="a">5.11.2020::16:1:35</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.11.2020::16:1:35</_modifiedTime>
-			<_itsTarget type="s">GUID 5ba1e255-a1bc-4c89-b575-c2af2e325f55</_itsTarget>
+			<_modifiedTimeWeak type="a">5.19.2020::13:21:30</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.19.2020::13:21:30</_modifiedTime>
+			<_itsTarget type="s">GUID bba1946a-0460-41fa-935d-005c391c692d</_itsTarget>
 			<_staticReaction type="a">0</_staticReaction>
 			<_itsSource type="s">GUID 024a4507-f897-470f-8f8e-ea7ffd1c72b7</_itsSource>
 			<AggregatesList type="e">
@@ -6788,16 +6789,16 @@
 		</IBranch>
 		<IState type="e">
 			<_id type="a">GUID 239fb1d1-436a-4b44-a099-6bdbc58aaf0f</_id>
-			<_modifiedTimeWeak type="a">5.11.2020::16:2:50</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.11.2020::16:2:50</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.19.2020::13:21:50</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.19.2020::13:21:50</_modifiedTime>
 			<_parent type="s"></_parent>
 			<_defaultTrans type="s"></_defaultTrans>
 		</IState>
 		<IState type="e">
 			<_id type="a">GUID 9f219dbe-e083-4c1b-8aad-dde5f41b9291</_id>
 			<_name type="a">A</_name>
-			<_modifiedTimeWeak type="a">5.11.2020::16:2:50</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.11.2020::16:2:50</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.19.2020::13:21:44</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.19.2020::13:21:44</_modifiedTime>
 			<_parent type="s">GUID 239fb1d1-436a-4b44-a099-6bdbc58aaf0f</_parent>
 			<_defaultTrans type="s">GUID 2e6dc45a-ae80-45d8-be04-c0df691acf77</_defaultTrans>
 		</IState>
@@ -6812,25 +6813,25 @@
 		<IState type="e">
 			<_id type="a">GUID bba1946a-0460-41fa-935d-005c391c692d</_id>
 			<_name type="a">C</_name>
-			<_modifiedTimeWeak type="a">5.11.2020::16:0:29</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.11.2020::16:0:29</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.19.2020::13:21:50</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.19.2020::13:21:50</_modifiedTime>
 			<_parent type="s">GUID 9f219dbe-e083-4c1b-8aad-dde5f41b9291</_parent>
 			<_defaultTrans type="s">GUID 1a73e5f5-4fb4-4755-aa47-f450750b481a</_defaultTrans>
 		</IState>
 		<IState type="e">
 			<_id type="a">GUID 5ba1e255-a1bc-4c89-b575-c2af2e325f55</_id>
 			<_name type="a">B</_name>
-			<_modifiedTimeWeak type="a">5.11.2020::16:0:8</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.11.2020::16:0:8</_modifiedTime>
+			<_modifiedTimeWeak type="a">5.19.2020::13:21:30</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.19.2020::13:21:30</_modifiedTime>
 			<_parent type="s">GUID bba1946a-0460-41fa-935d-005c391c692d</_parent>
 			<_defaultTrans type="s"></_defaultTrans>
 		</IState>
 		<IState type="e">
 			<_id type="a">GUID 11f45572-d601-4590-90d3-42011edc6c08</_id>
 			<_name type="a">D</_name>
-			<_modifiedTimeWeak type="a">5.11.2020::16:2:39</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.11.2020::16:2:39</_modifiedTime>
-			<_parent type="s">GUID bba1946a-0460-41fa-935d-005c391c692d</_parent>
+			<_modifiedTimeWeak type="a">5.19.2020::13:21:44</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.19.2020::13:21:44</_modifiedTime>
+			<_parent type="s">GUID 9f219dbe-e083-4c1b-8aad-dde5f41b9291</_parent>
 			<_defaultTrans type="s"></_defaultTrans>
 		</IState>
 		<IState type="e">
@@ -7042,9 +7043,9 @@
 			</IPropertyContainer>
 			</_properties>
 			<_name type="a">statechartdiagram_0</_name>
-			<_modifiedTimeWeak type="a">5.11.2020::15:59:43</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">5.19.2020::13:21:30</_modifiedTimeWeak>
 			<_modifiedTime type="a">5.11.2020::16:2:39</_modifiedTime>
-			<_lastModifiedTime type="a">5.11.2020::16:2:50</_lastModifiedTime>
+			<_lastModifiedTime type="a">5.19.2020::13:21:58</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -7612,7 +7613,7 @@
 				</CGIText>
 			</m_name>
 			<m_drawBehavior type="a">4104</m_drawBehavior>
-			<m_transform type="a">0.342857 0 0 0.634146 657.6 103.415 </m_transform>
+			<m_transform type="a">0.342857 0 0 0.341463 657.6 103.415 </m_transform>
 			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
 			<m_AdditionalLabel type="p">
 				<CGIText type="e">
@@ -7701,7 +7702,7 @@
 				</CGIText>
 			</m_name>
 			<m_drawBehavior type="a">4104</m_drawBehavior>
-			<m_transform type="a">0.666668 0 0 0.230769 182.667 203.846 </m_transform>
+			<m_transform type="a">0.666668 0 0 0.428571 182.667 378.571 </m_transform>
 			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
 			<m_AdditionalLabel type="p">
 				<CGIText type="e">
@@ -7779,10 +7780,11 @@
 					<m_nOrientationCtrlPt type="a">0</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_rpn>
+			<m_arrow type="a">1 888 276  </m_arrow>
 			<m_anglePoint1 type="a">0 0 </m_anglePoint1>
 			<m_anglePoint2 type="a">0 0 </m_anglePoint2>
 			<m_line_style type="a">6</m_line_style>
-			<m_SourcePort type="a">548 122 </m_SourcePort>
+			<m_SourcePort type="a">548 227 </m_SourcePort>
 			<m_TargetPort type="a">554 0 </m_TargetPort>
 			<m_pInheritsFrom type="r">
 				<IHandle type="e">
@@ -7821,7 +7823,7 @@
 			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
 			<m_pSource type="s">GUID 1e7ed637-9859-41be-a51b-a2699dd80d01</m_pSource>
 			<m_sourceType type="a">'F'</m_sourceType>
-			<m_pTarget type="s">GUID 812cbc26-ceeb-4253-bf7f-e2f6219d5c07</m_pTarget>
+			<m_pTarget type="s">GUID b6ee87b7-9bb2-4c1e-9eaa-941273616db1</m_pTarget>
 			<m_targetType type="a">'T'</m_targetType>
 			<m_direction type="a">' '</m_direction>
 			<m_rpn type="p">
@@ -7835,9 +7837,12 @@
 							<m_bgFlag type="a">0</m_bgFlag>
 						</IColor>
 					</m_color>
-					<m_position type="a">1 0 0  </m_position>
+					<m_position type="a">4 -6 -9  48 -9  48 5  -6 5  </m_position>
 					<m_nIdent type="a">0</m_nIdent>
 					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_transform type="a">1 0 0 1 666 309 </m_transform>
+					<m_nHorizontalSpacing type="a">-31</m_nHorizontalSpacing>
+					<m_nVerticalSpacing type="a">1</m_nVerticalSpacing>
 					<m_nOrientationCtrlPt type="a">0</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_rpn>
@@ -7845,7 +7850,7 @@
 			<m_anglePoint2 type="a">0 0 </m_anglePoint2>
 			<m_line_style type="a">6</m_line_style>
 			<m_SourcePort type="a">25 15 </m_SourcePort>
-			<m_TargetPort type="a">0 559 </m_TargetPort>
+			<m_TargetPort type="a">0 618 </m_TargetPort>
 			<m_pInheritsFrom type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -7956,7 +7961,7 @@
 					<_hid type="a">GUID 11f45572-d601-4590-90d3-42011edc6c08</_hid>
 				</IHandle>
 			</m_pModelObject>
-			<m_pParent type="s">GUID b6ee87b7-9bb2-4c1e-9eaa-941273616db1</m_pParent>
+			<m_pParent type="s">GUID b9cb37b3-1df8-4411-b474-a4df578b6989</m_pParent>
 			<m_name type="p">
 				<CGIText type="e">
 					<m_str type="a">D</m_str>
@@ -7975,7 +7980,7 @@
 				</CGIText>
 			</m_name>
 			<m_drawBehavior type="a">4104</m_drawBehavior>
-			<m_transform type="a">0.666668 0 0 0.230769 182.667 693.077 </m_transform>
+			<m_transform type="a">0.228572 0 0 0.146341 735.886 542.927 </m_transform>
 			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
 			<m_AdditionalLabel type="p">
 				<CGIText type="e">
@@ -8428,7 +8433,7 @@
 					<m_nOrientationCtrlPt type="a">0</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_rpn>
-			<m_arrow type="a">1 891 588  </m_arrow>
+			<m_arrow type="a">1 903 588  </m_arrow>
 			<m_anglePoint1 type="a">0 0 </m_anglePoint1>
 			<m_anglePoint2 type="a">0 0 </m_anglePoint2>
 			<m_line_style type="a">6</m_line_style>

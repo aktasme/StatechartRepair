@@ -104,6 +104,19 @@ public class State extends Node
 		return internalTransitions;
 	}
 	
+	public Transition getDefaultTransition()
+	{
+		Transition defaultTransition = null;
+		
+		IRPTransition irpTransition = irpState.getDefaultTransition();
+		if(irpTransition != null)
+		{
+			defaultTransition = statechart.getTransition(irpTransition.getName());
+		}
+		
+		return defaultTransition;
+	}
+	
 	public String getEntryAction()
 	{
 		return irpState.getEntryAction();
