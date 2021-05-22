@@ -9,20 +9,20 @@
 	<RHAPSODY-MODEL>
 	<IWorkspace type="e">
 			<m_SavedActiveProjectsName type="a">AutoRepaired</m_SavedActiveProjectsName>
-			<_id type="a">GUID a7bf8444-7bd7-467f-b807-d57745af87c2</_id>
+			<_id type="a">GUID d113f6a5-5d4e-437f-8392-a9153f8383c8</_id>
 			<_myState type="a">8192</_myState>
-			<_name type="a">Projects</_name>
+			<_name type="a">Projects2</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.16.2020::12:54:36</_modifiedTime>
+			<_modifiedTime type="a">5.22.2020::16:55:17</_modifiedTime>
 			<AggregatesList type="e">
-				<value>GUID 784a68ed-2783-47f4-a015-c71c6e600f29</value>
+				<value>GUID 40a78d2b-3199-4430-8c9b-263d7b29bf8a</value>
 				<value>GUID dd3a83ec-04ca-4555-8614-5df00e063c79</value>
 			</AggregatesList>
 		</IWorkspace>
 		<IProject type="e">
 			<fileName type="a">AutoRepaired</fileName>
 			<_persistAs type="a">D:\GitHub\StatechartRepair\model\StateRepair_AutoRepaired</_persistAs>
-			<_id type="a">GUID 784a68ed-2783-47f4-a015-c71c6e600f29</_id>
+			<_id type="a">GUID 40a78d2b-3199-4430-8c9b-263d7b29bf8a</_id>
 		</IProject>
 		<IProject type="e">
 			<fileName type="a">StateRepair</fileName>

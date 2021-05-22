@@ -30,6 +30,7 @@ public class Statechart extends Element
 	HashMap<String, Transition> transitionMap;
 
 	float complexity = 0;
+	boolean hasAndState = false;
 	
 	String className;
 	
@@ -157,6 +158,11 @@ public class Statechart extends Element
 		{
 			State state = queue.firstElement();
 			queue.remove(0);
+			
+			if(state.isAnd())
+			{
+				hasAndState = true;
+			}
 			
 			/* If the state has default transition, it is default state */
 			Transition defaultTransition = state.getDefaultTransition(); 
@@ -358,4 +364,16 @@ public class Statechart extends Element
 	{
 		this.isUNS = isUNS;
 	}
+
+	public boolean isHasAndState() 
+	{
+		return hasAndState;
+	}
+
+	public void setHasAndState(boolean hasAndState) 
+	{
+		this.hasAndState = hasAndState;
+	}
+	
+	
 }

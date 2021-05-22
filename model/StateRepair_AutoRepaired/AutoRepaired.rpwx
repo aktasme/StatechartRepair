@@ -37,7 +37,7 @@
 						<_theDiagram type="r">
 							<IHandle type="e">
 								<_hm2Class type="a">IStateChartDiagram</_hm2Class>
-								<_hfilename type="a">.\..\StateRepair_AutoRepaired\AutoRepaired_rpy\Default.sbsx</_hfilename>
+								<_hfilename type="a">.\AutoRepaired_rpy\Default.sbsx</_hfilename>
 								<_hsubsystem type="a">Default</_hsubsystem>
 								<_hclass type="a">class_0</_hclass>
 								<_hname type="a">StatechartDiagram</_hname>
@@ -70,7 +70,7 @@
 						<_theDiagram type="r">
 							<IHandle type="e">
 								<_hm2Class type="a">IStateChartDiagram</_hm2Class>
-								<_hfilename type="a">.\..\StateRepair_AutoRepaired\AutoRepaired_rpy\_2_TransitionBetweenStatesWithDifferentHierarchy.sbsx</_hfilename>
+								<_hfilename type="a">.\AutoRepaired_rpy\_2_TransitionBetweenStatesWithDifferentHierarchy.sbsx</_hfilename>
 								<_hsubsystem type="a">_2_TransitionBetweenStatesWithDifferentHierarchy</_hsubsystem>
 								<_hclass type="a">TBSWDH_2</_hclass>
 								<_hname type="a">StatechartDiagram</_hname>
@@ -103,7 +103,7 @@
 						<_theDiagram type="r">
 							<IHandle type="e">
 								<_hm2Class type="a">IStateChartDiagram</_hm2Class>
-								<_hfilename type="a">.\..\StateRepair_AutoRepaired\AutoRepaired_rpy\_5_UnreachableState.sbsx</_hfilename>
+								<_hfilename type="a">.\AutoRepaired_rpy\_5_UnreachableState.sbsx</_hfilename>
 								<_hsubsystem type="a">_5_UnreachableState</_hsubsystem>
 								<_hclass type="a">URS_1</_hclass>
 								<_hname type="a">StatechartDiagram</_hname>
@@ -118,7 +118,7 @@
 					
 				</IRPYRawContainer>
 			</myViewsWithID>
-			<_fullName type="a">D:\GitHub\StatechartRepair\model\StateRepair\StateRepair</_fullName>
+			<_fullName type="a">D:\GitHub\StatechartRepair\model\StateRepair_AutoRepaired\AutoRepaired</_fullName>
 			<_selectedPerspective type="a">Advanced</_selectedPerspective>
 			<m_SearchScopeList type="c">
 				<IRPYRawContainer type="e">

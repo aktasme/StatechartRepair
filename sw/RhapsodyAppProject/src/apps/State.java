@@ -9,6 +9,10 @@ public class State extends Node
 	IRPState irpState;
 	boolean isRoot;
 	boolean isDefault;
+	boolean isUnreachable = false;
+	boolean isAnd;
+	boolean isLeaf;
+	boolean isCompound;
 	
 	int depth = -1;
 	
@@ -18,6 +22,9 @@ public class State extends Node
 		this.irpState = irpState;
 		this.isRoot = (irpState.isRoot() == 1);
 		this.isDefault = false;
+		this.isAnd = (irpState.isAnd() == 1);
+		this.isLeaf = (irpState.isLeaf() == 1);
+		this.isCompound = (irpState.isCompound() == 1);
 	}
 
 	/* Wrapper Functions */
@@ -197,4 +204,46 @@ public class State extends Node
 	{
 		this.isDefault = isDefault;
 	}
+
+	public boolean isUnreachable() 
+	{
+		return isUnreachable;
+	}
+
+	public void setUnreachable(boolean isUnreachable) 
+	{
+		this.isUnreachable = isUnreachable;
+	}
+
+	public boolean isAnd() 
+	{
+		return isAnd;
+	}
+
+	public void setAnd(boolean isAnd) 
+	{
+		this.isAnd = isAnd;
+	}
+
+	public boolean isLeaf() 
+	{
+		return isLeaf;
+	}
+
+	public void setLeaf(boolean isLeaf) 
+	{
+		this.isLeaf = isLeaf;
+	}
+
+	public boolean isCompound() 
+	{
+		return isCompound;
+	}
+
+	public void setCompound(boolean isCompound) 
+	{
+		this.isCompound = isCompound;
+	}
+	
+	
 }

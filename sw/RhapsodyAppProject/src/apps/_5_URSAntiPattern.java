@@ -43,12 +43,28 @@ public class _5_URSAntiPattern extends AntiPatternBase
 			Vector<Transition> inTransitions = state.getInTransitions();
 			if(!state.isRoot() && !state.isDefault && inTransitions.size() == 0)
 			{
+				state.isUnreachable = true;
 				statesFound.add(state);
-				bReturn = true;
 			}
 		}
 		
-		statechart.setURS(bReturn);
+		controlSubstates();
+		
+		iter = states.iterator();
+		while(iter.hasNext())
+		{
+			State state = iter.next();
+			if(!state.isUnreachable())
+			{
+				statesFound.remove(state);
+			}
+		}
+		
+		if(statesFound.size() > 0)
+		{
+			bReturn = true;
+			statechart.setURS(bReturn);
+		}
 		
 		return bReturn;
 	}
@@ -69,5 +85,44 @@ public class _5_URSAntiPattern extends AntiPatternBase
 		statesFound.clear();
 		return bReturn;
 	}
+	
+	public void controlSubstates()
+	{
+		Iterator<State> iter = statesFound.iterator();
+		
+		while(iter.hasNext())
+		{
+			State state = iter.next();
+			if(isAnySubStateReachable(state))
+			{
+				state.setUnreachable(false);
+			}
+		}
+	}
+	
+	public boolean isAnySubStateReachable(State state)
+	{
+		boolean bRet = false;
+		
+		if(!state.isUnreachable())
+		{
+			bRet = true;
+		}
+		else
+		{
+			Vector<State> subStates = state.getSubStates();
+			Iterator<State> iter = subStates.iterator();
+			while(iter.hasNext())
+			{
+				State substate = iter.next();
+				if(isAnySubStateReachable(substate))
+				{
+					bRet = true;
+					break;
+				}
+			}
+		}
 
+		return bRet;
+	}
 }

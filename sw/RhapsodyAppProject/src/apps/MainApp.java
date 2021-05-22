@@ -40,8 +40,11 @@ public class MainApp extends App
 					
 					Statechart statechart = new Statechart(rhapsody, irpStatechart);
 					statechart.initialize();
-					runAntiPattern(statechart);	
-					statechart.print();
+					if(!statechart.isHasAndState())
+					{
+						runAntiPattern(statechart);
+						statechart.print();
+					}
 				}
 			}			
 		}
@@ -54,8 +57,11 @@ public class MainApp extends App
 			/* Create and initialize Statechart class object */
 			Statechart statechart = new Statechart(rhapsody, irpStatechart);
 			statechart.initialize();
-			runAntiPattern(statechart);	
-			statechart.print();
+			if(!statechart.isHasAndState())
+			{
+				runAntiPattern(statechart);
+				statechart.print();
+			}
 		}
 		else
 		{
