@@ -149,42 +149,49 @@ public class Statechart extends Element
 		Vector<State> queue = new Vector<State>();
 		
 		State rootState = stateMap.get("ROOT");
-		rootState.setDepth(0);		
-		rootState.setDefault(true);
-		queue.add(rootState);
-
-		
-		while(!queue.isEmpty())
+		if(rootState != null)
 		{
-			State state = queue.firstElement();
-			queue.remove(0);
+			rootState.setDepth(0);		
+			rootState.setDefault(true);
+			queue.add(rootState);
+	
 			
-			if(state.isAnd())
+			while(!queue.isEmpty())
 			{
-				hasAndState = true;
-			}
-			
-			/* If the state has default transition, it is default state */
-			Transition defaultTransition = state.getDefaultTransition(); 
-			if(defaultTransition != null)
-			{
-				State subState = (State)defaultTransition.getItsTarget();
-				subState.setDefault(true);
-			}
-			
-			Vector<State> subStates = state.getSubStates();
-			for(int index = 0; index < subStates.size(); index++)
-			{
-				State child = subStates.get(index);
-				child.setDepth(state.getDepth() + 1);
+				State state = queue.firstElement();
+				queue.remove(0);
 				
-				if(subStates.size() == 1)
+				if(state.isAnd())
 				{
-					/* If the state is only state of its parent, it is default state */
-					child.setDefault(true);
+					hasAndState = true;
 				}
-						
-				queue.add(child);
+				
+				/* If the state has default transition, it is default state */
+				Transition defaultTransition = state.getDefaultTransition(); 
+				if(defaultTransition != null)
+				{
+					Node subNode = (Node)defaultTransition.getItsTarget();
+					
+					if(subNode != null)
+					{
+						subNode.setDefault(true);
+					}
+				}
+				
+				Vector<State> subStates = state.getSubStates();
+				for(int index = 0; index < subStates.size(); index++)
+				{
+					State child = subStates.get(index);
+					child.setDepth(state.getDepth() + 1);
+					
+					if(subStates.size() == 1)
+					{
+						/* If the state is only state of its parent, it is default state */
+						child.setDefault(true);
+					}
+							
+					queue.add(child);
+				}
 			}
 		}
 	}
@@ -247,7 +254,7 @@ public class Statechart extends Element
 	@Override
 	public String toPrintableString() 
 	{
-		String mainProperties = String.format("%-10s: %2d %2d %2d %2d", irpClass.getName(), nodes.size(), states.size(), conditions.size(), transitions.size());
+		String mainProperties = String.format("%-60s: %4d %4d %4d %4d", irpClass.getName(), nodes.size(), states.size(), conditions.size(), transitions.size());
 		String antiPatternProperties = String.format(" | %s %s %s %s %s %s %s", toString(isCSD), toString(isTBSWDH), toString(isTWCWOE), toString(isISN), toString(isURS), toString(isNC), toString(isUNS));
 		String extraProperties = String.format(" | %10f", complexity);
 		printableString = mainProperties + antiPatternProperties + extraProperties;

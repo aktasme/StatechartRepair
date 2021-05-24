@@ -15,6 +15,8 @@ public class Node extends Element
 	IRPStateVertex irpStateVertex;
 	NodeTypeEnum type;
 	
+	boolean isDefault = false;
+	
 	public Node(Statechart statechart, IRPStateVertex irpStateVertex, NodeTypeEnum type)
 	{
 		super(irpStateVertex);
@@ -38,5 +40,15 @@ public class Node extends Element
 	public void setType(NodeTypeEnum type) 
 	{
 		this.type = type;
-	}	
+	}
+
+	public boolean isDefault() 
+	{
+		return isDefault;
+	}
+
+	public void setDefault(boolean isDefault) 
+	{
+		this.isDefault = isDefault;
+	}
 }

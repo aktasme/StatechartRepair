@@ -9,19 +9,27 @@ package apps;
 public class _1_CSDAntiPattern extends AntiPatternBase
 {
 	final float COMPLEXITY_THRESHOLD = 2;
-	
 	float complexity = 0;
+	
+	public _1_CSDAntiPattern()
+	{
+		name = this.getClass().getSimpleName();
+	}
 	
 	@Override
 	public boolean control(Statechart statechart) 
 	{
 		boolean bReturn = false;
 		
-		complexity = (float)statechart.getTransitionCount() / (float)statechart.getStateCount();
-		
-		if(complexity >= COMPLEXITY_THRESHOLD)
+		if(statechart.getStateCount() > 0)
 		{
-			bReturn = true;
+			complexity = (float)statechart.getTransitionCount() / (float)statechart.getStateCount();
+		
+			if(complexity >= COMPLEXITY_THRESHOLD)
+			{
+				bReturn = true;
+				hitCount++;
+			}
 		}
 		
 		statechart.setComplexity(complexity);

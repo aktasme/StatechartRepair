@@ -18,6 +18,7 @@ public class _4_ISNAntiPattern extends AntiPatternBase
 	
 	public _4_ISNAntiPattern()
 	{
+		name = this.getClass().getSimpleName();
 		statesFound = new Vector<State>();
 	}
 
@@ -41,6 +42,7 @@ public class _4_ISNAntiPattern extends AntiPatternBase
 			{
 				statesFound.add(state);
 				bReturn = true;
+				hitCount++;
 			}
 		}
 		

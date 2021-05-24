@@ -16,6 +16,7 @@ public class _2_TBSWDHAntiPattern extends AntiPatternBase
 	
 	public _2_TBSWDHAntiPattern() 
 	{
+		name = this.getClass().getSimpleName();
 		transitionsFound = new Vector<Transition>();
 	}
 
@@ -35,7 +36,9 @@ public class _2_TBSWDHAntiPattern extends AntiPatternBase
 				Node sourceNode = transition.getItsSource();
 				Node targetNode = transition.getItsTarget();
 				
-				if(sourceNode.getType() == NodeTypeEnum.NodeType_state && targetNode.getType() == NodeTypeEnum.NodeType_state)
+				if(sourceNode != null && targetNode != null && 
+				   sourceNode.getType() == NodeTypeEnum.NodeType_state && 
+				   targetNode.getType() == NodeTypeEnum.NodeType_state)
 				{
 					State sourceState = (State)sourceNode;
 					State targetState = (State)targetNode;
@@ -44,6 +47,7 @@ public class _2_TBSWDHAntiPattern extends AntiPatternBase
 					{
 						transitionsFound.add(transition);
 						bReturn = true;
+						hitCount++;
 					}
 				}
 			}

@@ -8,8 +8,11 @@ import com.telelogic.rhapsody.core.*;
 public class MainApp extends App
 {
 	final String TargetProjectName = "AutoRepaired";
+	int statechartCount = 0;
 	
 	Vector<AntiPatternBase> antiPatterns;
+	
+	
 	
 	/*
 	* This method is called on invoking an app inside Rhapsody.
@@ -25,47 +28,96 @@ public class MainApp extends App
 		if(selected.getIsOfMetaClass("Project") == 1)
 		{		
 			/* Copy project to a new project for working on it without changing original one */
-			IRPProject targetProject = copyProject(rhapsody, selected);
-			
-			/* Work on target project */
-			IRPCollection targetProjectPackages = targetProject.getPackages();
-			for(int packageIndex = 1; packageIndex <= targetProjectPackages.getCount(); packageIndex++)
-			{
-				IRPPackage irpPackage = (IRPPackage)targetProjectPackages.getItem(packageIndex);				
-				IRPCollection irpClasses = irpPackage.getClasses();
-				for(int classIndex = 1; classIndex <= irpClasses.getCount(); classIndex++)
-				{
-					IRPClass irpClass = (IRPClass)irpClasses.getItem(classIndex);					
-					IRPStatechart irpStatechart = irpClass.getStatechart();
-					
-					Statechart statechart = new Statechart(rhapsody, irpStatechart);
-					statechart.initialize();
-					if(!statechart.isHasAndState())
-					{
-						runAntiPattern(statechart);
-						statechart.print();
-					}
-				}
-			}			
+			//IRPProject targetProject = copyProject(rhapsody, selected);
+			IRPProject targetProject = (IRPProject)selected;
+			runAntiPattern(targetProject);
+		}
+		else if(selected.getIsOfMetaClass("Package") == 1)
+		{
+			IRPPackage irpPackage = (IRPPackage)selected;	
+			runAntiPattern(irpPackage);
 		}
 		else if(selected.getIsOfMetaClass("Statechart") == 1)
 		{
 			/* Control the strategies for only selected statechart */
-			
 			IRPStatechart irpStatechart = (IRPStatechart)selected;
-			
-			/* Create and initialize Statechart class object */
-			Statechart statechart = new Statechart(rhapsody, irpStatechart);
-			statechart.initialize();
-			if(!statechart.isHasAndState())
-			{
-				runAntiPattern(statechart);
-				statechart.print();
-			}
+			runAntiPattern(irpStatechart);
 		}
 		else
 		{
 			System.out.printf("Selected model element: %s %s", selected.getMetaClass(), selected.getName());
+		}
+		
+		printStatistics();
+	}
+	
+	public void runAntiPattern(IRPProject irpProject)
+	{
+		if(irpProject != null)
+		{
+			//System.out.printf("Project: %s\n", irpProject.getName());
+			IRPCollection irpPackages = irpProject.getPackages();
+			for(int packageIndex = 1; packageIndex <= irpPackages.getCount(); packageIndex++)
+			{
+				IRPPackage irpPackage = (IRPPackage)irpPackages.getItem(packageIndex);				
+				runAntiPattern(irpPackage);
+			}
+		}
+	}	
+	
+	public void runAntiPattern(IRPPackage irpPackage)
+	{
+		if(irpPackage != null)
+		{
+			//System.out.printf("  Package: %s\n", irpPackage.getName());
+			IRPCollection irpClasses = irpPackage.getClasses();
+			for(int classIndex = 1; classIndex <= irpClasses.getCount(); classIndex++)
+			{
+				IRPClass irpClass = (IRPClass)irpClasses.getItem(classIndex);					
+				//System.out.printf("    Class:%s ", irpClass.getName());				
+				IRPStatechart irpStatechart = irpClass.getStatechart();
+				runAntiPattern(irpStatechart);
+			}
+			
+			IRPCollection irpPackages = irpPackage.getPackages();
+			for(int packageIndex = 1; packageIndex <= irpPackages.getCount(); packageIndex++)
+			{
+				IRPPackage irpSubPackage = (IRPPackage)irpPackages.getItem(packageIndex);				
+				runAntiPattern(irpSubPackage);
+			}
+		}
+	}
+ 
+	public void runAntiPattern(IRPStatechart irpStatechart)
+	{
+		if(irpStatechart != null)
+		{
+			/* Create and initialize Statechart class object */
+			//System.out.printf("Statechart:%s\n", irpStatechart.getName());
+			Statechart statechart = new Statechart(rhapsody, irpStatechart);
+			statechart.initialize();
+			//if(!statechart.isHasAndState())
+			{
+				runAntiPattern(statechart);
+				statechart.print();
+			}	
+		}
+		else
+		{
+			//System.out.printf("has no any statechart\n");
+		}
+	}
+	
+	public void runAntiPattern(Statechart statechart)
+	{
+		statechartCount++;
+		
+		Iterator<AntiPatternBase> iter = antiPatterns.iterator();
+		
+		while(iter.hasNext())
+		{
+			AntiPatternBase antiPattern = iter.next();
+			antiPattern.run(statechart);
 		}
 	}	
 	
@@ -144,7 +196,7 @@ public class MainApp extends App
 			
 				if(copyPackage)
 				{
-					irpPackage.copyToAnotherProject(targetProject);
+					//irpPackage.copyToAnotherProject(targetProject);
 				}
 			}
 		}
@@ -165,20 +217,24 @@ public class MainApp extends App
 		return targetProject;
 	}
 	
-	public void runAntiPattern(Statechart statechart)
+	/* Logging functions */
+	public void print()
 	{
+		System.out.printf("%-60s:   #N   #S   #C   #T | 1 2 3 4 5 6 7 | %-10s\n", "[Name]", "Complexity");
+	}
+	
+	public void printStatistics()
+	{
+		System.out.printf("\nTotal number of statecharts examined: %d\n", statechartCount);
+		
+		System.out.printf("\n%-30s %s\n", "[AntiPattern]", "Count");
+		
 		Iterator<AntiPatternBase> iter = antiPatterns.iterator();
 		
 		while(iter.hasNext())
 		{
-			AntiPatternBase strategy = iter.next();
-			strategy.run(statechart);
-		}
-	}
-	
-	/* Logging functions */
-	public void print()
-	{
-		System.out.printf("%-10s: #N #S #C #T | 1 2 3 4 5 6 7 | %-10s\n", "Name", "Complexity");
+			AntiPatternBase antiPattern = iter.next();
+			antiPattern.print();
+		}	
 	}
 }

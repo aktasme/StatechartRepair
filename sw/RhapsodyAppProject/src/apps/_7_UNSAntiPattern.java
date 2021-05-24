@@ -18,6 +18,7 @@ public class _7_UNSAntiPattern extends AntiPatternBase
 	
 	public _7_UNSAntiPattern()
 	{
+		name = this.getClass().getSimpleName();
 		statesFound = new Vector<State>();
 	}
 
@@ -73,9 +74,11 @@ public class _7_UNSAntiPattern extends AntiPatternBase
 			Transition transition = iter.next();			
 			Node sourceNode = transition.getItsSource();
 			IRPTrigger irpTrigger = transition.getItsTrigger();
-			if(sourceNode.getType() == NodeTypeEnum.NodeType_condition || irpTrigger != null)
+			
+			if((sourceNode != null && sourceNode.getType() == NodeTypeEnum.NodeType_condition) || irpTrigger != null)
 			{
 				bReturn = false;
+				hitCount++;
 			}	
 		}
 		

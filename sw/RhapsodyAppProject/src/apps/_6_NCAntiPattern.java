@@ -17,6 +17,7 @@ public class _6_NCAntiPattern extends AntiPatternBase
 
 	public _6_NCAntiPattern() 
 	{
+		name = this.getClass().getSimpleName();
 		transitionsFound = new Vector<Transition>();
 	}
 
@@ -34,10 +35,13 @@ public class _6_NCAntiPattern extends AntiPatternBase
 			Node sourceNode = transition.getItsSource();
 			Node targetNode = transition.getItsTarget();
 			
-			if(sourceNode.getType() == NodeTypeEnum.NodeType_condition && targetNode.getType() == NodeTypeEnum.NodeType_condition)
+			if(sourceNode != null && targetNode != null && 
+			   sourceNode.getType() == NodeTypeEnum.NodeType_condition && 
+			   targetNode.getType() == NodeTypeEnum.NodeType_condition)
 			{
 				transitionsFound.add(transition);
-				bReturn = true;				
+				bReturn = true;
+				hitCount++;
 			}			
 		}
 		

@@ -18,6 +18,7 @@ public class _3_TWCWOEAntiPattern extends AntiPatternBase
 
 	public _3_TWCWOEAntiPattern() 
 	{
+		name = this.getClass().getSimpleName();
 		transitionsFound = new Vector<Transition>();
 	}
 
@@ -38,7 +39,8 @@ public class _3_TWCWOEAntiPattern extends AntiPatternBase
 			if(irpGuard != null && irpTrigger == null && sourceNode.getType() != NodeTypeEnum.NodeType_condition)
 			{
 				transitionsFound.add(transition);
-				bReturn = true;				
+				bReturn = true;
+				hitCount++;
 			}			
 		}
 		

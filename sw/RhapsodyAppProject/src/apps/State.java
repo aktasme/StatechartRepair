@@ -8,7 +8,6 @@ public class State extends Node
 {
 	IRPState irpState;
 	boolean isRoot;
-	boolean isDefault;
 	boolean isUnreachable = false;
 	boolean isAnd;
 	boolean isLeaf;
@@ -193,16 +192,6 @@ public class State extends Node
 	public void setIrpState(IRPState irpState) 
 	{
 		this.irpState = irpState;
-	}
-
-	public boolean isDefault() 
-	{
-		return isDefault;
-	}
-
-	public void setDefault(boolean isDefault) 
-	{
-		this.isDefault = isDefault;
 	}
 
 	public boolean isUnreachable() 

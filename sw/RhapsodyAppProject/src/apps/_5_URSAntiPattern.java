@@ -15,6 +15,7 @@ public class _5_URSAntiPattern extends AntiPatternBase
 	
 	public _5_URSAntiPattern()
 	{
+		name = this.getClass().getSimpleName();
 		statesFound = new Vector<State>();
 	}
 
@@ -63,6 +64,7 @@ public class _5_URSAntiPattern extends AntiPatternBase
 		if(statesFound.size() > 0)
 		{
 			bReturn = true;
+			hitCount++;
 			statechart.setURS(bReturn);
 		}
 		

@@ -1,7 +1,16 @@
 package apps;
 
-public class AntiPatternBase 
+import log.CommonLog;
+
+public class AntiPatternBase extends CommonLog
 {
+	String name;
+	int hitCount = 0;
+	
+	public AntiPatternBase()
+	{
+	}
+	
 	public void run(Statechart statechart)
 	{
 		if(control(statechart))
@@ -19,4 +28,13 @@ public class AntiPatternBase
 	{
 		return false;
 	}
+
+	@Override
+	public String toPrintableString()
+	{
+		String printableString = String.format("%-30s: %d", name, hitCount);
+		return printableString;
+	}
+	
+	
 }
