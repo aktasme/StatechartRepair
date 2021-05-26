@@ -43,7 +43,7 @@ HerkulAxisHandler                                           :    8    8    0   2
 HerkulV2Tester                                              :   20   20    0   65 | + - - + + - + |   3,250000
 HerkulV2TestInstance                                        :   12   12    0   24 | + - - + - - - |   2,000000
 SKGBInterface                                               :    9    9    0   18 | + - - + - - + |   2,000000
-SKGBUdpImplementation                                       :    5    5    0    7 | - - - - - - - |   1,400000
+SKGBUdpImplementation                                       :    0    0    0    0 | - - - - - - - |   2,000000
 SKGBCanImplementation                                       :    5    5    0    7 | - - - - - - - |   1,400000
 TBInterface                                                 :    8    8    0   10 | - - - + - - + |   1,250000
 TBInterfaceTester                                           :    3    3    0    6 | + - - - - - - |   2,000000
@@ -63,14 +63,14 @@ SPOTTester                                                  :    5    5    0    
 SPOTTesterComposite                                         :    2    2    0    1 | - - - - - - - |   0,500000
 NMEACommunicator                                            :    4    4    0    5 | - - - - - - - |   1,250000
 BAMPBInterface                                              :    4    4    0    7 | - - - - - - - |   1,750000
-BAMPBImplementation                                         :    5    5    0    7 | - - - - - - - |   1,400000
+BAMPBImplementation                                         :    0    0    0    0 | - - - - - - - |   1,750000
 BAMPBTester                                                 :    7    7    0    9 | - - - - - - - |   1,285714
 BAMPBTesterComposite                                        :    2    2    0    1 | - - - - - - - |   0,500000
 VECTORInterface                                             :    4    4    0    9 | + - - - - - - |   2,250000
 VECTORTester                                                :    6    6    0    5 | - - - - - - - |   0,833333
 VECTORTesterComposite                                       :    2    2    0    1 | - - - - - - - |   0,500000
 LAGKOSInterface                                             :    5    5    0    7 | - - - - - - - |   1,400000
-LAGKOSImplementation                                        :    5    5    0    7 | - - - - - - - |   1,400000
+LAGKOSImplementation                                        :    0    0    0    0 | - - - - - - - |   1,400000
 TestInterface                                               :   16   16    0   10 | - - - + + - + |   0,625000
 TestInterfaceHETAY                                          :    5    5    0    6 | - - - - - - - |   1,200000
 UIManager                                                   :  546  523   23  765 | - + + + + - + |   1,462715
@@ -182,19 +182,19 @@ MASTInterface                                               :    5    5    0    
 FIRTINAInterface                                            :    8    8    0    7 | - - - - - - + |   0,875000
 FIRTINATester                                               :    6    6    0    7 | - - - - - - - |   1,166667
 FIRTINAComposite                                            :    2    2    0    1 | - - - - - - - |   0,500000
-FIRTINAImplementation                                       :    5    5    0    7 | - - - - - - - |   1,400000
+FIRTINAImplementation                                       :    0    0    0    0 | - - - - - - - |   0,500000
 TEPESInterface                                              :   10   10    0    8 | - - - + - - + |   0,800000
-TEPESImplementation                                         :    5    5    0    7 | - - - - - - - |   1,400000
+TEPESImplementation                                         :    0    0    0    0 | - - - - - - - |   0,800000
 AKSInterface                                                :   11   11    0   12 | - - - + - - + |   1,090909
 KardelenInterface                                           :   15   15    0   16 | - - - + - - + |   1,066667
 ShershenInterface                                           :   12   12    0   16 | - - - + - - + |   1,333333
 TKKMBSInterface                                             :    3    3    0    5 | - - - - - - - |   1,666667
-TKKMBSImplementation                                        :    5    5    0    7 | - - - - - - - |   1,400000
+TKKMBSImplementation                                        :    0    0    0    0 | - - - - - - - |   1,666667
 DataRecord                                                  :    8    8    0   10 | - - - + - - + |   1,250000
 IKAInterface                                                :    8    8    0   14 | - - - - - - + |   1,750000
-IKAImplementation                                           :    5    5    0    7 | - - - - - - - |   1,400000
+IKAImplementation                                           :    0    0    0    0 | - - - - - - - |   1,750000
 UserInterface                                               :   13   13    0   21 | - - - + - - + |   1,615385
-AKYImplementation                                           :    5    5    0    9 | - - - - - - - |   1,800000
+AKYImplementation                                           :    0    0    0    0 | - - - - - - - |   1,615385
 ModeAdaptorForNmea                                          :    2    2    0    2 | - - - - - - - |   1,000000
 ModeAdaptorForLrf                                           :    2    2    0    2 | - - - - - - - |   1,000000
 RadarTrackingAdaptor                                        :    3    3    0    4 | - - - + - - - |   1,333333
@@ -229,4 +229,4 @@ _3_TWCWOEAntiPattern          : 187
 _4_ISNAntiPattern             : 535
 _5_URSAntiPattern             : 13
 _6_NCAntiPattern              : 4
-_7_UNSAntiPattern             : 9001
+_7_UNSAntiPattern             : 621

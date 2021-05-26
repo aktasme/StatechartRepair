@@ -232,4 +232,4 @@ _3_TWCWOEAntiPattern          : 59
 _4_ISNAntiPattern             : 239
 _5_URSAntiPattern             : 14
 _6_NCAntiPattern              : 4
-_7_UNSAntiPattern             : 6155
+_7_UNSAntiPattern             : 225
