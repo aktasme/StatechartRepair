@@ -23,7 +23,7 @@ public class _1_CSDAntiPattern extends AntiPatternBase
 		
 		if(statechart.getStateCount() > 0)
 		{
-			complexity = (float)statechart.getTransitionCount() / (float)statechart.getStateCount();
+			complexity = (float)statechart.getExternalTransitionCount() / (float)statechart.getStateCount();
 		
 			if(complexity >= COMPLEXITY_THRESHOLD)
 			{

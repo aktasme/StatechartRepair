@@ -14,7 +14,7 @@ public class _4_ISNAntiPattern extends AntiPatternBase
 {
 	Vector<State> statesFound;
 	
-	final String RegularExpression = "state_";
+	final String RegularExpression = "state_\\d{1,}";
 	
 	public _4_ISNAntiPattern()
 	{
@@ -27,22 +27,26 @@ public class _4_ISNAntiPattern extends AntiPatternBase
 	{
 		boolean bReturn = false;
 		
-		Vector<State> states = statechart.getStates();
-		Iterator<State> iter = states.iterator();
-		
-		while(iter.hasNext())
+		if(!statechart.isIncludeAndState())
 		{
-			State state = iter.next();		
-			String stateName = state.getName();
+			Vector<State> states = statechart.getStates();
+			Iterator<State> iter = states.iterator();
 			
-			Pattern pattern = Pattern.compile(RegularExpression);
-			Matcher matcher = pattern.matcher(stateName);
-			boolean matchFound = matcher.find();	
-			if(matchFound)
+			while(iter.hasNext())
 			{
-				statesFound.add(state);
-				bReturn = true;
-				hitCount++;
+				State state = iter.next();		
+				String stateName = state.getName();
+				
+				Pattern pattern = Pattern.compile(RegularExpression);
+				Matcher matcher = pattern.matcher(stateName);
+				boolean matchFound = matcher.find();	
+				if(matchFound)
+				{
+					statesFound.add(state);
+					bReturn = true;
+					//System.out.printf("Name:%s\n", stateName);
+					hitCount++;
+				}
 			}
 		}
 		

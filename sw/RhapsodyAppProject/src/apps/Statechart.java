@@ -16,6 +16,7 @@ public class Statechart extends Element
 	IRPStatechart irpStatechart;
 	IRPState irpRoot;
 	IRPCollection irpElements;
+	IRPProject irpProject;
 	
 	Vector<State> states;
 	HashMap<String, State> stateMap;
@@ -27,10 +28,12 @@ public class Statechart extends Element
 	HashMap<String, Node> nodeMap;
 	
 	Vector<Transition> transitions;
+	Vector<Transition> internalTransitions;
+	Vector<Transition> externalTransitions;
 	HashMap<String, Transition> transitionMap;
 
 	float complexity = 0;
-	boolean hasAndState = false;
+	boolean isIncludeAndState = false;
 	
 	String className;
 	
@@ -53,6 +56,7 @@ public class Statechart extends Element
 		this.irpClass = (IRPClass)irpStatechart.getItsClass();
 		this.irpPackage = (IRPPackage)irpClass.getOwner();
 		this.className = irpClass.getName();
+		this.irpProject = (IRPProject)rhapsody.getProjects().getItem(1);
 				
 		states = new Vector<State>();
 		stateMap = new HashMap<String, State>();
@@ -64,6 +68,8 @@ public class Statechart extends Element
 		nodeMap = new HashMap<String, Node>();
 		
 		transitions = new Vector<Transition>();
+		internalTransitions = new Vector<Transition>();
+		externalTransitions = new Vector<Transition>();
 		transitionMap = new HashMap<String, Transition>();
 	}
 	
@@ -99,22 +105,24 @@ public class Statechart extends Element
 			{
 				IRPState irpState = (IRPState)element;
 				State state = new State(this, irpState);
+				state.print();
 				
 				states.add(state);
 				stateMap.put(irpState.getName(), state);
 				
 				nodes.add(state);
 				nodeMap.put(irpState.getName(), state);
-				
+								
 				/* Internal transitions are not included in elements */
 				/* Create extra transitions for them */
 				IRPCollection irpTransitions =  irpState.getInternalTransitions();
 				for(int tIndex = 1; tIndex < irpTransitions.getCount() + 1; tIndex++)
 				{
 					IRPTransition irpTransition = (IRPTransition)irpTransitions.getItem(tIndex);
-					Transition transition = new Transition(this, irpTransition);
+					Transition transition = new Transition(this, irpTransition, true);
 					transitions.add(transition);
 					transitionMap.put(irpTransition.getName(), transition);
+					internalTransitions.add(transition);
 				}
 			}
 			else if(element.getIsOfMetaClass("Condition") == 1)
@@ -131,10 +139,11 @@ public class Statechart extends Element
 			else if(element.getIsOfMetaClass("Transition") == 1)
 			{
 				IRPTransition irpTransition = (IRPTransition)element;
-				Transition transition = new Transition(this, irpTransition);
+				Transition transition = new Transition(this, irpTransition, false);
 				
 				transitions.add(transition);
 				transitionMap.put(irpTransition.getName(), transition);
+				externalTransitions.add(transition);
 			}
 			else
 			{
@@ -163,7 +172,7 @@ public class Statechart extends Element
 				
 				if(state.isAnd())
 				{
-					hasAndState = true;
+					isIncludeAndState = true;
 				}
 				
 				/* If the state has default transition, it is default state */
@@ -199,7 +208,7 @@ public class Statechart extends Element
 	/* Helper Functions */
 	public void export()
 	{
-		String folderName = ExportPath + irpPackage.getName(); 
+		String folderName = ExportPath + irpProject.getName() + "\\" + irpPackage.getName(); 
 		String exportName = folderName + "\\" + irpClass.getName() + ExportExt;
 		
 		File folder = new File(folderName);
@@ -254,7 +263,7 @@ public class Statechart extends Element
 	@Override
 	public String toPrintableString() 
 	{
-		String mainProperties = String.format("%-60s: %4d %4d %4d %4d", irpClass.getName(), nodes.size(), states.size(), conditions.size(), transitions.size());
+		String mainProperties = String.format("%-60s: %4d %4d %4d %4d(%4d:%4d)", irpClass.getName(), nodes.size(), states.size(), conditions.size(), transitions.size(), externalTransitions.size(), internalTransitions.size());
 		String antiPatternProperties = String.format(" | %s %s %s %s %s %s %s", toString(isCSD), toString(isTBSWDH), toString(isTWCWOE), toString(isISN), toString(isURS), toString(isNC), toString(isUNS));
 		String extraProperties = String.format(" | %10f", complexity);
 		printableString = mainProperties + antiPatternProperties + extraProperties;
@@ -270,6 +279,16 @@ public class Statechart extends Element
 	public int getTransitionCount() 
 	{
 		return transitions.size();
+	}
+	
+	public int getInternalTransitionCount() 
+	{
+		return internalTransitions.size();
+	}
+	
+	public int getExternalTransitionCount() 
+	{
+		return externalTransitions.size();
 	}
 	
 	public float getComplexity() 
@@ -372,14 +391,14 @@ public class Statechart extends Element
 		this.isUNS = isUNS;
 	}
 
-	public boolean isHasAndState() 
+	public boolean isIncludeAndState() 
 	{
-		return hasAndState;
+		return isIncludeAndState;
 	}
 
-	public void setHasAndState(boolean hasAndState) 
+	public void setIncludeAndState(boolean hasAndState) 
 	{
-		this.hasAndState = hasAndState;
+		this.isIncludeAndState = hasAndState;
 	}
 	
 	

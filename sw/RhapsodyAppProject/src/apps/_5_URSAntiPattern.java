@@ -59,6 +59,10 @@ public class _5_URSAntiPattern extends AntiPatternBase
 			{
 				statesFound.remove(state);
 			}
+			else
+			{
+				//System.out.printf("Name: %s\n", state.getName());
+			}
 		}
 		
 		if(statesFound.size() > 0)

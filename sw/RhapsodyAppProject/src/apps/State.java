@@ -6,12 +6,14 @@ import com.telelogic.rhapsody.core.*;
 
 public class State extends Node
 {
-	IRPState irpState;
-	boolean isRoot;
-	boolean isUnreachable = false;
-	boolean isAnd;
-	boolean isLeaf;
-	boolean isCompound;
+	protected IRPState irpState;
+	protected IRPStatechart irpNestedStatechart;
+	protected boolean isRoot = false;
+	protected boolean isUnreachable = false;
+	protected boolean isAnd = false;
+	protected boolean isLeaf = false;
+	protected boolean isCompound = false;
+	protected boolean isIncludeNestedStatechart = false;
 	
 	int depth = -1;
 	
@@ -24,6 +26,12 @@ public class State extends Node
 		this.isAnd = (irpState.isAnd() == 1);
 		this.isLeaf = (irpState.isLeaf() == 1);
 		this.isCompound = (irpState.isCompound() == 1);
+		this.irpNestedStatechart = irpState.getNestedStatechart();
+		
+		if(irpNestedStatechart != null)
+		{
+			this.isIncludeNestedStatechart = true;
+		}
 	}
 
 	/* Wrapper Functions */
@@ -161,7 +169,7 @@ public class State extends Node
 	{
 		super.print();
 		
-		System.out.printf("State:%s depth:%d\n", irpState.getName(), depth);
+		System.out.printf("State:%s depth:%d %s\n", irpState.getName(), depth, irpState.getFullNameInStatechart());
 	}
 	
 	/* Getters and Setters */
@@ -233,6 +241,14 @@ public class State extends Node
 	{
 		this.isCompound = isCompound;
 	}
-	
-	
+
+	public boolean isIncludeNestedStatechart()
+	{
+		return isIncludeNestedStatechart;
+	}
+
+	public void setIncludeNestedStatechart(boolean isIncludeNestedStatechart)
+	{
+		this.isIncludeNestedStatechart = isIncludeNestedStatechart;
+	}
 }

@@ -220,7 +220,7 @@ public class MainApp extends App
 	/* Logging functions */
 	public void print()
 	{
-		System.out.printf("%-60s:   #N   #S   #C   #T | 1 2 3 4 5 6 7 | %-10s\n", "[Name]", "Complexity");
+		System.out.printf("%-60s:   #N   #S   #C   #T(  #E:  #I) | 1 2 3 4 5 6 7 | %-10s\n", "[Name]", "Complexity");
 	}
 	
 	public void printStatistics()

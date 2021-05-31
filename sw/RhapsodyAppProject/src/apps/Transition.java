@@ -4,15 +4,17 @@ import com.telelogic.rhapsody.core.*;
 
 public class Transition extends Element
 {
-	Statechart statechart;
-	IRPTransition irpTransition;
+	protected Statechart statechart;
+	protected IRPTransition irpTransition;	
+	protected boolean isInternal = false;
 	
-	public Transition(Statechart statechart, IRPTransition irpTransition)
+	public Transition(Statechart statechart, IRPTransition irpTransition, boolean isInternal)
 	{
 		super(irpTransition);
 		this.statechart = statechart;
 		this.irpTransition = irpTransition;
 		this.name = irpTransition.getName();
+		this.isInternal = isInternal;
 	}
 	
 	/* Wrapper Functions */
@@ -30,8 +32,8 @@ public class Transition extends Element
 	
 	public Node getItsTarget()
 	{
-		IRPStateVertex irpSource = irpTransition.getItsTarget();
-		Node node = statechart.getNode(irpSource.getName());
+		IRPStateVertex irpTarget = irpTransition.getItsTarget();
+		Node node = statechart.getNode(irpTarget.getName());
 		return node;
 	}
 	
@@ -45,6 +47,7 @@ public class Transition extends Element
 		return irpTransition.getItsTrigger();
 	}
 		
+	/* Getter and Setters */
 	public String getName() 
 	{
 		return name;
@@ -63,6 +66,16 @@ public class Transition extends Element
 	public void setIrpTransition(IRPTransition irpTransition) 
 	{
 		this.irpTransition = irpTransition;
+	}
+
+	public boolean isInternal()
+	{
+		return isInternal;
+	}
+
+	public void setInternal(boolean isInternal)
+	{
+		this.isInternal = isInternal;
 	}
 
 	/* Logging Functions */

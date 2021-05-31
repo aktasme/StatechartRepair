@@ -26,28 +26,33 @@ public class _7_UNSAntiPattern extends AntiPatternBase
 	public boolean control(Statechart statechart) 
 	{
 		boolean bReturn = false;
-		
-		Vector<State> states = statechart.getStates();
-		Iterator<State> iter = states.iterator();
-		
-		while(iter.hasNext())
+
+		if(!statechart.isIncludeAndState())
 		{
-			State state = iter.next();
-			
-			Vector<Transition> inTransitions = state.getInTransitions();
-			Vector<Transition> outTransitions = state.getOutTransitions();
-			Vector<Transition> internalTransitions = state.getInternalTransitions();
-			
-			boolean hasNoAction = (state.getEntryAction().isEmpty() && state.getExitAction().isEmpty());
-			boolean hasNoInternalTransition = (internalTransitions.size() == 0);
-			boolean isInTransitionsEventEmpty = isTransitionsEventsEmpty(inTransitions);
-			boolean isOutTransitionsEventEmpty = isTransitionsEventsEmpty(outTransitions);
-					
-			if(!state.isRoot() && !state.isDefault() && hasNoAction && hasNoInternalTransition && isInTransitionsEventEmpty && isOutTransitionsEventEmpty)
+			Vector<State> states = statechart.getStates();
+			Iterator<State> iter = states.iterator();
+	
+			while(iter.hasNext())
 			{
-				statesFound.add(state);
-				hitCount++;
-				bReturn = true;
+				State state = iter.next();
+				
+				Vector<Transition> inTransitions = state.getInTransitions();
+				Vector<Transition> outTransitions = state.getOutTransitions();
+				Vector<Transition> internalTransitions = state.getInternalTransitions();
+				
+				boolean hasNoAction = (state.getEntryAction().isEmpty() && state.getExitAction().isEmpty());
+				boolean hasNoInternalTransition = (internalTransitions.size() == 0);
+				boolean isInTransitionsEventEmpty = isTransitionsEventsEmpty(inTransitions);
+				boolean isOutTransitionsEventEmpty = isTransitionsEventsEmpty(outTransitions);
+				boolean isIncludeNestedStatechart = state.isIncludeNestedStatechart();
+						
+				if(!state.isRoot() && !state.isDefault() && hasNoAction && hasNoInternalTransition && isInTransitionsEventEmpty && isOutTransitionsEventEmpty && !isIncludeNestedStatechart)
+				{
+					statesFound.add(state);
+					bReturn = true;
+					hitCount++;
+					System.out.printf("Name: %s\n", state.getName());
+				}
 			}
 		}
 		
