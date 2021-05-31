@@ -150,7 +150,9 @@ public class Statechart extends Element
 				//System.out.printf("findElements(): ignored element: MetaClass:%s Name:%s\n", element.getMetaClass(), element.getName());
 				/* Do not count other type of elements for now */
 			}						
-		}	
+		}
+		
+		System.out.printf("findElements(): statesSize:%d, stateMapSize:%d\n", states.size(), stateMap.size());
 	}
 	
 	public void initializeStates()

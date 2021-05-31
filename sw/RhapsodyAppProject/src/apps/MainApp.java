@@ -37,6 +37,11 @@ public class MainApp extends App
 			IRPPackage irpPackage = (IRPPackage)selected;	
 			runAntiPattern(irpPackage);
 		}
+		else if(selected.getIsOfMetaClass("Class") == 1)
+		{
+			IRPClass irpClass = (IRPClass)selected;	
+			runAntiPattern(irpClass);
+		}
 		else if(selected.getIsOfMetaClass("Statechart") == 1)
 		{
 			/* Control the strategies for only selected statechart */
@@ -85,6 +90,15 @@ public class MainApp extends App
 				IRPPackage irpSubPackage = (IRPPackage)irpPackages.getItem(packageIndex);				
 				runAntiPattern(irpSubPackage);
 			}
+		}
+	}
+	
+	public void runAntiPattern(IRPClass irpClass)
+	{
+		if(irpClass != null)
+		{
+			IRPStatechart irpStatechart = irpClass.getStatechart();
+			runAntiPattern(irpStatechart);		
 		}
 	}
  
