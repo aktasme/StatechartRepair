@@ -13,7 +13,6 @@ public class Transition extends Element
 		super(irpTransition);
 		this.statechart = statechart;
 		this.irpTransition = irpTransition;
-		this.name = irpTransition.getName();
 		this.isInternal = isInternal;
 	}
 	
@@ -26,14 +25,14 @@ public class Transition extends Element
 	public Node getItsSource()
 	{
 		IRPStateVertex irpSource = irpTransition.getItsSource();
-		Node node = statechart.getNode(irpSource.getName());
+		Node node = statechart.getNode(irpSource.getGUID());
 		return node;
 	}
 	
 	public Node getItsTarget()
 	{
 		IRPStateVertex irpTarget = irpTransition.getItsTarget();
-		Node node = statechart.getNode(irpTarget.getName());
+		Node node = statechart.getNode(irpTarget.getGUID());
 		return node;
 	}
 	
@@ -86,5 +85,4 @@ public class Transition extends Element
 		
 		System.out.printf("Transition:%s\n", irpTransition.getName());
 	}
-
 }

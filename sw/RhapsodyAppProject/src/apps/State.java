@@ -43,7 +43,7 @@ public class State extends Node
 		for(int index = 1; index <= irpSubStates.getCount(); index++)
 		{
 			IRPState irpState = (IRPState)irpSubStates.getItem(index);
-			State state = statechart.getState(irpState.getName());
+			State state = statechart.getState(irpState.getGUID());
 			subStates.add(state);
 		}
 		
@@ -58,7 +58,7 @@ public class State extends Node
 		for(int index = 1; index <= irpTransitions.getCount(); index++)
 		{
 			IRPTransition irpTransition = (IRPTransition)irpTransitions.getItem(index);
-			Transition transition = statechart.getTransition(irpTransition.getName());
+			Transition transition = statechart.getTransition(irpTransition.getGUID());
 			
 			if(transition != null)
 			{
@@ -81,7 +81,7 @@ public class State extends Node
 		for(int index = 1; index <= irpTransitions.getCount(); index++)
 		{
 			IRPTransition irpTransition = (IRPTransition)irpTransitions.getItem(index);
-			Transition transition = statechart.getTransition(irpTransition.getName());
+			Transition transition = statechart.getTransition(irpTransition.getGUID());
 			if(transition != null)
 			{
 				outTransitions.add(transition);
@@ -103,7 +103,7 @@ public class State extends Node
 		for(int index = 1; index <= irpTransitions.getCount(); index++)
 		{
 			IRPTransition irpTransition = (IRPTransition)irpTransitions.getItem(index);
-			Transition transition = statechart.getTransition(irpTransition.getName());
+			Transition transition = statechart.getTransition(irpTransition.getGUID());
 
 			if(transition != null)
 			{
@@ -125,7 +125,7 @@ public class State extends Node
 		IRPTransition irpTransition = irpState.getDefaultTransition();
 		if(irpTransition != null)
 		{
-			defaultTransition = statechart.getTransition(irpTransition.getName());
+			defaultTransition = statechart.getTransition(irpTransition.getGUID());
 		}
 		
 		return defaultTransition;
@@ -169,7 +169,7 @@ public class State extends Node
 	{
 		super.print();
 		
-		System.out.printf("State:%s depth:%d %s %s\n", irpState.getName(), depth, irpState.getFullNameInStatechart(), irpState.getGUID());
+		System.out.printf("State:%s depth:%d\n", irpState.getFullNameInStatechart(), depth);
 	}
 	
 	/* Getters and Setters */

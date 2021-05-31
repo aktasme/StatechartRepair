@@ -33,7 +33,7 @@
 								<m_nBottom type="a">907</m_nBottom>
 							</CCommon_WINDOWPLACEMENT>
 						</_placement>
-						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
+						<_wasOpenedOnCloseProject type="a">0</_wasOpenedOnCloseProject>
 						<_theDiagram type="r">
 							<IHandle type="e">
 								<_hm2Class type="a">IStateChartDiagram</_hm2Class>
@@ -46,7 +46,7 @@
 						</_theDiagram>
 						<_UpLeft type="a">0 0 </_UpLeft>
 						<_DownRight type="a">1272 717 </_DownRight>
-						<m_nDiagramIndex type="a">2</m_nDiagramIndex>
+						<m_nDiagramIndex type="a">0</m_nDiagramIndex>
 						<m_bIsActiveView type="a">0</m_bIsActiveView>
 					</CGEMdiDiagramParams>
 					
@@ -66,7 +66,7 @@
 								<m_nBottom type="a">881</m_nBottom>
 							</CCommon_WINDOWPLACEMENT>
 						</_placement>
-						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
+						<_wasOpenedOnCloseProject type="a">0</_wasOpenedOnCloseProject>
 						<_theDiagram type="r">
 							<IHandle type="e">
 								<_hm2Class type="a">IStateChartDiagram</_hm2Class>
@@ -79,7 +79,7 @@
 						</_theDiagram>
 						<_UpLeft type="a">0 0 </_UpLeft>
 						<_DownRight type="a">1272 717 </_DownRight>
-						<m_nDiagramIndex type="a">3</m_nDiagramIndex>
+						<m_nDiagramIndex type="a">0</m_nDiagramIndex>
 						<m_bIsActiveView type="a">0</m_bIsActiveView>
 					</CGEMdiDiagramParams>
 					
@@ -99,7 +99,7 @@
 								<m_nBottom type="a">855</m_nBottom>
 							</CCommon_WINDOWPLACEMENT>
 						</_placement>
-						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
+						<_wasOpenedOnCloseProject type="a">0</_wasOpenedOnCloseProject>
 						<_theDiagram type="r">
 							<IHandle type="e">
 								<_hm2Class type="a">IStateChartDiagram</_hm2Class>
@@ -112,7 +112,7 @@
 						</_theDiagram>
 						<_UpLeft type="a">0 0 </_UpLeft>
 						<_DownRight type="a">1272 717 </_DownRight>
-						<m_nDiagramIndex type="a">4</m_nDiagramIndex>
+						<m_nDiagramIndex type="a">0</m_nDiagramIndex>
 						<m_bIsActiveView type="a">0</m_bIsActiveView>
 					</CGEMdiDiagramParams>
 					
@@ -132,7 +132,7 @@
 								<m_nBottom type="a">848</m_nBottom>
 							</CCommon_WINDOWPLACEMENT>
 						</_placement>
-						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
+						<_wasOpenedOnCloseProject type="a">0</_wasOpenedOnCloseProject>
 						<_theDiagram type="r">
 							<IHandle type="e">
 								<_hm2Class type="a">IStateChartDiagram</_hm2Class>
@@ -145,7 +145,7 @@
 						</_theDiagram>
 						<_UpLeft type="a">0 0 </_UpLeft>
 						<_DownRight type="a">1268 736 </_DownRight>
-						<m_nDiagramIndex type="a">5</m_nDiagramIndex>
+						<m_nDiagramIndex type="a">0</m_nDiagramIndex>
 						<m_bIsActiveView type="a">0</m_bIsActiveView>
 					</CGEMdiDiagramParams>
 					
@@ -165,7 +165,7 @@
 								<m_nBottom type="a">985</m_nBottom>
 							</CCommon_WINDOWPLACEMENT>
 						</_placement>
-						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
+						<_wasOpenedOnCloseProject type="a">0</_wasOpenedOnCloseProject>
 						<_theDiagram type="r">
 							<IHandle type="e">
 								<_hm2Class type="a">IStateChartDiagram</_hm2Class>
@@ -210,8 +210,8 @@
 							</IHandle>
 						</_theDiagram>
 						<_UpLeft type="a">0 0 </_UpLeft>
-						<_DownRight type="a">1022 1364 </_DownRight>
-						<m_nDiagramIndex type="a">1</m_nDiagramIndex>
+						<_DownRight type="a">1929 1433 </_DownRight>
+						<m_nDiagramIndex type="a">0</m_nDiagramIndex>
 						<m_bIsActiveView type="a">1</m_bIsActiveView>
 					</CGEMdiDiagramParams>
 					

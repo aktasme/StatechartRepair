@@ -51,7 +51,7 @@ public class _7_UNSAntiPattern extends AntiPatternBase
 					statesFound.add(state);
 					bReturn = true;
 					hitCount++;
-					//System.out.printf("Name: %s\n", state.getName());
+					//state.print();
 				}
 			}
 		}

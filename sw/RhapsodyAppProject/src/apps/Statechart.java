@@ -3,6 +3,8 @@ package apps;
 import java.util.Vector;
 import java.io.File;
 import java.util.HashMap;
+import java.util.Iterator;
+
 import com.telelogic.rhapsody.core.*;
 
 public class Statechart extends Element
@@ -105,13 +107,13 @@ public class Statechart extends Element
 			{
 				IRPState irpState = (IRPState)element;
 				State state = new State(this, irpState);
-				state.print();
+				//state.print();
 				
 				states.add(state);
-				stateMap.put(irpState.getName(), state);
+				stateMap.put(irpState.getGUID(), state);
 				
 				nodes.add(state);
-				nodeMap.put(irpState.getName(), state);
+				nodeMap.put(irpState.getGUID(), state);
 								
 				/* Internal transitions are not included in elements */
 				/* Create extra transitions for them */
@@ -121,7 +123,7 @@ public class Statechart extends Element
 					IRPTransition irpTransition = (IRPTransition)irpTransitions.getItem(tIndex);
 					Transition transition = new Transition(this, irpTransition, true);
 					transitions.add(transition);
-					transitionMap.put(irpTransition.getName(), transition);
+					transitionMap.put(irpTransition.getGUID(), transition);
 					internalTransitions.add(transition);
 				}
 			}
@@ -131,10 +133,10 @@ public class Statechart extends Element
 				Condition condition = new Condition(this, irpConnector);
 				
 				conditions.add(condition);
-				conditionMap.put(irpConnector.getName(), condition);
+				conditionMap.put(irpConnector.getGUID(), condition);
 				
 				nodes.add(condition);		
-				nodeMap.put(irpConnector.getName(), condition);
+				nodeMap.put(irpConnector.getGUID(), condition);
 			}
 			else if(element.getIsOfMetaClass("Transition") == 1)
 			{
@@ -142,7 +144,7 @@ public class Statechart extends Element
 				Transition transition = new Transition(this, irpTransition, false);
 				
 				transitions.add(transition);
-				transitionMap.put(irpTransition.getName(), transition);
+				transitionMap.put(irpTransition.getGUID(), transition);
 				externalTransitions.add(transition);
 			}
 			else
@@ -150,58 +152,60 @@ public class Statechart extends Element
 				//System.out.printf("findElements(): ignored element: MetaClass:%s Name:%s\n", element.getMetaClass(), element.getName());
 				/* Do not count other type of elements for now */
 			}						
-		}
-		
-		System.out.printf("findElements(): statesSize:%d, stateMapSize:%d\n", states.size(), stateMap.size());
+		}		
 	}
 	
 	public void initializeStates()
 	{
 		Vector<State> queue = new Vector<State>();
 		
-		State rootState = stateMap.get("ROOT");
-		if(rootState != null)
+		Iterator<State> iter = states.iterator();
+		
+		while(iter.hasNext())
 		{
-			rootState.setDepth(0);		
-			rootState.setDefault(true);
-			queue.add(rootState);
-	
-			
-			while(!queue.isEmpty())
+			State rootState = iter.next();
+			if(rootState != null && rootState.getName().equals("ROOT"))
 			{
-				State state = queue.firstElement();
-				queue.remove(0);
+				rootState.setDepth(0);		
+				rootState.setDefault(true);
+				queue.add(rootState);
 				
-				if(state.isAnd())
+				while(!queue.isEmpty())
 				{
-					isIncludeAndState = true;
-				}
-				
-				/* If the state has default transition, it is default state */
-				Transition defaultTransition = state.getDefaultTransition(); 
-				if(defaultTransition != null)
-				{
-					Node subNode = (Node)defaultTransition.getItsTarget();
+					State state = queue.firstElement();
+					queue.remove(0);
 					
-					if(subNode != null)
+					if(state.isAnd())
 					{
-						subNode.setDefault(true);
+						isIncludeAndState = true;
 					}
-				}
-				
-				Vector<State> subStates = state.getSubStates();
-				for(int index = 0; index < subStates.size(); index++)
-				{
-					State child = subStates.get(index);
-					child.setDepth(state.getDepth() + 1);
 					
-					if(subStates.size() == 1)
+					/* If the state has default transition, it is default state */
+					Transition defaultTransition = state.getDefaultTransition(); 
+					if(defaultTransition != null)
 					{
-						/* If the state is only state of its parent, it is default state */
-						child.setDefault(true);
+						Node subNode = (Node)defaultTransition.getItsTarget();
+						
+						if(subNode != null)
+						{
+							subNode.setDefault(true);
+						}
 					}
-							
-					queue.add(child);
+					
+					Vector<State> subStates = state.getSubStates();
+					for(int index = 0; index < subStates.size(); index++)
+					{
+						State child = subStates.get(index);
+						child.setDepth(state.getDepth() + 1);
+						
+						if(subStates.size() == 1)
+						{
+							/* If the state is only state of its parent, it is default state */
+							child.setDefault(true);
+						}
+								
+						queue.add(child);
+					}
 				}
 			}
 		}
@@ -224,27 +228,27 @@ public class Statechart extends Element
 	}
 	
 	/* Wrapper Functions */
-	public State getState(String name)
+	public State getState(String guid)
 	{
-		State state = stateMap.get(name);
+		State state = stateMap.get(guid);
 		return state;
 	}
 	
-	public Condition getCondition(String name)
+	public Condition getCondition(String guid)
 	{
-		Condition condition = conditionMap.get(name);
+		Condition condition = conditionMap.get(guid);
 		return condition;
 	}
 	
-	public Node getNode(String name)
+	public Node getNode(String guid)
 	{
-		Node node = nodeMap.get(name);
+		Node node = nodeMap.get(guid);
 		return node;
 	}	
 	
-	public Transition getTransition(String name)
+	public Transition getTransition(String guid)
 	{
-		Transition transition = transitionMap.get(name);
+		Transition transition = transitionMap.get(guid);
 		return transition;
 	}
 	
@@ -252,13 +256,13 @@ public class Statechart extends Element
 	{
 		irpStatechart.deleteState(state.getIrpState());
 		states.remove(state);
-		stateMap.remove(state.getName());
+		stateMap.remove(state.getGUID());
 	}
 	
 	public void deleteTransition(Transition transition)
 	{
 		transitions.remove(transition);
-		transitionMap.remove(transition.getName());
+		transitionMap.remove(transition.getGUID());
 	}
 		
 	/* Logging Functions */

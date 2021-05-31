@@ -24,13 +24,7 @@ public class Node extends Element
 		this.irpStateVertex = irpStateVertex;
 		this.type = type;
 	}
-	
-	/* Wrapper Functions */
-	String getName()
-	{
-		return irpStateVertex.getName();
-	}
-	
+		
 	/* Getters and Setters */
 	public NodeTypeEnum getType() 
 	{
