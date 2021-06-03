@@ -45,14 +45,16 @@ public class _7_UNSAntiPattern extends AntiPatternBase
 				boolean isInTransitionsEventEmpty = isTransitionsEventsEmpty(inTransitions);
 				boolean isOutTransitionsEventEmpty = isTransitionsEventsEmpty(outTransitions);
 				boolean isIncludeNestedStatechart = state.isIncludeNestedStatechart();
+				boolean isCompound = state.isCompound();
 						
-				if(!state.isRoot() && !state.isDefault() && hasNoAction && hasNoInternalTransition && isInTransitionsEventEmpty && isOutTransitionsEventEmpty && !isIncludeNestedStatechart)
+				if(!state.isRoot() && hasNoAction && hasNoInternalTransition && isInTransitionsEventEmpty && isOutTransitionsEventEmpty && !isIncludeNestedStatechart && !isCompound)
 				{
 					statesFound.add(state);
 					bReturn = true;
 					hitCount++;
 					//state.print();
 				}
+				//state.print();
 			}
 		}
 		

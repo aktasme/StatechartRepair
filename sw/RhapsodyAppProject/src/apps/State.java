@@ -169,7 +169,7 @@ public class State extends Node
 	{
 		super.print();
 		
-		System.out.printf("State:%s depth:%d\n", irpState.getFullNameInStatechart(), depth);
+		System.out.printf("State:%s depth:%d isIncludeNestedStatechart:%b, isCompound:%b %s", irpState.getFullNameInStatechart(), depth, isIncludeNestedStatechart, isCompound, irpState.getGUID());
 	}
 	
 	/* Getters and Setters */
