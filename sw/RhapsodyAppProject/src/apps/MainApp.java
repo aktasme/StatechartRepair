@@ -12,7 +12,7 @@ public class MainApp extends App
 	
 	Vector<AntiPatternBase> antiPatterns;
 	
-	
+	final boolean bRepair = true;
 	
 	/*
 	* This method is called on invoking an app inside Rhapsody.

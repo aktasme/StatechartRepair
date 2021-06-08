@@ -24,9 +24,9 @@ public class _5_URSAntiPattern extends AntiPatternBase
 	{
 		statesFound.clear();
 		
-		if(control(statechart))
+		while(control(statechart))
 		{
-			//repair(statechart);
+			repair(statechart);
 		}
 	}
 

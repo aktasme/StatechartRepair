@@ -254,9 +254,9 @@ public class Statechart extends Element
 	
 	public void deleteState(State state)
 	{
-		irpStatechart.deleteState(state.getIrpState());
 		states.remove(state);
 		stateMap.remove(state.getGUID());
+		irpStatechart.deleteState(state.getIrpState());
 	}
 	
 	public void deleteTransition(Transition transition)

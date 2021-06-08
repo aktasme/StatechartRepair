@@ -158,8 +158,8 @@ public class State extends Node
 		while(iter.hasNext())
 		{
 			Transition transition = iter.next();
-			irpState.deleteTransition(transition.getIrpTransition());
 			statechart.deleteTransition(transition);
+			irpState.deleteTransition(transition.getIrpTransition());
 		}
 	}
 	
