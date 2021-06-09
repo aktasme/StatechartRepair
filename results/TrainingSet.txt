@@ -13,7 +13,7 @@ TWCWOE_1                                                    :    4    4    0    
 TWCWOE_2                                                    :    3    3    0    3(   3:   0) | - - + - - - - |   1,000000
 TWCWOE_3                                                    :    5    5    0    6(   6:   0) | - - + - - - - |   1,200000
 TWCWOE_4                                                    :    5    5    0    7(   7:   0) | - - + - - - - |   1,400000
-TWCWOE_5                                                    :    7    7    0    6(   6:   0) | - - + - - - + |   0,857143
+TWCWOE_5                                                    :    7    7    0    6(   6:   0) | - - + - - - - |   0,857143
 ISN_1                                                       :    5    5    0    3(   3:   0) | - - - + - - - |   0,600000
 ISN_2                                                       :    4    4    0    2(   2:   0) | - - - + - - - |   0,500000
 ISN_3                                                       :    4    4    0    2(   2:   0) | - - - + - - - |   0,500000
@@ -30,19 +30,24 @@ UNS_3                                                       :    5    5    0    
 UNS_4                                                       :    6    6    0    8(   6:   2) | - - - - - - + |   1,000000
 UNS_5                                                       :    5    5    0    8(   6:   2) | - - - - - - + |   1,200000
 UNS_6                                                       :    9    9    0    8(   6:   2) | - - - - - - + |   0,666667
-NC_1                                                        :   10    7    3    8(   8:   0) | - - - - - + + |   1,142857
+NC_1                                                        :   10    7    3    8(   8:   0) | - - - - - + - |   1,142857
 NC_2                                                        :    6    4    2    6(   6:   0) | - - - - - + - |   1,500000
 NC_3                                                        :    8    5    3    9(   9:   0) | - - - - - + - |   1,800000
 NC_4                                                        :    7    5    2    6(   6:   0) | - - - - - + - |   1,200000
-NC_5                                                        :   10    7    3   10(  10:   0) | - - - - - + + |   1,428571
+NC_5                                                        :   10    7    3   10(  10:   0) | - - - - - + - |   1,428571
 
-Total number of statecharts examined: 36
+[Total number of processed elements]
+#SM:36
+#N:215
+#S:199
+#C:16
+#T:244
 
-[AntiPattern]                  Count
-_1_CSDAntiPattern             : 5
-_2_TBSWDHAntiPattern          : 8
-_3_TWCWOEAntiPattern          : 10
-_4_ISNAntiPattern             : 6
-_5_URSAntiPattern             : 5
-_6_NCAntiPattern              : 8
-_7_UNSAntiPattern             : 10
+[AntiPattern Hits]              #SM   #S   #T
+_1_CSDAntiPattern                 5    0    0
+_2_TBSWDHAntiPattern              5    0    8
+_3_TWCWOEAntiPattern              5    0   10
+_4_ISNAntiPattern                 5    6    0
+_5_URSAntiPattern                 5    7    0
+_6_NCAntiPattern                  5    0    8
+_7_UNSAntiPattern                 6    7    0

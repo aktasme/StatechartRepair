@@ -2,6 +2,7 @@ package apps;
 
 import log.CommonLog;
 import com.telelogic.rhapsody.core.IRPModelElement;
+import com.telelogic.rhapsody.core.IRPUnit;
 
 public class Element extends CommonLog
 {
@@ -19,6 +20,18 @@ public class Element extends CommonLog
 		return name;
 	}
 	
+	public void setName(String name) 
+	{
+		this.name = name;
+		irpModelElement.setName(name);
+		
+		IRPUnit irpUnit = irpModelElement.getSaveUnit();
+		if(irpUnit != null)
+		{
+			irpUnit.save(0);
+		}
+	}
+
 	public String getGUID()
 	{
 		return irpModelElement.getGUID();

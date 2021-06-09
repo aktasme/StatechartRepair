@@ -11,10 +11,10 @@
 			<_id type="a">GUID ff29f7ed-650e-4c99-a93c-5095623a1ee5</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">_3_TransitionWithConditionWithoutEvent</_name>
-			<_modifiedTimeWeak type="a">6.9.2020::19:12:46</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">6.9.2020::19:18:56</_modifiedTimeWeak>
 			<_modifiedTime type="a">5.11.2020::14:14:38</_modifiedTime>
 			<_lastID type="a">4</_lastID>
-			<weakCGTime type="a">6.9.2020::19:12:46</weakCGTime>
+			<weakCGTime type="a">6.9.2020::19:18:56</weakCGTime>
 			<strongCGTime type="a">5.2.2020::18:52:21</strongCGTime>
 			<_defaultComposite type="s">GUID 6dc63412-b4bb-4050-a902-ad4d3030dd75</_defaultComposite>
 			<_eventsBaseID type="a">-1</_eventsBaseID>
@@ -4635,10 +4635,10 @@
 			<_id type="a">GUID 95aafc8a-f812-4655-88c1-1ca5fdada42d</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">TWCWOE_5</_name>
-			<_modifiedTimeWeak type="a">6.9.2020::19:12:46</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">6.9.2020::19:18:56</_modifiedTimeWeak>
 			<_modifiedTime type="a">5.11.2020::14:19:30</_modifiedTime>
 			<_lastID type="a">1</_lastID>
-			<weakCGTime type="a">6.9.2020::19:12:46</weakCGTime>
+			<weakCGTime type="a">6.9.2020::19:18:56</weakCGTime>
 			<strongCGTime type="a">5.11.2020::14:14:25</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
@@ -4741,10 +4741,10 @@
 			<_id type="a">GUID 75016a44-3357-4648-aa7f-b6adc919c967</_id>
 			<_myState type="a">10240</_myState>
 			<_name type="a">statechart_0</_name>
-			<_modifiedTimeWeak type="a">6.9.2020::19:12:46</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.9.2020::19:12:46</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.9.2020::19:18:56</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.9.2020::19:18:56</_modifiedTime>
 			<_lastID type="a">8</_lastID>
-			<weakCGTime type="a">6.9.2020::19:12:46</weakCGTime>
+			<weakCGTime type="a">6.9.2020::19:18:56</weakCGTime>
 			<strongCGTime type="a">5.11.2020::14:14:25</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
@@ -4752,7 +4752,7 @@
 			</_itsStateChart>
 			<_classModifier type="a">Unspecified</_classModifier>
 			<_defNumber type="a">6</_defNumber>
-			<_version type="a">6.9.2020::22:12:46</_version>
+			<_version type="a">6.9.2020::22:18:56</_version>
 			<_baseVersion type="a">1.2.1990::0:0:0</_baseVersion>
 			<_diagram type="s">GUID 4f6e6562-937e-4e1e-9fa8-c88c56d082a4</_diagram>
 			<AggregatesList type="e">
@@ -4969,7 +4969,7 @@
 				<_id type="a">GUID 30592dcf-d025-4831-b48d-dab1076c465b</_id>
 				<_myState type="a">4096</_myState>
 				<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-				<_modifiedTime type="a">1.1.1970::3:0:0</_modifiedTime>
+				<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 				<_body type="a">printf(&quot;A&quot;);</_body>
 			</IAction>
 			</_entryAction>
@@ -5001,10 +5001,18 @@
 		<IState type="e">
 			<_id type="a">GUID fba7d876-9893-4e1e-bfcb-a2183243f1cc</_id>
 			<_name type="a">E</_name>
-			<_modifiedTimeWeak type="a">5.19.2020::13:41:20</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.19.2020::13:41:20</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.9.2020::19:18:56</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.9.2020::19:18:56</_modifiedTime>
 			<_parent type="s">GUID b1a5ff90-4e90-4eb0-a387-5311effefcf6</_parent>
 			<_defaultTrans type="s"></_defaultTrans>
+			<_entryAction type="p"><IAction type="e">
+				<_id type="a">GUID eae38e99-6c64-456e-8edf-738a03a31e19</_id>
+				<_myState type="a">4096</_myState>
+				<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+				<_modifiedTime type="a">1.1.1970::3:0:0</_modifiedTime>
+				<_body type="a">printf(&quot;E&quot;);</_body>
+			</IAction>
+			</_entryAction>
 		</IState>
 		<IState type="e">
 			<_id type="a">GUID 6ec3d37b-81a6-45f3-bf97-d4a53ef02426</_id>
@@ -5140,9 +5148,9 @@
 			</IPropertyContainer>
 			</_properties>
 			<_name type="a">statechartdiagram_0</_name>
-			<_modifiedTimeWeak type="a">6.9.2020::19:12:46</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">6.9.2020::19:18:56</_modifiedTimeWeak>
 			<_modifiedTime type="a">5.11.2020::14:18:1</_modifiedTime>
-			<_lastModifiedTime type="a">6.9.2020::19:12:46</_lastModifiedTime>
+			<_lastModifiedTime type="a">6.9.2020::19:18:56</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
