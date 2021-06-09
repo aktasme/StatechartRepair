@@ -40,11 +40,15 @@ public class _3_TWCWOEAntiPattern extends AntiPatternBase
 			{
 				transitionsFound.add(transition);
 				bReturn = true;
-				hitCount++;
+				hitCountTransition++;
 			}			
 		}
 		
-		statechart.setTWCWOE(bReturn);
+		if(bReturn)
+		{
+			hitCountStatechart++;
+			statechart.setTWCWOE(true);
+		}
 		
 		return bReturn;
 	}

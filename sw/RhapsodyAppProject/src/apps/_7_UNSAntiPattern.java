@@ -51,14 +51,18 @@ public class _7_UNSAntiPattern extends AntiPatternBase
 				{
 					statesFound.add(state);
 					bReturn = true;
-					hitCount++;
+					hitCountState++;
 					//state.print();
 				}
 				//state.print();
 			}
 		}
 		
-		statechart.setUNS(bReturn);
+		if(bReturn)
+		{
+			hitCountStatechart++;
+			statechart.setUNS(true);
+		}
 		
 		return bReturn;
 	}

@@ -24,9 +24,9 @@ public class _5_URSAntiPattern extends AntiPatternBase
 	{
 		statesFound.clear();
 		
-		while(control(statechart))
+		if(control(statechart))
 		{
-			repair(statechart);
+			//repair(statechart);
 		}
 	}
 
@@ -68,8 +68,9 @@ public class _5_URSAntiPattern extends AntiPatternBase
 		if(statesFound.size() > 0)
 		{
 			bReturn = true;
-			hitCount++;
-			statechart.setURS(bReturn);
+			hitCountStatechart++;
+			hitCountState += statesFound.size();
+			statechart.setURS(true);
 		}
 		
 		return bReturn;

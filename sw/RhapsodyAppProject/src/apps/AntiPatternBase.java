@@ -5,7 +5,9 @@ import log.CommonLog;
 public class AntiPatternBase extends CommonLog
 {
 	String name;
-	int hitCount = 0;
+	int hitCountStatechart = 0;
+	int hitCountState = 0;
+	int hitCountTransition = 0;
 	
 	public AntiPatternBase()
 	{
@@ -32,7 +34,7 @@ public class AntiPatternBase extends CommonLog
 	@Override
 	public String toPrintableString()
 	{
-		String printableString = String.format("%-30s: %d", name, hitCount);
+		String printableString = String.format("%-30s %4d %4d %4d", name, hitCountStatechart, hitCountState, hitCountTransition);
 		return printableString;
 	}
 	

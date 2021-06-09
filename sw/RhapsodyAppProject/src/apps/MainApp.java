@@ -9,10 +9,12 @@ public class MainApp extends App
 {
 	final String TargetProjectName = "AutoRepaired";
 	int statechartCount = 0;
-	
+	int nodeCount = 0;
+	int stateCount = 0;
+	int conditionCount = 0;
+	int transitionCount = 0;
+
 	Vector<AntiPatternBase> antiPatterns;
-	
-	final boolean bRepair = true;
 	
 	/*
 	* This method is called on invoking an app inside Rhapsody.
@@ -125,6 +127,10 @@ public class MainApp extends App
 	public void runAntiPattern(Statechart statechart)
 	{
 		statechartCount++;
+		nodeCount += statechart.getNodesCount();
+		stateCount += statechart.getStateCount();
+		conditionCount += statechart.getConditionsCount();
+		transitionCount += statechart.getTransitionCount();
 		
 		Iterator<AntiPatternBase> iter = antiPatterns.iterator();
 		
@@ -239,9 +245,14 @@ public class MainApp extends App
 	
 	public void printStatistics()
 	{
-		System.out.printf("\nTotal number of statecharts examined: %d\n", statechartCount);
+		System.out.printf("\n[Total number of processed elements]\n");
+		System.out.printf("#SM:%d\n", statechartCount);
+		System.out.printf("#N:%d\n", nodeCount);
+		System.out.printf("#S:%d\n", stateCount);
+		System.out.printf("#C:%d\n", conditionCount);
+		System.out.printf("#T:%d\n", transitionCount);
 		
-		System.out.printf("\n%-30s %s\n", "[AntiPattern]", "Count");
+		System.out.printf("\n%-30s %4s %4s %4s\n", "[AntiPattern Hits]", "#SM", "#S", "#T");
 		
 		Iterator<AntiPatternBase> iter = antiPatterns.iterator();
 		

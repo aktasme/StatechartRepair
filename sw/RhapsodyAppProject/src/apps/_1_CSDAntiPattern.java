@@ -28,7 +28,7 @@ public class _1_CSDAntiPattern extends AntiPatternBase
 			if(complexity >= COMPLEXITY_THRESHOLD)
 			{
 				bReturn = true;
-				hitCount++;
+				hitCountStatechart++;
 			}
 		}
 		

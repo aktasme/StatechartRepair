@@ -47,13 +47,17 @@ public class _2_TBSWDHAntiPattern extends AntiPatternBase
 					{
 						transitionsFound.add(transition);
 						bReturn = true;
-						hitCount++;
+						hitCountTransition++;
 					}
 				}
 			}
 		}
 		
-		statechart.setTBSWDH(bReturn);
+		if(bReturn)
+		{
+			hitCountStatechart++;
+			statechart.setTBSWDH(true);
+		}
 		
 		return bReturn;
 	}

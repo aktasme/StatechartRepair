@@ -167,11 +167,9 @@ public class State extends Node
 	@Override
 	public void print() 
 	{
-		super.print();
-		
-		System.out.printf("State:%s depth:%d isIncludeNestedStatechart:%b, isCompound:%b %s", irpState.getFullNameInStatechart(), depth, isIncludeNestedStatechart, isCompound, irpState.getGUID());
+		System.out.printf("State:%s depth:%d isIncludeNestedStatechart:%b, isCompound:%b %s\n", irpState.getFullNameInStatechart(), depth, isIncludeNestedStatechart, isCompound, irpState.getGUID());
 	}
-	
+
 	/* Getters and Setters */
 	public int getDepth() 
 	{
@@ -183,7 +181,8 @@ public class State extends Node
 		this.depth = depth;
 	}
 
-	public boolean isRoot() {
+	public boolean isRoot() 
+	{
 		return isRoot;
 	}
 

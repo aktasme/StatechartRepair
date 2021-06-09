@@ -41,11 +41,15 @@ public class _6_NCAntiPattern extends AntiPatternBase
 			{
 				transitionsFound.add(transition);
 				bReturn = true;
-				hitCount++;
+				hitCountTransition++;
 			}			
 		}
 		
-		statechart.setNC(bReturn);
+		if(bReturn)
+		{
+			hitCountStatechart++;
+			statechart.setNC(true);
+		}
 				
 		return bReturn;
 	}

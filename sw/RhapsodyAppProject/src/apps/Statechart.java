@@ -47,6 +47,8 @@ public class Statechart extends Element
 	boolean isNC = false;
 	boolean isUNS = false;
 	
+	boolean isHideStatechartName = false;
+	
 	public Statechart(IRPApplication rhapsody, IRPStatechart irpStatechart)
 	{
 		super(irpStatechart);
@@ -269,7 +271,15 @@ public class Statechart extends Element
 	@Override
 	public String toPrintableString() 
 	{
-		String mainProperties = String.format("%-60s: %4d %4d %4d %4d(%4d:%4d)", irpClass.getName(), nodes.size(), states.size(), conditions.size(), transitions.size(), externalTransitions.size(), internalTransitions.size());
+		String statechartName = irpClass.getName();
+		int statechartNameLen = statechartName.length();
+		int publicCharacterLen = 3;
+		if(isHideStatechartName && statechartNameLen > publicCharacterLen)
+		{
+			statechartName = statechartName.substring(0, publicCharacterLen) + new String(new char[statechartNameLen-publicCharacterLen]).replace("\0", "*");
+		}
+		
+		String mainProperties = String.format("%-60s: %4d %4d %4d %4d(%4d:%4d)", statechartName, nodes.size(), states.size(), conditions.size(), transitions.size(), externalTransitions.size(), internalTransitions.size());
 		String antiPatternProperties = String.format(" | %s %s %s %s %s %s %s", toString(isCSD), toString(isTBSWDH), toString(isTWCWOE), toString(isISN), toString(isURS), toString(isNC), toString(isUNS));
 		String extraProperties = String.format(" | %10f", complexity);
 		printableString = mainProperties + antiPatternProperties + extraProperties;
@@ -285,6 +295,16 @@ public class Statechart extends Element
 	public int getTransitionCount() 
 	{
 		return transitions.size();
+	}
+	
+	public int getNodesCount()
+	{
+		return nodes.size();
+	}
+	
+	public int getConditionsCount()
+	{
+		return conditions.size();
 	}
 	
 	public int getInternalTransitionCount() 

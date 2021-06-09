@@ -44,13 +44,17 @@ public class _4_ISNAntiPattern extends AntiPatternBase
 				{
 					statesFound.add(state);
 					bReturn = true;
-					//System.out.printf("Name:%s\n", stateName);
-					hitCount++;
+					state.print();
+					hitCountState++;
 				}
 			}
 		}
 		
-		statechart.setISN(bReturn);
+		if(bReturn)
+		{
+			hitCountStatechart++;
+			statechart.setISN(true);
+		}
 		
 		return bReturn;
 	}
