@@ -44,7 +44,7 @@ public class _4_ISNAntiPattern extends AntiPatternBase
 				{
 					statesFound.add(state);
 					bReturn = true;
-					state.print();
+					//state.print();
 					hitCountState++;
 				}
 			}
