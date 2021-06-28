@@ -49,52 +49,7 @@ public class State extends Node
 		
 		return subStates;
 	}
-	
-	public Vector<Transition> getInTransitions()
-	{
-		Vector<Transition> inTransitions = new Vector<Transition>();
 		
-		IRPCollection irpTransitions =  irpState.getInTransitions();
-		for(int index = 1; index <= irpTransitions.getCount(); index++)
-		{
-			IRPTransition irpTransition = (IRPTransition)irpTransitions.getItem(index);
-			Transition transition = statechart.getTransition(irpTransition.getGUID());
-			
-			if(transition != null)
-			{
-				inTransitions.add(transition);
-			}
-			else
-			{
-				System.out.printf("State:%s Transition:%s getInTransitions() null pointer\n", irpState.getName(), irpTransition.getName());
-			}
-		}	
-		
-		return inTransitions;
-	}
-	
-	public Vector<Transition> getOutTransitions()
-	{
-		Vector<Transition> outTransitions = new Vector<Transition>();
-		
-		IRPCollection irpTransitions =  irpState.getOutTransitions();
-		for(int index = 1; index <= irpTransitions.getCount(); index++)
-		{
-			IRPTransition irpTransition = (IRPTransition)irpTransitions.getItem(index);
-			Transition transition = statechart.getTransition(irpTransition.getGUID());
-			if(transition != null)
-			{
-				outTransitions.add(transition);
-			}
-			else
-			{
-				System.out.printf("State:%s Transition:%s getOutTransitions() null pointer\n", irpState.getName(), irpTransition.getName());
-			}				
-		}	
-		
-		return outTransitions;
-	}
-	
 	public Vector<Transition> getInternalTransitions()
 	{
 		Vector<Transition> internalTransitions = new Vector<Transition>();

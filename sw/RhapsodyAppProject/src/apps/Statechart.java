@@ -261,10 +261,23 @@ public class Statechart extends Element
 		irpStatechart.deleteState(state.getIrpState());
 	}
 	
+	public void deleteCondition(Condition condition)
+	{
+		conditions.remove(condition);
+		conditionMap.remove(condition.getGUID());
+		IRPStateVertex irpStateVertex = condition.getIrpStateVertex();
+		irpStateVertex.deleteFromProject();
+	}
+	
 	public void deleteTransition(Transition transition)
 	{
 		transitions.remove(transition);
 		transitionMap.remove(transition.getGUID());
+	}
+	
+	public void createGraphics()
+	{
+		irpStatechart.createGraphics();
 	}
 		
 	/* Logging Functions */

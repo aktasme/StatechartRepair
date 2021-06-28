@@ -3,6 +3,9 @@ package apps;
 import java.util.Iterator;
 import java.util.Vector;
 
+import com.telelogic.rhapsody.core.IRPGuard;
+import com.telelogic.rhapsody.core.IRPTransition;
+
 import apps.Node.NodeTypeEnum;
 
 /**
@@ -57,8 +60,46 @@ public class _6_NCAntiPattern extends AntiPatternBase
 	@Override
 	public boolean repair(Statechart statechart) 
 	{
-		// TODO Auto-generated method stub
-		return false;
+		boolean bReturn = true;
+		Iterator<Transition> iter = transitionsFound.iterator();
+		
+		while(iter.hasNext())
+		{
+			Transition transition = iter.next();	
+			
+			Condition sourceCondition = (Condition)transition.getItsSource();
+			Condition targetCondition = (Condition)transition.getItsTarget();
+
+			IRPGuard guard = transition.getItsGuard();
+			String guardString = guard.getBody();
+			
+			Vector<Transition> outTransitions = targetCondition.getOutTransitions();
+			Iterator<Transition> iterOut = outTransitions.iterator();
+
+			while(iterOut.hasNext())
+			{
+				Transition transitionOut = iterOut.next();
+				IRPGuard guardOut = transitionOut.getItsGuard();
+				String guardOutString = guardOut.getBody();
+				
+				String repairString;
+				if(guardOutString.equals("else"))
+				{
+					repairString = "!(" + guardString + ")";
+				}
+				else
+				{
+					repairString = "(" + guardString + ") && (" + guardOutString + ")";					
+				}
+												
+				transitionOut.setItsGuard(repairString);
+				transitionOut.setItsSource(sourceCondition);
+			}
+		}
+		
+		//statechart.createGraphics();
+		
+		return bReturn;
 	}
 
 }

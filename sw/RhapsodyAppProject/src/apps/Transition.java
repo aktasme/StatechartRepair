@@ -29,11 +29,23 @@ public class Transition extends Element
 		return node;
 	}
 	
+	public void setItsSource(Node node)
+	{
+		IRPStateVertex irpSource = node.getIrpStateVertex();
+		irpTransition.setItsSource(irpSource);
+	}
+	
 	public Node getItsTarget()
 	{
 		IRPStateVertex irpTarget = irpTransition.getItsTarget();
 		Node node = statechart.getNode(irpTarget.getGUID());
 		return node;
+	}
+	
+	public void setItsTarget(Node node)
+	{
+		IRPStateVertex irpTarget = node.getIrpStateVertex();
+		irpTransition.setItsTarget(irpTarget);
 	}
 	
 	public IRPGuard getItsGuard()
