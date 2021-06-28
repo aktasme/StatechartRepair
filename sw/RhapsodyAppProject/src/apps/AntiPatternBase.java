@@ -17,7 +17,7 @@ public class AntiPatternBase extends CommonLog
 	{
 		if(control(statechart))
 		{
-			//repair(statechart);
+			repair(statechart);
 		}
 	}
 	

@@ -40,12 +40,22 @@ public class Transition extends Element
 	{
 		return irpTransition.getItsGuard();
 	}
+
+	public IRPGuard setItsGuard(String guardString)
+	{
+		return irpTransition.setItsGuard(guardString);
+	}
 	
 	public IRPTrigger getItsTrigger()
 	{
 		return irpTransition.getItsTrigger();
 	}
 		
+	IRPTrigger setItsTrigger(String triggerString)
+	{
+		return irpTransition.setItsTrigger(triggerString);
+	}
+
 	/* Getter and Setters */
 	public String getName() 
 	{
@@ -76,7 +86,7 @@ public class Transition extends Element
 	{
 		this.isInternal = isInternal;
 	}
-
+	
 	/* Logging Functions */
 	@Override
 	public void print() 

@@ -79,7 +79,7 @@ public class _5_URSAntiPattern extends AntiPatternBase
 	@Override
 	public boolean repair(Statechart statechart) 
 	{
-		boolean bReturn = false;
+		boolean bReturn = true;
 		
 		Iterator<State> iter = statesFound.iterator();
 		while(iter.hasNext())

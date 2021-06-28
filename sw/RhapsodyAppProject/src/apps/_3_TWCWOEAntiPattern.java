@@ -56,8 +56,36 @@ public class _3_TWCWOEAntiPattern extends AntiPatternBase
 	@Override
 	public boolean repair(Statechart statechart) 
 	{
-		// TODO Auto-generated method stub
-		return false;
+		boolean bReturn = true;
+		Iterator<Transition> iter = transitionsFound.iterator();
+		
+		while(iter.hasNext())
+		{
+			Transition transition = iter.next();			
+			State sourceState = (State)transition.getItsSource();
+			State targetState = (State)transition.getItsTarget();
+			
+			/* New event name constructed */
+			String triggerString = "ev" + sourceState.getName() + "to" + targetState.getName();
+			
+			transition.setItsTrigger(triggerString);			
+			IRPGuard irpGuard = transition.getItsGuard();
+			
+			/* Guard deleted */
+			String guardString = irpGuard.getBody();
+			irpGuard.setBody("");
+			
+			/* GEN code added to end of the entry action */
+			String entryAction = sourceState.getEntryAction();
+			String repairEntryAction = entryAction;
+			repairEntryAction += "\n";
+			repairEntryAction = repairEntryAction + "if(" + guardString + ")\n{\n\tGEN(" + triggerString + ");\n}";
+						
+			sourceState.setEntryAction(repairEntryAction);
+		}
+		
+		transitionsFound.clear();
+		return bReturn;
 	}
 
 }

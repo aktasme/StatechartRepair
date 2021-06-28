@@ -136,11 +136,21 @@ public class State extends Node
 		return irpState.getEntryAction();
 	}
 	
+	public void setEntryAction(String entryActionString)
+	{
+		irpState.setEntryAction(entryActionString);
+	}
+	
 	public String getExitAction()
 	{
 		return irpState.getExitAction();
 	}
 	
+	public void setExitAction(String exitActionString)
+	{
+		irpState.setExitAction(exitActionString);
+	}
+		
 	public void deleteTransitions()
 	{
 		Vector<Transition> internalTransitions = getInternalTransitions();
