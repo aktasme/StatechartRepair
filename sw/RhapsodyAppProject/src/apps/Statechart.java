@@ -273,6 +273,8 @@ public class Statechart extends Element
 	{
 		transitions.remove(transition);
 		transitionMap.remove(transition.getGUID());
+		IRPTransition irpTransition = transition.getIrpTransition();
+		irpTransition.deleteFromProject();
 	}
 	
 	public void createGraphics()
@@ -439,6 +441,14 @@ public class Statechart extends Element
 	{
 		this.isIncludeAndState = hasAndState;
 	}
-	
-	
+
+	public IRPStatechart getIrpStatechart() 
+	{
+		return irpStatechart;
+	}
+
+	public void setIrpStatechart(IRPStatechart irpStatechart) 
+	{
+		this.irpStatechart = irpStatechart;
+	}
 }

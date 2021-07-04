@@ -1,5 +1,7 @@
 package apps;
 
+import com.telelogic.rhapsody.core.IRPApplication;
+
 import log.CommonLog;
 
 public class AntiPatternBase extends CommonLog
@@ -13,20 +15,20 @@ public class AntiPatternBase extends CommonLog
 	{
 	}
 	
-	public void run(Statechart statechart)
+	public void run(IRPApplication irpApplication, Statechart statechart)
 	{
-		if(control(statechart))
+		if(control(irpApplication, statechart))
 		{
-			repair(statechart);
+			repair(irpApplication, statechart);
 		}
 	}
 	
-	public boolean control(Statechart statechart)
+	public boolean control(IRPApplication irpApplication, Statechart statechart)
 	{
 		return false;
 	}
 	
-	public boolean repair(Statechart statechart)
+	public boolean repair(IRPApplication irpApplication, Statechart statechart)
 	{
 		return false;
 	}

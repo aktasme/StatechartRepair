@@ -67,7 +67,7 @@ public class Transition extends Element
 	{
 		return irpTransition.setItsTrigger(triggerString);
 	}
-
+	
 	/* Getter and Setters */
 	public String getName() 
 	{

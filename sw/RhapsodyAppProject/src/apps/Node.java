@@ -73,6 +73,17 @@ public class Node extends Element
 		return outTransitions;
 	}
 	
+	Transition addTransition(Node targetNode)
+	{
+		IRPStateVertex targetStateVertex = targetNode.getIrpStateVertex();
+		IRPTransition newIRPTransition = irpStateVertex.addTransition(targetStateVertex);
+		
+		Transition newTransition = new Transition(statechart, newIRPTransition, false);
+		
+		return newTransition;
+	}
+
+	
 	/* Getters and Setters */
 	public NodeTypeEnum getType() 
 	{

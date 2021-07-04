@@ -2,6 +2,9 @@ package apps;
 
 import java.util.Iterator;
 import java.util.Vector;
+
+import com.telelogic.rhapsody.core.IRPApplication;
+
 import apps.Node.NodeTypeEnum;
 
 /**
@@ -21,7 +24,7 @@ public class _2_TBSWDHAntiPattern extends AntiPatternBase
 	}
 
 	@Override
-	public boolean control(Statechart statechart) 
+	public boolean control(IRPApplication irpApplication, Statechart statechart) 
 	{
 		boolean bReturn = false;
 		Vector<Transition> transitions = statechart.getTransitions();
@@ -63,7 +66,7 @@ public class _2_TBSWDHAntiPattern extends AntiPatternBase
 	}
 
 	@Override
-	public boolean repair(Statechart statechart) 
+	public boolean repair(IRPApplication irpApplication, Statechart statechart) 
 	{
 		// TODO Auto-generated method stub
 		return false;

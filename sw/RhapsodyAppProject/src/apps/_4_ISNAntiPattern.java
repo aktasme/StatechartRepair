@@ -26,18 +26,18 @@ public class _4_ISNAntiPattern extends AntiPatternBase
 	}
 
 	@Override
-	public void run(Statechart statechart) 
+	public void run(IRPApplication irpApplication, Statechart statechart) 
 	{
 		statesFound.clear();
 		
-		while(control(statechart))
+		while(control(irpApplication, statechart))
 		{
-			repair(statechart);
+			repair(irpApplication, statechart);
 		}
 	}
 
 	@Override
-	public boolean control(Statechart statechart) 
+	public boolean control(IRPApplication irpApplication, Statechart statechart) 
 	{
 		boolean bReturn = false;
 		
@@ -74,7 +74,7 @@ public class _4_ISNAntiPattern extends AntiPatternBase
 	}
 
 	@Override
-	public boolean repair(Statechart statechart) 
+	public boolean repair(IRPApplication irpApplication, Statechart statechart) 
 	{
 		boolean bReturn = false;
 		

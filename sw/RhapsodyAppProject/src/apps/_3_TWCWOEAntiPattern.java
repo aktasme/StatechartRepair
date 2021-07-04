@@ -23,7 +23,7 @@ public class _3_TWCWOEAntiPattern extends AntiPatternBase
 	}
 
 	@Override
-	public boolean control(Statechart statechart) 
+	public boolean control(IRPApplication irpApplication, Statechart statechart) 
 	{
 		boolean bReturn = false;
 		Vector<Transition> transitions = statechart.getTransitions();
@@ -54,7 +54,7 @@ public class _3_TWCWOEAntiPattern extends AntiPatternBase
 	}
 
 	@Override
-	public boolean repair(Statechart statechart) 
+	public boolean repair(IRPApplication irpApplication, Statechart statechart) 
 	{
 		boolean bReturn = true;
 		Iterator<Transition> iter = transitionsFound.iterator();

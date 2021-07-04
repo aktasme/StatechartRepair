@@ -3,6 +3,8 @@ package apps;
 import java.util.Iterator;
 import java.util.Vector;
 
+import com.telelogic.rhapsody.core.IRPApplication;
+
 /**
  * @author mehmetaktas
  * 
@@ -20,18 +22,18 @@ public class _5_URSAntiPattern extends AntiPatternBase
 	}
 
 	@Override
-	public void run(Statechart statechart) 
+	public void run(IRPApplication irpApplication, Statechart statechart) 
 	{
 		statesFound.clear();
 		
-		if(control(statechart))
+		if(control(irpApplication, statechart))
 		{
-			//repair(statechart);
+			//repair(irpApplication, statechart);
 		}
 	}
 
 	@Override
-	public boolean control(Statechart statechart) 
+	public boolean control(IRPApplication irpApplication, Statechart statechart) 
 	{
 		boolean bReturn = false;
 		
@@ -77,7 +79,7 @@ public class _5_URSAntiPattern extends AntiPatternBase
 	}
 
 	@Override
-	public boolean repair(Statechart statechart) 
+	public boolean repair(IRPApplication irpApplication, Statechart statechart) 
 	{
 		boolean bReturn = true;
 		

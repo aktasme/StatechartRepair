@@ -1,5 +1,7 @@
 package apps;
 
+import com.telelogic.rhapsody.core.IRPApplication;
+
 /**
  * @author mehmetaktas
  *
@@ -17,7 +19,7 @@ public class _1_CSDAntiPattern extends AntiPatternBase
 	}
 	
 	@Override
-	public boolean control(Statechart statechart) 
+	public boolean control(IRPApplication irpApplication, Statechart statechart) 
 	{
 		boolean bReturn = false;
 		
@@ -39,7 +41,7 @@ public class _1_CSDAntiPattern extends AntiPatternBase
 	}
 
 	@Override
-	public boolean repair(Statechart statechart) 
+	public boolean repair(IRPApplication irpApplication, Statechart statechart) 
 	{
 		/* State machine optimization and minimization algorithm can be used for complex statechart diagrams. */
 		/* In this work no solution is recommended for this type of diagrams. */

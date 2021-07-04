@@ -3,7 +3,11 @@ package apps;
 import java.util.Iterator;
 import java.util.Vector;
 
+import com.telelogic.rhapsody.core.IRPApplication;
+import com.telelogic.rhapsody.core.IRPCollection;
+import com.telelogic.rhapsody.core.IRPGraphElement;
 import com.telelogic.rhapsody.core.IRPGuard;
+import com.telelogic.rhapsody.core.IRPModelElement;
 import com.telelogic.rhapsody.core.IRPTransition;
 
 import apps.Node.NodeTypeEnum;
@@ -25,7 +29,7 @@ public class _6_NCAntiPattern extends AntiPatternBase
 	}
 
 	@Override
-	public boolean control(Statechart statechart) 
+	public boolean control(IRPApplication irpApplication, Statechart statechart) 
 	{
 		boolean bReturn = false;
 		Vector<Transition> transitions = statechart.getTransitions();
@@ -58,11 +62,13 @@ public class _6_NCAntiPattern extends AntiPatternBase
 	}
 
 	@Override
-	public boolean repair(Statechart statechart) 
+	public boolean repair(IRPApplication irpApplication, Statechart statechart) 
 	{
 		boolean bReturn = true;
-		Iterator<Transition> iter = transitionsFound.iterator();
 		
+		IRPCollection newTransitions = irpApplication.createNewCollection();
+
+		Iterator<Transition> iter = transitionsFound.iterator();
 		while(iter.hasNext())
 		{
 			Transition transition = iter.next();	
@@ -74,8 +80,19 @@ public class _6_NCAntiPattern extends AntiPatternBase
 			String guardString = guard.getBody();
 			
 			Vector<Transition> outTransitions = targetCondition.getOutTransitions();
-			Iterator<Transition> iterOut = outTransitions.iterator();
+			Vector<Transition> inTransitions = targetCondition.getInTransitions();
 
+			statechart.deleteCondition(targetCondition);
+			
+			Iterator<Transition> iterIn = inTransitions.iterator();
+			while(iterIn.hasNext())
+			{
+				Transition transitionIn = iterIn.next();
+				statechart.deleteTransition(transitionIn);
+			}
+
+						
+			Iterator<Transition> iterOut = outTransitions.iterator();
 			while(iterOut.hasNext())
 			{
 				Transition transitionOut = iterOut.next();
@@ -92,13 +109,28 @@ public class _6_NCAntiPattern extends AntiPatternBase
 					repairString = "(" + guardString + ") && (" + guardOutString + ")";					
 				}
 												
-				transitionOut.setItsGuard(repairString);
-				transitionOut.setItsSource(sourceCondition);
+				//transitionOut.setItsGuard(repairString);
+				//transitionOut.setItsSource(sourceCondition);
+				
+				
+				Node targetNode = transitionOut.getItsTarget();
+				Transition newTransition = sourceCondition.addTransition(targetNode);
+				newTransition.setItsGuard(repairString);
+				newTransitions.addItem(newTransition.getIrpTransition());
+				
+				statechart.deleteTransition(transitionOut);
+
 			}
 		}
 		
-		//statechart.createGraphics();
+		IRPCollection relationTypes = irpApplication.createNewCollection();
+		relationTypes.setSize(1);
+		relationTypes.setString(1, "AllRelations");
 		
+		statechart.getIrpStatechart().populateDiagram(newTransitions, relationTypes, "fromto");
+		
+		//statechart.createGraphics();
+				
 		return bReturn;
 	}
 

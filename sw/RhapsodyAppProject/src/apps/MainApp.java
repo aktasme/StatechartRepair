@@ -14,6 +14,8 @@ public class MainApp extends App
 	int conditionCount = 0;
 	int transitionCount = 0;
 
+	IRPApplication irpApplication = null; 
+	
 	Vector<AntiPatternBase> antiPatterns;
 	
 	/*
@@ -23,6 +25,8 @@ public class MainApp extends App
 	*/
 	public void execute(IRPApplication rhapsody, IRPModelElement selected)
 	{
+		irpApplication = rhapsody;
+		
 		/* Create all strategies */
 		createStrategies();
 		print();
@@ -137,7 +141,7 @@ public class MainApp extends App
 		while(iter.hasNext())
 		{
 			AntiPatternBase antiPattern = iter.next();
-			antiPattern.run(statechart);
+			antiPattern.run(irpApplication, statechart);
 		}
 	}	
 	
@@ -157,26 +161,26 @@ public class MainApp extends App
 		antiPatterns = new Vector<AntiPatternBase>();
 		AntiPatternBase antiPattern = null;
 		
-		antiPattern = new _1_CSDAntiPattern();
-		antiPatterns.add(antiPattern);
-		
-		antiPattern = new _2_TBSWDHAntiPattern();
-		antiPatterns.add(antiPattern);	
-	
-		antiPattern = new _3_TWCWOEAntiPattern();
-		antiPatterns.add(antiPattern);
-		
-		antiPattern = new _4_ISNAntiPattern();
-		antiPatterns.add(antiPattern);
-		
-		antiPattern = new _5_URSAntiPattern();
-		antiPatterns.add(antiPattern);
-		
+//		antiPattern = new _1_CSDAntiPattern();
+//		antiPatterns.add(antiPattern);
+//		
+//		antiPattern = new _2_TBSWDHAntiPattern();
+//		antiPatterns.add(antiPattern);	
+//	
+//		antiPattern = new _3_TWCWOEAntiPattern();
+//		antiPatterns.add(antiPattern);
+//		
+//		antiPattern = new _4_ISNAntiPattern();
+//		antiPatterns.add(antiPattern);
+//		
+//		antiPattern = new _5_URSAntiPattern();
+//		antiPatterns.add(antiPattern);
+//		
 		antiPattern = new _6_NCAntiPattern();
 		antiPatterns.add(antiPattern);		
-		
-		antiPattern = new _7_UNSAntiPattern();
-		antiPatterns.add(antiPattern);
+//		
+//		antiPattern = new _7_UNSAntiPattern();
+//		antiPatterns.add(antiPattern);
 	}
 	
 	public IRPProject copyProject(IRPApplication rhapsody, IRPModelElement selected)
