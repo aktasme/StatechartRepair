@@ -90,7 +90,6 @@ public class _6_NCAntiPattern extends AntiPatternBase
 				Transition transitionIn = iterIn.next();
 				statechart.deleteTransition(transitionIn);
 			}
-
 						
 			Iterator<Transition> iterOut = outTransitions.iterator();
 			while(iterOut.hasNext())
@@ -107,11 +106,7 @@ public class _6_NCAntiPattern extends AntiPatternBase
 				else
 				{
 					repairString = "(" + guardString + ") && (" + guardOutString + ")";					
-				}
-												
-				//transitionOut.setItsGuard(repairString);
-				//transitionOut.setItsSource(sourceCondition);
-				
+				}														
 				
 				Node targetNode = transitionOut.getItsTarget();
 				Transition newTransition = sourceCondition.addTransition(targetNode);
@@ -119,7 +114,6 @@ public class _6_NCAntiPattern extends AntiPatternBase
 				newTransitions.addItem(newTransition.getIrpTransition());
 				
 				statechart.deleteTransition(transitionOut);
-
 			}
 		}
 		
@@ -129,7 +123,6 @@ public class _6_NCAntiPattern extends AntiPatternBase
 		
 		statechart.getIrpStatechart().populateDiagram(newTransitions, relationTypes, "fromto");
 		
-		//statechart.createGraphics();
 				
 		return bReturn;
 	}

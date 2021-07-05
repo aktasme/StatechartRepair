@@ -161,26 +161,26 @@ public class MainApp extends App
 		antiPatterns = new Vector<AntiPatternBase>();
 		AntiPatternBase antiPattern = null;
 		
-//		antiPattern = new _1_CSDAntiPattern();
-//		antiPatterns.add(antiPattern);
-//		
-//		antiPattern = new _2_TBSWDHAntiPattern();
-//		antiPatterns.add(antiPattern);	
-//	
-//		antiPattern = new _3_TWCWOEAntiPattern();
-//		antiPatterns.add(antiPattern);
-//		
-//		antiPattern = new _4_ISNAntiPattern();
-//		antiPatterns.add(antiPattern);
-//		
-//		antiPattern = new _5_URSAntiPattern();
-//		antiPatterns.add(antiPattern);
-//		
+		antiPattern = new _1_CSDAntiPattern();
+		antiPatterns.add(antiPattern);
+		
+		antiPattern = new _2_TBSWDHAntiPattern();
+		antiPatterns.add(antiPattern);	
+	
+		antiPattern = new _3_TWCWOEAntiPattern();
+		antiPatterns.add(antiPattern);
+		
+		antiPattern = new _4_ISNAntiPattern();
+		antiPatterns.add(antiPattern);
+		
+		antiPattern = new _5_URSAntiPattern();
+		antiPatterns.add(antiPattern);
+		
 		antiPattern = new _6_NCAntiPattern();
 		antiPatterns.add(antiPattern);		
-//		
-//		antiPattern = new _7_UNSAntiPattern();
-//		antiPatterns.add(antiPattern);
+		
+		antiPattern = new _7_UNSAntiPattern();
+		antiPatterns.add(antiPattern);
 	}
 	
 	public IRPProject copyProject(IRPApplication rhapsody, IRPModelElement selected)

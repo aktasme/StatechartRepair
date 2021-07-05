@@ -72,8 +72,17 @@ public class _7_UNSAntiPattern extends AntiPatternBase
 	@Override
 	public boolean repair(IRPApplication irpApplication, Statechart statechart) 
 	{
-		// TODO Auto-generated method stub
-		return false;
+		boolean bReturn = true;
+		
+		Iterator<State> iter = statesFound.iterator();
+		while(iter.hasNext())
+		{
+			State state = iter.next();
+			
+		}
+		
+		statesFound.clear();
+		return bReturn;
 	}
 	
 	/* Helper Functions */

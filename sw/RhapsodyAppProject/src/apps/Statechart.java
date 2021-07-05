@@ -123,10 +123,7 @@ public class Statechart extends Element
 				for(int tIndex = 1; tIndex < irpTransitions.getCount() + 1; tIndex++)
 				{
 					IRPTransition irpTransition = (IRPTransition)irpTransitions.getItem(tIndex);
-					Transition transition = new Transition(this, irpTransition, true);
-					transitions.add(transition);
-					transitionMap.put(irpTransition.getGUID(), transition);
-					internalTransitions.add(transition);
+					createTransition(irpTransition, true);
 				}
 			}
 			else if(element.getIsOfMetaClass("Condition") == 1)
@@ -143,11 +140,7 @@ public class Statechart extends Element
 			else if(element.getIsOfMetaClass("Transition") == 1)
 			{
 				IRPTransition irpTransition = (IRPTransition)element;
-				Transition transition = new Transition(this, irpTransition, false);
-				
-				transitions.add(transition);
-				transitionMap.put(irpTransition.getGUID(), transition);
-				externalTransitions.add(transition);
+				createTransition(irpTransition, false);
 			}
 			else
 			{
@@ -280,6 +273,25 @@ public class Statechart extends Element
 	public void createGraphics()
 	{
 		irpStatechart.createGraphics();
+	}
+	
+	Transition createTransition(IRPTransition irpTransition, boolean isIntenal)
+	{
+		Transition transition = new Transition(this, irpTransition, isIntenal);
+		
+		transitions.add(transition);
+		transitionMap.put(irpTransition.getGUID(), transition);
+		
+		if(isIntenal)
+		{
+			internalTransitions.add(transition);
+		}
+		else
+		{
+			externalTransitions.add(transition);
+		}
+
+		return transition;
 	}
 		
 	/* Logging Functions */

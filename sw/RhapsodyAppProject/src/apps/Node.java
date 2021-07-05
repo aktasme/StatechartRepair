@@ -75,10 +75,11 @@ public class Node extends Element
 	
 	Transition addTransition(Node targetNode)
 	{
-		IRPStateVertex targetStateVertex = targetNode.getIrpStateVertex();
-		IRPTransition newIRPTransition = irpStateVertex.addTransition(targetStateVertex);
+		IRPStateVertex targetIRPStateVertex = targetNode.getIrpStateVertex();
 		
-		Transition newTransition = new Transition(statechart, newIRPTransition, false);
+		IRPTransition newIRPTransition = irpStateVertex.addTransition(targetIRPStateVertex);
+		
+		Transition newTransition = statechart.createTransition(newIRPTransition, false);	
 		
 		return newTransition;
 	}
