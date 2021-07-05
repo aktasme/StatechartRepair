@@ -4,6 +4,7 @@ import java.util.Iterator;
 import java.util.Vector;
 
 import com.telelogic.rhapsody.core.IRPApplication;
+import com.telelogic.rhapsody.core.IRPCollection;
 import com.telelogic.rhapsody.core.IRPTrigger;
 
 import apps.Node.NodeTypeEnum;
@@ -73,13 +74,84 @@ public class _7_UNSAntiPattern extends AntiPatternBase
 	public boolean repair(IRPApplication irpApplication, Statechart statechart) 
 	{
 		boolean bReturn = true;
+
+		IRPCollection newTransitions = irpApplication.createNewCollection();
 		
 		Iterator<State> iter = statesFound.iterator();
 		while(iter.hasNext())
 		{
 			State state = iter.next();
 			
+			Vector<Transition> inTransitions = state.getInTransitions();
+			Vector<Transition> outTransitions = state.getOutTransitions();
+
+			Iterator<Transition> iterTin = inTransitions.iterator();
+			Iterator<Transition> iterTout = outTransitions.iterator();
+			
+			while(iterTin.hasNext())
+			{
+				Transition transitionIn = iterTin.next();
+				
+				while(iterTout.hasNext())
+				{
+					Transition transitionOut = iterTout.next();
+					
+					String guardString = "";
+					if(transitionIn.getItsGuard() != null && transitionOut.getItsGuard() == null)
+					{
+						guardString = transitionIn.getItsGuard().getBody();
+					}
+					else if(transitionIn.getItsGuard() == null && transitionOut.getItsGuard() != null)
+					{
+						guardString = transitionOut.getItsGuard().getBody();
+					}
+					else if(transitionIn.getItsGuard() != null && transitionOut.getItsGuard() != null)
+					{
+						guardString = "(" + transitionIn.getItsGuard().getBody() + ") && (" + transitionOut.getItsGuard().getBody() + ")";
+					}
+					else
+					{
+						/* No action required. Empty string remains. */
+					}
+
+					String actionString = "";
+					if(transitionIn.getItsAction() != null && transitionOut.getItsAction() == null)
+					{
+						actionString = transitionIn.getItsAction().getBody();
+					}
+					else if(transitionIn.getItsAction() == null && transitionOut.getItsAction() != null)
+					{
+						actionString = transitionOut.getItsAction().getBody();
+					}
+					else if(transitionIn.getItsAction() != null && transitionOut.getItsAction() != null)
+					{
+						actionString = transitionIn.getItsAction().getBody() + "\n\n" + transitionOut.getItsAction().getBody();
+					}
+					else
+					{
+						/* No action required. Empty string remains. */
+					}
+					
+					State sourceState = (State)transitionIn.getItsSource();
+					State targetState = (State)transitionOut.getItsTarget();
+					
+					Transition newTransition = sourceState.addTransition(targetState);
+					newTransition.setItsGuard(guardString);
+					newTransition.setItsAction(actionString);
+					newTransitions.addItem(newTransition.getIrpTransition());
+				}
+				
+				statechart.deleteState(state);
+			}
+			
+			
 		}
+
+		IRPCollection relationTypes = irpApplication.createNewCollection();
+		relationTypes.setSize(1);
+		relationTypes.setString(1, "AllRelations");
+		
+		statechart.getIrpStatechart().populateDiagram(newTransitions, relationTypes, "fromto");		
 		
 		statesFound.clear();
 		return bReturn;

@@ -123,7 +123,6 @@ public class _6_NCAntiPattern extends AntiPatternBase
 		
 		statechart.getIrpStatechart().populateDiagram(newTransitions, relationTypes, "fromto");
 		
-				
 		return bReturn;
 	}
 

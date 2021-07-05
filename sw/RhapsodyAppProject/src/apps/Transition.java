@@ -68,6 +68,17 @@ public class Transition extends Element
 		return irpTransition.setItsTrigger(triggerString);
 	}
 	
+	public IRPAction getItsAction()
+	{
+		IRPAction irpAction = irpTransition.getItsAction();
+		return irpAction;
+	}
+	
+	public IRPAction setItsAction(String actionString)
+	{
+		return irpTransition.setItsAction(actionString);
+	}
+	
 	/* Getter and Setters */
 	public String getName() 
 	{
