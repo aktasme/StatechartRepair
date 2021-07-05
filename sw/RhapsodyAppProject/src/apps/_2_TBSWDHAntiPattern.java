@@ -4,6 +4,7 @@ import java.util.Iterator;
 import java.util.Vector;
 
 import com.telelogic.rhapsody.core.IRPApplication;
+import com.telelogic.rhapsody.core.IRPCollection;
 
 import apps.Node.NodeTypeEnum;
 
@@ -68,8 +69,81 @@ public class _2_TBSWDHAntiPattern extends AntiPatternBase
 	@Override
 	public boolean repair(IRPApplication irpApplication, Statechart statechart) 
 	{
-		// TODO Auto-generated method stub
-		return false;
+		boolean bReturn = true;
+		
+		IRPCollection newTransitions = irpApplication.createNewCollection();
+
+		Iterator<Transition> iter = transitionsFound.iterator();
+		while(iter.hasNext())
+		{
+			Transition transition = iter.next();
+			
+			State sourceState = (State)transition.getItsSource();
+			State targetState = (State)transition.getItsTarget();
+			
+			if(sourceState.getDepth() > targetState.getDepth())
+			{
+				State parentOfSource = sourceState.getParentState();
+				Transition newTransition = parentOfSource.addTransition(targetState);		
+				newTransitions.addItem(newTransition.getIrpTransition());
+				
+				if(transition.getItsGuard() != null)
+				{
+					newTransition.setItsGuard(transition.getItsGuard().getBody());
+				}
+				
+				if(transition.getItsAction() != null)
+				{
+					newTransition.setItsAction(transition.getItsAction().getBody());
+				}
+				
+				if(transition.getItsTrigger() != null)
+				{
+					newTransition.setItsTrigger(transition.getItsTrigger().getBody());
+				}
+			}
+			else if(sourceState.getDepth() < targetState.getDepth() && targetState.isDefault())
+			{
+				State parentOfDest = targetState.getParentState();
+				Transition newTransition = sourceState.addTransition(parentOfDest);		
+				newTransitions.addItem(newTransition.getIrpTransition());
+				
+				if(transition.getItsGuard() != null)
+				{
+					newTransition.setItsGuard(transition.getItsGuard().getBody());
+				}
+				
+				if(transition.getItsAction() != null)
+				{
+					newTransition.setItsAction(transition.getItsAction().getBody());
+				}
+				
+				if(transition.getItsTrigger() != null)
+				{
+					newTransition.setItsTrigger(transition.getItsTrigger().getBody());
+				}
+			}
+			else
+			{
+				/* No automatic repairing */
+			}
+		}
+		
+		iter = transitionsFound.iterator();
+		while(iter.hasNext())
+		{
+			Transition transition = iter.next();
+			statechart.deleteTransition(transition);
+		}
+		
+		IRPCollection relationTypes = irpApplication.createNewCollection();
+		relationTypes.setSize(1);
+		relationTypes.setString(1, "AllRelations");
+		
+		statechart.getIrpStatechart().populateDiagram(newTransitions, relationTypes, "fromto");		
+		
+		transitionsFound.clear();
+		return bReturn;
 	}
 
 }

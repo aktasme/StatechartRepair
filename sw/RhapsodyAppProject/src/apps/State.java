@@ -128,6 +128,15 @@ public class State extends Node
 		}
 	}
 	
+	State getParentState()
+	{
+		IRPState irpParentState = irpState.getParent();
+		
+		State parentState = statechart.getState(irpParentState.getGUID());
+		
+		return parentState;
+	}
+	
 	/* Logging Functions */
 	@Override
 	public void print() 

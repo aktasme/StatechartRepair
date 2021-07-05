@@ -142,9 +142,7 @@ public class _7_UNSAntiPattern extends AntiPatternBase
 				}
 				
 				statechart.deleteState(state);
-			}
-			
-			
+			}		
 		}
 
 		IRPCollection relationTypes = irpApplication.createNewCollection();
