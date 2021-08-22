@@ -11,7 +11,7 @@ import apps.Node.NodeTypeEnum;
 /**
  * @author mehmetaktas
  * 
- * Transition Between States with Different Hierarchy
+ * Cross Level Transition
  *
  */
 public class APCrossLevelTransition extends AntiPatternBase 

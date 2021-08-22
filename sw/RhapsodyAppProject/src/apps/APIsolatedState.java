@@ -12,7 +12,7 @@ import apps.Node.NodeTypeEnum;
 /**
  * @author mehmetaktas
  * 
- * Unnecessary State
+ * Isolated State
  *
  */
 public class APIsolatedState extends AntiPatternBase

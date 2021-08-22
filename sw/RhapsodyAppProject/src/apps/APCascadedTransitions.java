@@ -15,7 +15,7 @@ import apps.Node.NodeTypeEnum;
 /**
  * @author mehmetaktas
  * 
- * Nested Conditions
+ * Cascaded Conditions
  *
  */
 public class APCascadedTransitions extends AntiPatternBase

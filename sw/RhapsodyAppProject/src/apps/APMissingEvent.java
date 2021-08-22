@@ -9,7 +9,7 @@ import apps.Node.NodeTypeEnum;
 /**
  * @author mehmetaktas
  * 
- * Transition with Condition without Event
+ * Missing Event
  *
  */
 public class APMissingEvent extends AntiPatternBase

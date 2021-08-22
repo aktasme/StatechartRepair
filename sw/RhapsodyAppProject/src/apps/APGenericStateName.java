@@ -10,7 +10,7 @@ import com.telelogic.rhapsody.core.*;
 /**
  * @author mehmetaktas
  * 
- * Invalid State Name
+ * Generic State Name
  *
  */
 public class APGenericStateName extends AntiPatternBase 
