@@ -11,10 +11,10 @@
 			<_id type="a">GUID a78ff901-06c2-4992-bcde-e77f5fbb7861</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">_2_TransitionBetweenStatesWithDifferentHierarchy</_name>
-			<_modifiedTimeWeak type="a">5.19.2020::13:40:14</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">7.7.2021::15:50:34</_modifiedTimeWeak>
 			<_modifiedTime type="a">5.11.2020::15:18:8</_modifiedTime>
 			<_lastID type="a">3</_lastID>
-			<weakCGTime type="a">5.19.2020::13:40:14</weakCGTime>
+			<weakCGTime type="a">7.7.2021::15:50:34</weakCGTime>
 			<strongCGTime type="a">5.2.2020::18:51:15</strongCGTime>
 			<_defaultComposite type="s">GUID d58c7423-02e2-4a91-8cad-b5933c614b33</_defaultComposite>
 			<_eventsBaseID type="a">-1</_eventsBaseID>
@@ -46,10 +46,10 @@
 			<_id type="a">GUID dba83570-adc0-4d8c-b929-434cd83f4c5a</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">TBSWDH_1</_name>
-			<_modifiedTimeWeak type="a">5.19.2020::13:15:35</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">7.7.2021::15:50:34</_modifiedTimeWeak>
 			<_modifiedTime type="a">5.2.2020::19:5:40</_modifiedTime>
 			<_lastID type="a">1</_lastID>
-			<weakCGTime type="a">5.19.2020::13:15:35</weakCGTime>
+			<weakCGTime type="a">7.7.2021::15:50:34</weakCGTime>
 			<strongCGTime type="a">5.2.2020::18:52:56</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
@@ -88,10 +88,10 @@
 			<_id type="a">GUID 64504b7e-a378-45a4-91a4-c76432dd80a0</_id>
 			<_myState type="a">10240</_myState>
 			<_name type="a">statechart_0</_name>
-			<_modifiedTimeWeak type="a">5.19.2020::13:15:35</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">7.7.2021::15:50:34</_modifiedTimeWeak>
 			<_modifiedTime type="a">5.19.2020::13:15:35</_modifiedTime>
 			<_lastID type="a">3</_lastID>
-			<weakCGTime type="a">5.19.2020::13:15:35</weakCGTime>
+			<weakCGTime type="a">7.7.2021::15:50:34</weakCGTime>
 			<strongCGTime type="a">2.28.2021::18:52:13</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
@@ -99,7 +99,7 @@
 			</_itsStateChart>
 			<_classModifier type="a">Unspecified</_classModifier>
 			<_defNumber type="a">5</_defNumber>
-			<_version type="a">5.19.2020::16:15:35</_version>
+			<_version type="a">7.7.2021::18:50:38</_version>
 			<_baseVersion type="a">1.2.1990::0:0:0</_baseVersion>
 			<_diagram type="s">GUID 89d783e7-9147-41dd-b5e9-5e859018caa5</_diagram>
 			<AggregatesList type="e">
@@ -190,7 +190,7 @@
 				<_id type="a">GUID cd19418a-c1a4-440f-aa73-e33c3e70eb83</_id>
 				<_myState type="a">4096</_myState>
 				<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-				<_modifiedTime type="a">1.1.1970::3:0:0</_modifiedTime>
+				<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 				<_body type="a">printf(&quot;A: Enter!\n&quot;);%0D
 </_body>
 			</IAction>
@@ -329,9 +329,9 @@
 			</IPropertyContainer>
 			</_properties>
 			<_name type="a">statechartdiagram_0</_name>
-			<_modifiedTimeWeak type="a">5.19.2020::13:15:35</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">7.7.2021::15:50:34</_modifiedTimeWeak>
 			<_modifiedTime type="a">5.2.2020::19:4:10</_modifiedTime>
-			<_lastModifiedTime type="a">5.19.2020::13:15:35</_lastModifiedTime>
+			<_lastModifiedTime type="a">7.7.2021::15:50:38</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -454,7 +454,43 @@
 			<_properties type="p"><IPropertyContainer type="e">
 				<Subjects type="c">
 					<IRPYRawContainer type="e">
-						<size type="a">1</size>
+						<size type="a">2</size>
+						<IPropertySubject type="e">
+							<_Name type="a">Format</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<size type="a">1</size>
+									<IPropertyMetaclass type="e">
+										<_Name type="a">State</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<size type="a">3</size>
+												<IProperty type="e">
+													<_Name type="a">Font.Size</_Name>
+													<_Value type="a">16</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Font.Weight</_Name>
+													<_Value type="a">700</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineWidth</_Name>
+													<_Value type="a">2</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
 						<IPropertySubject type="e">
 							<_Name type="a">General</_Name>
 							<Metaclasses type="c">
@@ -543,7 +579,67 @@
 			<_properties type="p"><IPropertyContainer type="e">
 				<Subjects type="c">
 					<IRPYRawContainer type="e">
-						<size type="a">1</size>
+						<size type="a">2</size>
+						<IPropertySubject type="e">
+							<_Name type="a">Format</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<size type="a">1</size>
+									<IPropertyMetaclass type="e">
+										<_Name type="a">State</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<size type="a">7</size>
+												<IProperty type="e">
+													<_Name type="a">Fill.FillColor</_Name>
+													<_Value type="a">255,255,255</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Font.Font</_Name>
+													<_Value type="a">Tahoma</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Font.Size</_Name>
+													<_Value type="a">16</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Font.Weight</_Name>
+													<_Value type="a">700</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">109,163,217</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineStyle</_Name>
+													<_Value type="a">0</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineWidth</_Name>
+													<_Value type="a">2</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
 						<IPropertySubject type="e">
 							<_Name type="a">General</_Name>
 							<Metaclasses type="c">
@@ -629,6 +725,74 @@
 		</CGIState>
 		<CGIState type="e">
 			<_id type="a">GUID ea436846-ecc3-4e53-9440-1e36d758ded7</_id>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<size type="a">1</size>
+						<IPropertySubject type="e">
+							<_Name type="a">Format</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<size type="a">1</size>
+									<IPropertyMetaclass type="e">
+										<_Name type="a">State</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<size type="a">7</size>
+												<IProperty type="e">
+													<_Name type="a">Fill.FillColor</_Name>
+													<_Value type="a">255,255,255</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Font.Font</_Name>
+													<_Value type="a">Tahoma</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Font.Size</_Name>
+													<_Value type="a">16</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Font.Weight</_Name>
+													<_Value type="a">700</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">109,163,217</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineStyle</_Name>
+													<_Value type="a">0</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineWidth</_Name>
+													<_Value type="a">2</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
 			<m_type type="a">8</m_type>
 			<m_pModelObject type="r">
 				<IHandle type="e">
@@ -655,7 +819,7 @@
 				</CGIText>
 			</m_name>
 			<m_drawBehavior type="a">4104</m_drawBehavior>
-			<m_transform type="a">0.175182 0 0 0.0679245 564 156 </m_transform>
+			<m_transform type="a">0.175182 0 0 0.0679245 600 156 </m_transform>
 			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
 			<m_AdditionalLabel type="p">
 				<CGIText type="e">
@@ -686,6 +850,74 @@
 		</CGIState>
 		<CGITrans type="e">
 			<_id type="a">GUID 5212fd4f-ad7a-43b2-b1b1-54f4a4532e72</_id>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<size type="a">1</size>
+						<IPropertySubject type="e">
+							<_Name type="a">Format</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<size type="a">1</size>
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Transition</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<size type="a">7</size>
+												<IProperty type="e">
+													<_Name type="a">Font.Font</_Name>
+													<_Value type="a">Tahoma</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Font.Size</_Name>
+													<_Value type="a">16</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Font.Weight</_Name>
+													<_Value type="a">700</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Font.Weight@Label.Link_Name</_Name>
+													<_Value type="a">400</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">128,128,128</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineStyle</_Name>
+													<_Value type="a">0</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineWidth</_Name>
+													<_Value type="a">2</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
 			<m_type type="a">28</m_type>
 			<m_pModelObject type="r">
 				<IHandle type="e">
@@ -728,11 +960,11 @@
 							<m_bgFlag type="a">0</m_bgFlag>
 						</IColor>
 					</m_color>
-					<m_position type="a">4 -6 -9  34 -9  34 5  -6 5  </m_position>
+					<m_position type="a">4 -6 -9  59 -9  59 17  -6 17  </m_position>
 					<m_nIdent type="a">0</m_nIdent>
 					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_transform type="a">1 0 0 1 462 177 </m_transform>
-					<m_nHorizontalSpacing type="a">-48</m_nHorizontalSpacing>
+					<m_transform type="a">1 0 0 1 510 177 </m_transform>
+					<m_nHorizontalSpacing type="a">-18</m_nHorizontalSpacing>
 					<m_nVerticalSpacing type="a">-9</m_nVerticalSpacing>
 					<m_nOrientationCtrlPt type="a">0</m_nOrientationCtrlPt>
 				</CGIText>
@@ -751,6 +983,44 @@
 		</CGITrans>
 		<CGITrans type="e">
 			<_id type="a">GUID 82c0c222-9f32-476f-83f6-d43e44459bf3</_id>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<size type="a">1</size>
+						<IPropertySubject type="e">
+							<_Name type="a">Format</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<size type="a">1</size>
+									<IPropertyMetaclass type="e">
+										<_Name type="a">DefaultTransition</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<size type="a">2</size>
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">128,128,128</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineWidth</_Name>
+													<_Value type="a">2</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
 			<m_type type="a">29</m_type>
 			<m_pModelObject type="r">
 				<IHandle type="e">
@@ -987,7 +1257,7 @@
 				<_id type="a">GUID ed289123-ca8d-47b5-852d-47ac7219a21c</_id>
 				<_myState type="a">4096</_myState>
 				<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-				<_modifiedTime type="a">1.1.1970::3:0:0</_modifiedTime>
+				<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 				<_body type="a">printf(&quot;A: Enter!\n&quot;);%0D
 </_body>
 			</IAction>
@@ -4976,7 +5246,7 @@
 				<_id type="a">GUID 328d5a39-49fe-43a1-9ce1-05c6d85ada58</_id>
 				<_myState type="a">4096</_myState>
 				<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-				<_modifiedTime type="a">1.1.1970::3:0:0</_modifiedTime>
+				<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 				<_body type="a">printf(&quot;C: Enter!\n&quot;);%0D
 </_body>
 			</IAction>

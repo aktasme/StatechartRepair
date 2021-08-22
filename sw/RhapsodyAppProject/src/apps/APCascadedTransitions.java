@@ -18,11 +18,11 @@ import apps.Node.NodeTypeEnum;
  * Nested Conditions
  *
  */
-public class _6_NCAntiPattern extends AntiPatternBase
+public class APCascadedTransitions extends AntiPatternBase
 {
 	Vector<Transition> transitionsFound;
 
-	public _6_NCAntiPattern() 
+	public APCascadedTransitions() 
 	{
 		name = this.getClass().getSimpleName();
 		transitionsFound = new Vector<Transition>();

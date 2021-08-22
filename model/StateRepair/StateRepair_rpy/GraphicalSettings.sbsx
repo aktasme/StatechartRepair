@@ -13,12 +13,51 @@
 			<_properties type="p"><IPropertyContainer type="e">
 				<Subjects type="c">
 					<IRPYRawContainer type="e">
-						<size type="a">1</size>
+						<size type="a">3</size>
+						<IPropertySubject type="e">
+							<_Name type="a">General</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<size type="a">1</size>
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Graphics</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<size type="a">1</size>
+												<IProperty type="e">
+													<_Name type="a">ClassBoxFont</_Name>
+													<_Value type="a">Tahoma 12 Bold NoItalic</_Value>
+													<_Type type="a">Font</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
 						<IPropertySubject type="e">
 							<_Name type="a">StatechartDiagram</_Name>
 							<Metaclasses type="c">
 								<IRPYRawContainer type="e">
-									<size type="a">3</size>
+									<size type="a">5</size>
+									<IPropertyMetaclass type="e">
+										<_Name type="a">ButtonArray</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<size type="a">1</size>
+												<IProperty type="e">
+													<_Name type="a">ButtonFont</_Name>
+													<_Value type="a">Arial 12 Bold NoItalic</_Value>
+													<_Type type="a">Font</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
 									<IPropertyMetaclass type="e">
 										<_Name type="a">DefaultTransition</_Name>
 										<Properties type="c">
@@ -52,6 +91,21 @@
 									</IPropertyMetaclass>
 									
 									<IPropertyMetaclass type="e">
+										<_Name type="a">PushButton</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<size type="a">1</size>
+												<IProperty type="e">
+													<_Name type="a">ButtonFont</_Name>
+													<_Value type="a">Arial 12 Bold NoItalic</_Value>
+													<_Type type="a">Font</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
 										<_Name type="a">Transition</_Name>
 										<Properties type="c">
 											<IRPYRawContainer type="e">
@@ -61,6 +115,30 @@
 													<_Value type="a">rounded_rectilinear_arrows</_Value>
 													<_Type type="a">Enum</_Type>
 													<_ExtraTypeInfo type="a">straight_arrows,rectilinear_arrows,spline_arrows,rounded_rectilinear_arrows</_ExtraTypeInfo>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">TimingDiagram</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<size type="a">1</size>
+									<IPropertyMetaclass type="e">
+										<_Name type="a">TimeAxis</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<size type="a">1</size>
+												<IProperty type="e">
+													<_Name type="a">Font</_Name>
+													<_Value type="a">Tahoma 12 Bold NoItalic</_Value>
+													<_Type type="a">Font</_Type>
 												</IProperty>
 												
 											</IRPYRawContainer>
@@ -89,13 +167,13 @@
 					
 				</IRPYRawContainer>
 			</Stereotypes>
-			<_modifiedTimeWeak type="a">2.28.2021::18:31:53</_modifiedTimeWeak>
-			<_modifiedTime type="a">2.28.2021::18:31:53</_modifiedTime>
-			<weakCGTime type="a">2.28.2021::18:31:53</weakCGTime>
-			<strongCGTime type="a">2.28.2021::18:31:53</strongCGTime>
+			<_modifiedTimeWeak type="a">7.7.2020::15:15:59</_modifiedTimeWeak>
+			<_modifiedTime type="a">7.7.2020::15:15:59</_modifiedTime>
+			<weakCGTime type="a">7.7.2020::15:15:59</weakCGTime>
+			<strongCGTime type="a">7.7.2020::15:15:59</strongCGTime>
 			<_defaultComposite type="s">GUID b6a99a6a-c308-410e-be9b-a2c7c5a1092b</_defaultComposite>
 			<_eventsBaseID type="a">-1</_eventsBaseID>
-			<_configurationRelatedTime type="a">1.1.1970::3:0:0</_configurationRelatedTime>
+			<_configurationRelatedTime type="a">1.2.1990::0:0:0</_configurationRelatedTime>
 			<AggregatesList type="e">
 				<value>GUID b6a99a6a-c308-410e-be9b-a2c7c5a1092b</value>
 			</AggregatesList>
@@ -105,7 +183,7 @@
 			<_myState type="a">40960</_myState>
 			<_name type="a">TopLevel</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::3:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<weakCGTime type="a">1.2.1990::0:0:0</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
 			<_itsStateChart type="r">

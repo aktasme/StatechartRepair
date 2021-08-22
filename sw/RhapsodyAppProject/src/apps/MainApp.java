@@ -161,25 +161,25 @@ public class MainApp extends App
 		antiPatterns = new Vector<AntiPatternBase>();
 		AntiPatternBase antiPattern = null;
 		
-		antiPattern = new _1_CSDAntiPattern();
+		antiPattern = new APComplexStatechartDiagram();
 		antiPatterns.add(antiPattern);
 		
-		antiPattern = new _2_TBSWDHAntiPattern();
+		antiPattern = new APCrossLevelTransition();
 		antiPatterns.add(antiPattern);	
 	
-		antiPattern = new _3_TWCWOEAntiPattern();
+		antiPattern = new APMissingEvent();
 		antiPatterns.add(antiPattern);
 		
-		antiPattern = new _4_ISNAntiPattern();
+		antiPattern = new APGenericStateName();
 		antiPatterns.add(antiPattern);
 		
-		antiPattern = new _5_URSAntiPattern();
+		antiPattern = new APUnreachableState();
 		antiPatterns.add(antiPattern);
 		
-		antiPattern = new _6_NCAntiPattern();
+		antiPattern = new APCascadedTransitions();
 		antiPatterns.add(antiPattern);		
 		
-		antiPattern = new _7_UNSAntiPattern();
+		antiPattern = new APIsolatedState();
 		antiPatterns.add(antiPattern);
 	}
 	

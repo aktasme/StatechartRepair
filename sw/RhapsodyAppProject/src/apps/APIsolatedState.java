@@ -15,11 +15,11 @@ import apps.Node.NodeTypeEnum;
  * Unnecessary State
  *
  */
-public class _7_UNSAntiPattern extends AntiPatternBase
+public class APIsolatedState extends AntiPatternBase
 {
 	Vector<State> statesFound;
 	
-	public _7_UNSAntiPattern()
+	public APIsolatedState()
 	{
 		name = this.getClass().getSimpleName();
 		statesFound = new Vector<State>();

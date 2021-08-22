@@ -11,11 +11,11 @@ import com.telelogic.rhapsody.core.IRPApplication;
  * Unreachable State
  *
  */
-public class _5_URSAntiPattern extends AntiPatternBase
+public class APUnreachableState extends AntiPatternBase
 {
 	Vector<State> statesFound;
 	
-	public _5_URSAntiPattern()
+	public APUnreachableState()
 	{
 		name = this.getClass().getSimpleName();
 		statesFound = new Vector<State>();

@@ -12,11 +12,11 @@ import apps.Node.NodeTypeEnum;
  * Transition with Condition without Event
  *
  */
-public class _3_TWCWOEAntiPattern extends AntiPatternBase
+public class APMissingEvent extends AntiPatternBase
 {
 	Vector<Transition> transitionsFound;
 
-	public _3_TWCWOEAntiPattern() 
+	public APMissingEvent() 
 	{
 		name = this.getClass().getSimpleName();
 		transitionsFound = new Vector<Transition>();

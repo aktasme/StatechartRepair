@@ -13,13 +13,13 @@ import com.telelogic.rhapsody.core.*;
  * Invalid State Name
  *
  */
-public class _4_ISNAntiPattern extends AntiPatternBase 
+public class APGenericStateName extends AntiPatternBase 
 {
 	Vector<State> statesFound;
 	
 	final String RegularExpression = "state_\\d{1,}";
 	
-	public _4_ISNAntiPattern()
+	public APGenericStateName()
 	{
 		name = this.getClass().getSimpleName();
 		statesFound = new Vector<State>();

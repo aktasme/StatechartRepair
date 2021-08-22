@@ -14,11 +14,11 @@ import apps.Node.NodeTypeEnum;
  * Transition Between States with Different Hierarchy
  *
  */
-public class _2_TBSWDHAntiPattern extends AntiPatternBase 
+public class APCrossLevelTransition extends AntiPatternBase 
 {
 	Vector<Transition> transitionsFound;
 	
-	public _2_TBSWDHAntiPattern() 
+	public APCrossLevelTransition() 
 	{
 		name = this.getClass().getSimpleName();
 		transitionsFound = new Vector<Transition>();

@@ -82,7 +82,7 @@ public class Statechart extends Element
 		findElements();
 		initializeStates();
 		//print();
-		export();
+		//export();
 	}
 	
 	public void reset()

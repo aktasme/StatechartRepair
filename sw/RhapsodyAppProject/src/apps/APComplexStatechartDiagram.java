@@ -8,12 +8,12 @@ import com.telelogic.rhapsody.core.IRPApplication;
  * Complex Statechart Diagram
  * 
  */
-public class _1_CSDAntiPattern extends AntiPatternBase
+public class APComplexStatechartDiagram extends AntiPatternBase
 {
 	final float COMPLEXITY_THRESHOLD = 2;
 	float complexity = 0;
 	
-	public _1_CSDAntiPattern()
+	public APComplexStatechartDiagram()
 	{
 		name = this.getClass().getSimpleName();
 	}
