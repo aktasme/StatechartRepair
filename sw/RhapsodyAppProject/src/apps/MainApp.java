@@ -31,7 +31,15 @@ public class MainApp extends App
 		createStrategies();
 		print();
 		
-		if(selected.getIsOfMetaClass("Project") == 1)
+		if(selected == null)
+		{
+			System.out.println("Please select any of these model elements from IBM Rational Rhapsody Model Browser!");
+			System.out.println("* Project");
+			System.out.println("* Package");
+			System.out.println("* Class");
+			System.out.println("* Statechart");
+		}
+		else if(selected.getIsOfMetaClass("Project") == 1)
 		{		
 			/* Copy project to a new project for working on it without changing original one */
 			//IRPProject targetProject = copyProject(rhapsody, selected);
