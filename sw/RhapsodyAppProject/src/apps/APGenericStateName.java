@@ -91,7 +91,7 @@ public class APGenericStateName extends AntiPatternBase
 				String oldName = irpState.getName();
 				String newName = irpParent.getName() + "_Initial";
 				state.setName(newName);
-				System.out.printf("Change name from %s to %s\n", oldName, newName);
+				//System.out.printf("Change name from %s to %s\n", oldName, newName);
 			}
 			else if(inTransitions.size() > 0)
 			{
@@ -112,7 +112,7 @@ public class APGenericStateName extends AntiPatternBase
 
 					String newName = prevNode.getName() + "_" + postName;
 					state.setName(newName);
-					System.out.printf("Change name from %s to %s\n", oldName, newName);
+					//System.out.printf("Change name from %s to %s\n", oldName, newName);
 				}
 			}
 			else
