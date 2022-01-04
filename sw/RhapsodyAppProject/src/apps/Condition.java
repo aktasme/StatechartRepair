@@ -1,6 +1,6 @@
 package apps;
 
-import com.telelogic.rhapsody.core.*;
+import com.telelogic.rhapsody.core.IRPConnector;
 
 public class Condition extends Node
 {

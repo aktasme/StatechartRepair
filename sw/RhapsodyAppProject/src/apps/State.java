@@ -2,7 +2,11 @@ package apps;
 
 import java.util.Iterator;
 import java.util.Vector;
-import com.telelogic.rhapsody.core.*;
+
+import com.telelogic.rhapsody.core.IRPCollection;
+import com.telelogic.rhapsody.core.IRPState;
+import com.telelogic.rhapsody.core.IRPStatechart;
+import com.telelogic.rhapsody.core.IRPTransition;
 
 public class State extends Node
 {
@@ -40,7 +44,7 @@ public class State extends Node
 		Vector<State> subStates = new Vector<State>();
 		
 		IRPCollection irpSubStates = irpState.getSubStates();
-		for(int index = 1; index <= irpSubStates.getCount(); index++)
+		for(int index = 1; index < irpSubStates.getCount() + 1; index++)
 		{
 			IRPState irpState = (IRPState)irpSubStates.getItem(index);
 			State state = statechart.getState(irpState.getGUID());
@@ -55,7 +59,7 @@ public class State extends Node
 		Vector<Transition> internalTransitions = new Vector<Transition>();
 		
 		IRPCollection irpTransitions =  irpState.getInternalTransitions();
-		for(int index = 1; index <= irpTransitions.getCount(); index++)
+		for(int index = 1; index < irpTransitions.getCount() + 1; index++)
 		{
 			IRPTransition irpTransition = (IRPTransition)irpTransitions.getItem(index);
 			Transition transition = statechart.getTransition(irpTransition.getGUID());

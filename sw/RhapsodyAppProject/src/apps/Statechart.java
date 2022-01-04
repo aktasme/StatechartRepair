@@ -1,11 +1,21 @@
 package apps;
 
-import java.util.Vector;
 import java.io.File;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Vector;
 
-import com.telelogic.rhapsody.core.*;
+import com.telelogic.rhapsody.core.IRPApplication;
+import com.telelogic.rhapsody.core.IRPClass;
+import com.telelogic.rhapsody.core.IRPCollection;
+import com.telelogic.rhapsody.core.IRPConnector;
+import com.telelogic.rhapsody.core.IRPModelElement;
+import com.telelogic.rhapsody.core.IRPPackage;
+import com.telelogic.rhapsody.core.IRPProject;
+import com.telelogic.rhapsody.core.IRPState;
+import com.telelogic.rhapsody.core.IRPStateVertex;
+import com.telelogic.rhapsody.core.IRPStatechart;
+import com.telelogic.rhapsody.core.IRPTransition;
 
 public class Statechart extends Element
 {
@@ -39,15 +49,17 @@ public class Statechart extends Element
 	
 	String className;
 	
-	boolean isCSD = false;
-	boolean isTBSWDH = false;
-	boolean isTWCWOE = false;
-	boolean isISN = false;
-	boolean isURS = false;
-	boolean isNC = false;
-	boolean isUNS = false;
+	private boolean isCrossLevelTransition = false;
+	private boolean isMissingEvent = false;
+	private boolean isGenericStateName = false;
+	private boolean isUnreachable = false;
+	private boolean isCascadedConditions = false;
+	private boolean isIsolated = false;
+	private boolean isComplex = false;
+	private boolean isAnyAntipatternExists = false;
+	private boolean isAnyRepairableAntipatternExists = false;
 	
-	boolean isHideStatechartName = false;
+	private boolean isHideStatechartName = false;
 	
 	public Statechart(IRPApplication rhapsody, IRPStatechart irpStatechart)
 	{
@@ -82,7 +94,7 @@ public class Statechart extends Element
 		findElements();
 		initializeStates();
 		//print();
-		export();
+		//export();
 	}
 	
 	public void reset()
@@ -102,7 +114,7 @@ public class Statechart extends Element
 	
 	public void findElements()
 	{		
-		for(int index = 1; index <= irpElements.getCount(); index++)
+		for(int index = 1; index < irpElements.getCount() + 1; index++)
 		{
 			IRPModelElement element = (IRPModelElement)irpElements.getItem(index);
 			if(element.getIsOfMetaClass("State") == 1)
@@ -222,6 +234,22 @@ public class Statechart extends Element
 		//System.out.printf("  Export %s to %s\n", irpClass.getName(), exportName);	
 	}
 	
+	public boolean isAnyAntipatternExists()
+	{
+		isAnyAntipatternExists = isCrossLevelTransition || isMissingEvent || isGenericStateName ||
+								 isUnreachable || isCascadedConditions || isIsolated || isComplex;
+		
+		return isAnyAntipatternExists;
+	}
+	
+	public boolean isAnyRepairableAntipatternExists()
+	{
+		isAnyRepairableAntipatternExists = isCrossLevelTransition || isMissingEvent || isGenericStateName ||
+									   	   isUnreachable || isCascadedConditions || isIsolated;
+		
+		return isAnyRepairableAntipatternExists;
+	}
+	
 	/* Wrapper Functions */
 	public State getState(String guid)
 	{
@@ -290,6 +318,8 @@ public class Statechart extends Element
 		{
 			externalTransitions.add(transition);
 		}
+		
+		//System.out.printf("createTransition:%s %s\n", transition.toString(), irpTransition.getGUID());
 
 		return transition;
 	}
@@ -307,9 +337,9 @@ public class Statechart extends Element
 		}
 		
 		String mainProperties = String.format("%-60s: %4d %4d %4d %4d(%4d:%4d)", statechartName, nodes.size(), states.size(), conditions.size(), transitions.size(), externalTransitions.size(), internalTransitions.size());
-		String antiPatternProperties = String.format(" | %s %s %s %s %s %s %s", toString(isCSD), toString(isTBSWDH), toString(isTWCWOE), toString(isISN), toString(isURS), toString(isNC), toString(isUNS));
+		String antiPatternProperties = String.format(" | %s %s %s %s %s %s %s", toString(isCrossLevelTransition), toString(isMissingEvent), toString(isGenericStateName), toString(isUnreachable), toString(isCascadedConditions), toString(isIsolated), toString(isComplex));
 		String extraProperties = String.format(" | %10f", complexity);
-		printableString = mainProperties + antiPatternProperties + extraProperties;
+		printableString = mainProperties + antiPatternProperties + extraProperties + "\n";
 		return printableString;
 	}
 
@@ -374,74 +404,64 @@ public class Statechart extends Element
 		this.transitions = transitions;
 	}
 
-	public boolean isCSD() 
+	public boolean isCrossLevelTransition()
 	{
-		return isCSD;
+		return isCrossLevelTransition;
 	}
 
-	public void setCSD(boolean isCSD) 
+	public void setCrossLevelTransition(boolean isCrossLevelTransition) 
 	{
-		this.isCSD = isCSD;
+		this.isCrossLevelTransition = isCrossLevelTransition;
 	}
 
-	public boolean isTBSWDH()
+	public boolean isMissingEvent() 
 	{
-		return isTBSWDH;
+		return isMissingEvent;
 	}
 
-	public void setTBSWDH(boolean isTBSWDH) 
+	public void setMissingEvent(boolean isMissingEvent) 
 	{
-		this.isTBSWDH = isTBSWDH;
+		this.isMissingEvent = isMissingEvent;
 	}
 
-	public boolean isTWCWOE() 
+	public boolean isIsolated() 
 	{
-		return isTWCWOE;
+		return isIsolated;
 	}
 
-	public void setTWCWOE(boolean isTWCWOE) 
+	public void setIsolated(boolean isIsolated) 
 	{
-		this.isTWCWOE = isTWCWOE;
+		this.isIsolated = isIsolated;
 	}
 
-	public boolean isISN() 
+	public boolean isUnreachable() 
 	{
-		return isISN;
+		return isUnreachable;
 	}
 
-	public void setISN(boolean isISN) 
+	public void setUnreachable(boolean isUnreachable) 
 	{
-		this.isISN = isISN;
+		this.isUnreachable = isUnreachable;
 	}
 
-	public boolean isURS() 
+	public boolean isCascadedConditions() 
 	{
-		return isURS;
+		return isCascadedConditions;
 	}
 
-	public void setURS(boolean isURS) 
+	public void setCascadedConditions(boolean isCascadedConditions) 
 	{
-		this.isURS = isURS;
+		this.isCascadedConditions = isCascadedConditions;
 	}
 
-	public boolean isNC() 
+	public boolean isGenericStateName() 
 	{
-		return isNC;
+		return isGenericStateName;
 	}
 
-	public void setNC(boolean isNC) 
+	public void setGenericStateName(boolean isGenericStateName) 
 	{
-		this.isNC = isNC;
-	}
-
-	public boolean isUNS() 
-	{
-		return isUNS;
-	}
-
-	public void setUNS(boolean isUNS) 
-	{
-		this.isUNS = isUNS;
+		this.isGenericStateName = isGenericStateName;
 	}
 
 	public boolean isIncludeAndState() 
@@ -449,6 +469,16 @@ public class Statechart extends Element
 		return isIncludeAndState;
 	}
 
+	public boolean isComplex() 
+	{
+		return isComplex;
+	}
+
+	public void setComplex(boolean isComplex) 
+	{
+		this.isComplex = isComplex;
+	}
+	
 	public void setIncludeAndState(boolean hasAndState) 
 	{
 		this.isIncludeAndState = hasAndState;
@@ -462,5 +492,15 @@ public class Statechart extends Element
 	public void setIrpStatechart(IRPStatechart irpStatechart) 
 	{
 		this.irpStatechart = irpStatechart;
+	}
+
+	public String getClassName()
+	{
+		return className;
+	}
+
+	public void setClassName(String className)
+	{
+		this.className = className;
 	}
 }

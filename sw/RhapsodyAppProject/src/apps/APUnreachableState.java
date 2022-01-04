@@ -4,6 +4,7 @@ import java.util.Iterator;
 import java.util.Vector;
 
 import com.telelogic.rhapsody.core.IRPApplication;
+import com.telelogic.rhapsody.core.IRPState;
 
 /**
  * @author mehmetaktas
@@ -22,20 +23,11 @@ public class APUnreachableState extends AntiPatternBase
 	}
 
 	@Override
-	public void run(IRPApplication irpApplication, Statechart statechart) 
-	{
-		statesFound.clear();
-		
-		if(control(irpApplication, statechart))
-		{
-			//repair(irpApplication, statechart);
-		}
-	}
-
-	@Override
 	public boolean control(IRPApplication irpApplication, Statechart statechart) 
 	{
 		boolean bReturn = false;
+		
+		statesFound.clear();
 		
 		Vector<State> states = statechart.getStates();
 		Iterator<State> iter = states.iterator();
@@ -72,7 +64,7 @@ public class APUnreachableState extends AntiPatternBase
 			bReturn = true;
 			hitCountStatechart++;
 			hitCountState += statesFound.size();
-			statechart.setURS(true);
+			statechart.setUnreachable(true);
 		}
 		
 		return bReturn;
@@ -133,5 +125,38 @@ public class APUnreachableState extends AntiPatternBase
 		}
 
 		return bRet;
+	}
+
+	@Override
+	public boolean highlight(IRPApplication irpApplication, Statechart statechart)
+	{
+		boolean bReturn = false;
+		
+		Iterator<State> iter = statesFound.iterator();
+		while(iter.hasNext())
+		{
+			State state = iter.next();
+			IRPState irpState = state.getIrpState();
+			irpState.highLightElement();
+			bReturn = true;
+		}
+		
+		return bReturn;
+	}
+	
+	@Override
+	public String toPrintableString()
+	{
+		String statisticsString = "";
+		
+		Iterator<State> iter = statesFound.iterator();
+		while(iter.hasNext())
+		{
+			State state = iter.next();
+			String nameLineString = "  Unreachable State: " + state.getName() + "\n";
+			statisticsString += nameLineString;
+		}
+
+		return statisticsString;
 	}
 }

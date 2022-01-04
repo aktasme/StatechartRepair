@@ -26,6 +26,9 @@ public class APMissingEvent extends AntiPatternBase
 	public boolean control(IRPApplication irpApplication, Statechart statechart) 
 	{
 		boolean bReturn = false;
+		
+		transitionsFound.clear();
+		
 		Vector<Transition> transitions = statechart.getTransitions();
 		Iterator<Transition> iter = transitions.iterator();
 		
@@ -36,7 +39,7 @@ public class APMissingEvent extends AntiPatternBase
 			IRPGuard irpGuard = transition.getItsGuard();
 			IRPTrigger irpTrigger = transition.getItsTrigger();
 			Node sourceNode = transition.getItsSource();
-			if(irpGuard != null && irpTrigger == null && sourceNode.getType() != NodeTypeEnum.NodeType_condition)
+			if( (irpGuard != null && !irpGuard.getBody().isEmpty()) && irpTrigger == null && sourceNode.getType() != NodeTypeEnum.NodeType_condition )
 			{
 				transitionsFound.add(transition);
 				bReturn = true;
@@ -47,7 +50,7 @@ public class APMissingEvent extends AntiPatternBase
 		if(bReturn)
 		{
 			hitCountStatechart++;
-			statechart.setTWCWOE(true);
+			statechart.setMissingEvent(true);
 		}
 		
 		return bReturn;
@@ -87,5 +90,38 @@ public class APMissingEvent extends AntiPatternBase
 		transitionsFound.clear();
 		return bReturn;
 	}
+	
+	@Override
+	public boolean highlight(IRPApplication irpApplication, Statechart statechart)
+	{
+		boolean bReturn = false;
+		
+		Iterator<Transition> iter = transitionsFound.iterator();
+		while(iter.hasNext())
+		{
+			Transition transition = iter.next();
+			IRPTransition irpTransition = transition.getIrpTransition();
+			irpTransition.highLightElement();
+			bReturn = true;
+		}
+		
+		return bReturn;
+	}
 
+	@Override
+	public String toPrintableString()
+	{
+		String statisticsString = "";
+		
+		Iterator<Transition> iter = transitionsFound.iterator();
+		while(iter.hasNext())
+		{
+			Transition transition = iter.next();
+			String nameLineString = "  Missing Event Transition: " + transition.toString() + "\n";
+			
+			statisticsString += nameLineString;
+		}
+
+		return statisticsString;
+	}
 }

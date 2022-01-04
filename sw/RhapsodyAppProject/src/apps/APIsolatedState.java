@@ -5,6 +5,7 @@ import java.util.Vector;
 
 import com.telelogic.rhapsody.core.IRPApplication;
 import com.telelogic.rhapsody.core.IRPCollection;
+import com.telelogic.rhapsody.core.IRPState;
 import com.telelogic.rhapsody.core.IRPTrigger;
 
 import apps.Node.NodeTypeEnum;
@@ -29,6 +30,8 @@ public class APIsolatedState extends AntiPatternBase
 	public boolean control(IRPApplication irpApplication, Statechart statechart) 
 	{
 		boolean bReturn = false;
+		
+		statesFound.clear();
 
 		if(!statechart.isIncludeAndState())
 		{
@@ -64,7 +67,7 @@ public class APIsolatedState extends AntiPatternBase
 		if(bReturn)
 		{
 			hitCountStatechart++;
-			statechart.setUNS(true);
+			statechart.setIsolated(true);
 		}
 		
 		return bReturn;
@@ -177,4 +180,36 @@ public class APIsolatedState extends AntiPatternBase
 		return bReturn;
 	}
 
+	@Override
+	public boolean highlight(IRPApplication irpApplication, Statechart statechart)
+	{
+		boolean bReturn = false;
+		
+		Iterator<State> iter = statesFound.iterator();
+		while(iter.hasNext())
+		{
+			State state = iter.next();
+			IRPState irpState = state.getIrpState();
+			irpState.highLightElement();
+			bReturn = true;
+		}
+		
+		return bReturn;
+	}
+	
+	@Override
+	public String toPrintableString()
+	{
+		String statisticsString = "";
+		
+		Iterator<State> iter = statesFound.iterator();
+		while(iter.hasNext())
+		{
+			State state = iter.next();
+			String nameLineString = "  Isolated State: " + state.getName() + "\n";
+			statisticsString += nameLineString;
+		}
+
+		return statisticsString;
+	}
 }

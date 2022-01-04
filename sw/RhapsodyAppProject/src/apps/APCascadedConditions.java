@@ -5,9 +5,7 @@ import java.util.Vector;
 
 import com.telelogic.rhapsody.core.IRPApplication;
 import com.telelogic.rhapsody.core.IRPCollection;
-import com.telelogic.rhapsody.core.IRPGraphElement;
 import com.telelogic.rhapsody.core.IRPGuard;
-import com.telelogic.rhapsody.core.IRPModelElement;
 import com.telelogic.rhapsody.core.IRPTransition;
 
 import apps.Node.NodeTypeEnum;
@@ -18,11 +16,11 @@ import apps.Node.NodeTypeEnum;
  * Cascaded Conditions
  *
  */
-public class APCascadedTransitions extends AntiPatternBase
+public class APCascadedConditions extends AntiPatternBase
 {
 	Vector<Transition> transitionsFound;
 
-	public APCascadedTransitions() 
+	public APCascadedConditions() 
 	{
 		name = this.getClass().getSimpleName();
 		transitionsFound = new Vector<Transition>();
@@ -32,6 +30,9 @@ public class APCascadedTransitions extends AntiPatternBase
 	public boolean control(IRPApplication irpApplication, Statechart statechart) 
 	{
 		boolean bReturn = false;
+
+		transitionsFound.clear();
+		
 		Vector<Transition> transitions = statechart.getTransitions();
 		Iterator<Transition> iter = transitions.iterator();
 		
@@ -55,7 +56,7 @@ public class APCascadedTransitions extends AntiPatternBase
 		if(bReturn)
 		{
 			hitCountStatechart++;
-			statechart.setNC(true);
+			statechart.setCascadedConditions(true);
 		}
 				
 		return bReturn;
@@ -79,6 +80,29 @@ public class APCascadedTransitions extends AntiPatternBase
 			IRPGuard guard = transition.getItsGuard();
 			String guardString = guard.getBody();
 			
+			if(guardString.equals("else"))
+			{
+				Vector<Transition> sourceConditionOutTransitions = sourceCondition.getOutTransitions();
+				Iterator<Transition> sourceIterOut = sourceConditionOutTransitions.iterator();
+				guardString = "";
+				
+				while(sourceIterOut.hasNext())
+				{
+					Transition sourceTransitionOut = sourceIterOut.next();
+					if(sourceTransitionOut != transition)
+					{
+						if(!guardString.isEmpty())
+						{
+							guardString += " && ";
+						}
+						
+						guardString += sourceTransitionOut.getItsGuard().getBody();
+					}
+				}
+				
+				guardString = "!(" + guardString + ")";
+			}
+			
 			Vector<Transition> outTransitions = targetCondition.getOutTransitions();
 			Vector<Transition> inTransitions = targetCondition.getInTransitions();
 
@@ -101,7 +125,7 @@ public class APCascadedTransitions extends AntiPatternBase
 				String repairString;
 				if(guardOutString.equals("else"))
 				{
-					repairString = "!(" + guardString + ")";
+					repairString = guardString;
 				}
 				else
 				{
@@ -125,5 +149,40 @@ public class APCascadedTransitions extends AntiPatternBase
 		
 		return bReturn;
 	}
+	
+	
 
+	@Override
+	public boolean highlight(IRPApplication irpApplication, Statechart statechart)
+	{
+		boolean bReturn = false;
+		
+		Iterator<Transition> iter = transitionsFound.iterator();
+		while(iter.hasNext())
+		{
+			Transition transition = iter.next();
+			IRPTransition irpTransition = transition.getIrpTransition();
+			irpTransition.highLightElement();
+			bReturn = true;
+		}
+		
+		return bReturn;
+	}
+
+	@Override
+	public String toPrintableString()
+	{
+		String statisticsString = "";
+		
+		Iterator<Transition> iter = transitionsFound.iterator();
+		while(iter.hasNext())
+		{
+			Transition transition = iter.next();
+			String nameLineString = "  Cascaded Transition: " + transition.toString() + "\n";
+			
+			statisticsString += nameLineString;
+		}
+
+		return statisticsString;
+	}
 }

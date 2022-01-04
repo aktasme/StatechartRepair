@@ -1,6 +1,5 @@
 package apps;
 
-import log.CommonLog;
 import com.telelogic.rhapsody.core.IRPModelElement;
 import com.telelogic.rhapsody.core.IRPUnit;
 

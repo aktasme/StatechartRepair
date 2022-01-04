@@ -1,6 +1,10 @@
 package apps;
 
-import com.telelogic.rhapsody.core.*;
+import com.telelogic.rhapsody.core.IRPAction;
+import com.telelogic.rhapsody.core.IRPGuard;
+import com.telelogic.rhapsody.core.IRPStateVertex;
+import com.telelogic.rhapsody.core.IRPTransition;
+import com.telelogic.rhapsody.core.IRPTrigger;
 
 public class Transition extends Element
 {
@@ -118,4 +122,46 @@ public class Transition extends Element
 		
 		System.out.printf("Transition:%s\n", irpTransition.getName());
 	}
+
+	@Override
+	public String toString()
+	{
+		String string = name + " ";
+		
+		IRPTrigger irpTrigger = irpTransition.getItsTrigger();
+		if(irpTrigger != null)
+		{
+			string += irpTrigger.getBody();
+		}
+		
+		string += "(";
+		
+		IRPStateVertex irpSource = irpTransition.getItsSource();
+		if(irpSource != null)
+		{
+			string += irpSource.getName();
+		}
+		
+		string += "->";
+		
+		IRPStateVertex irpTarget = irpTransition.getItsTarget();
+		if(irpTarget != null)
+		{
+			string += irpTarget.getName();
+		}
+		
+		string += ")";
+		
+		IRPGuard irpGuard = irpTransition.getItsGuard();
+		if(irpGuard != null)
+		{
+			string += "[";
+			string += irpGuard.getBody();
+			string += "]";
+		}
+			
+		return string;
+	}
+	
+	
 }

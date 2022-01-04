@@ -5,6 +5,7 @@ import java.util.Vector;
 
 import com.telelogic.rhapsody.core.IRPApplication;
 import com.telelogic.rhapsody.core.IRPCollection;
+import com.telelogic.rhapsody.core.IRPTransition;
 
 import apps.Node.NodeTypeEnum;
 
@@ -28,9 +29,12 @@ public class APCrossLevelTransition extends AntiPatternBase
 	public boolean control(IRPApplication irpApplication, Statechart statechart) 
 	{
 		boolean bReturn = false;
+
+		transitionsFound.clear();
+		
 		Vector<Transition> transitions = statechart.getTransitions();
 		Iterator<Transition> iter = transitions.iterator();
-		
+	
 		while(iter.hasNext())
 		{
 			Transition transition = iter.next();
@@ -60,7 +64,7 @@ public class APCrossLevelTransition extends AntiPatternBase
 		if(bReturn)
 		{
 			hitCountStatechart++;
-			statechart.setTBSWDH(true);
+			statechart.setCrossLevelTransition(true);
 		}
 		
 		return bReturn;
@@ -145,5 +149,37 @@ public class APCrossLevelTransition extends AntiPatternBase
 		transitionsFound.clear();
 		return bReturn;
 	}
+	
+	@Override
+	public boolean highlight(IRPApplication irpApplication, Statechart statechart)
+	{
+		boolean bReturn = false;
+		
+		Iterator<Transition> iter = transitionsFound.iterator();
+		while(iter.hasNext())
+		{
+			Transition transition = iter.next();
+			IRPTransition irpTransition = transition.getIrpTransition();
+			irpTransition.highLightElement();
+			bReturn = true;
+		}
+		
+		return bReturn;
+	}
 
+	@Override
+	public String toPrintableString()
+	{
+		String statisticsString = "";
+		
+		Iterator<Transition> iter = transitionsFound.iterator();
+		while(iter.hasNext())
+		{
+			Transition transition = iter.next();
+			String nameLineString = "  Cross Level Transition: " + transition.toString() + "\n";
+			statisticsString += nameLineString;
+		}
+
+		return statisticsString;
+	}
 }

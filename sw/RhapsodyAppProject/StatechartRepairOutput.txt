@@ -1,0 +1,99 @@
+[Name]                                                      :   #N   #S   #C   #T(  #E:  #I) | 1 2 3 4 5 6 7 | Complexity
+CascadedCondition_1                                         :   10    7    3    8(   8:   0) | - - - - + - - |   1,142857
+  Cascaded Transition: 3 (condition_1->condition_2)[else]
+  Cascaded Transition: 5 (condition_2->condition_3)[else]
+CascadedCondition_2                                         :    6    4    2    6(   6:   0) | - - - - + - - |   1,500000
+  Cascaded Transition: 3 (condition_2->condition_5)[x == 2]
+CascadedCondition_3                                         :    8    5    3    9(   9:   0) | - - - - + - - |   1,800000
+  Cascaded Transition: 2 (condition_2->condition_5)[x == 1]
+  Cascaded Transition: 4 (condition_2->condition_4)[x == 3]
+CascadedCondition_4                                         :    7    5    2    6(   6:   0) | - - - - + - - |   1,200000
+  Cascaded Transition: 3 (condition_1->condition_4)[else]
+CascadedCondition_5                                         :   10    7    3   10(  10:   0) | - - - - + - - |   1,428571
+  Cascaded Transition: 4 (condition_1->condition_4)[else]
+  Cascaded Transition: 6 (condition_4->condition_9)[else]
+ComplexStatechartDiagram_1                                  :   11   11    0   29(  29:   0) | - - - - - - + |   2,636364
+ComplexStatechartDiagram_2                                  :    7    4    3   10(  10:   0) | - - - - - - + |   2,500000
+ComplexStatechartDiagram_3                                  :    7    7    0   15(  15:   0) | - - - - - - + |   2,142857
+ComplexStatechartDiagram_4                                  :    5    5    0   11(  11:   0) | - - - - - - + |   2,200000
+ComplexStatechartDiagram_5                                  :    3    3    0    7(   7:   0) | - - - - - - + |   2,333333
+CrossLevelTransition_1                                      :    4    4    0    2(   2:   0) | + - - - - - - |   0,500000
+  Cross Level Transition: 0 evBC(B->C)
+CrossLevelTransition_2                                      :    4    4    0    2(   2:   0) | + - - - - - - |   0,500000
+  Cross Level Transition: 1 evCB(C->B)
+CrossLevelTransition_3                                      :    6    6    0    6(   6:   0) | + - - - - - - |   1,000000
+  Cross Level Transition: 5 evEB(E->B)
+CrossLevelTransition_4                                      :    6    6    0    6(   6:   0) | + - - - - - - |   1,000000
+  Cross Level Transition: 2 evBD(B->D)
+CrossLevelTransition_5                                      :    7    7    0    8(   8:   0) | + - - - - - - |   1,142857
+  Cross Level Transition: 2 evBD(B->D)
+  Cross Level Transition: 5 evEB(E->B)
+  Cross Level Transition: 6 evDF(D->F)
+  Cross Level Transition: 7 evFE(F->E)
+GenericName_1                                               :    5    5    0    3(   3:   0) | - - + - - - - |   0,600000
+  Generic Name State: state_659
+  Generic Name State: state_660
+GenericName_2                                               :    4    4    0    2(   2:   0) | - - + - - - - |   0,500000
+  Generic Name State: state_0
+GenericName_3                                               :    4    4    0    2(   2:   0) | - - + - - - - |   0,500000
+  Generic Name State: state_3
+GenericName_4                                               :    4    4    0    2(   2:   0) | - - + - - - - |   0,500000
+  Generic Name State: state_1
+GenericName_5                                               :    5    5    0    3(   3:   0) | - - + - - - - |   0,600000
+  Generic Name State: state_1
+IsolatedState_1                                             :    4    4    0    5(   3:   2) | - - - - - + - |   0,750000
+  Isolated State: B
+IsolatedState_2                                             :    6    6    0    8(   6:   2) | - - - - - + - |   1,000000
+  Isolated State: D
+IsolatedState_3                                             :    5    5    0    7(   5:   2) | - - - - - + - |   1,000000
+  Isolated State: D
+IsolatedState_4                                             :    6    6    0    8(   6:   2) | - - - - - + - |   1,000000
+  Isolated State: D
+  Isolated State: E
+IsolatedState_5                                             :    5    5    0    8(   6:   2) | - - - - - + - |   1,200000
+  Isolated State: D
+IsolatedState_6                                             :    9    9    0    8(   6:   2) | - - - - - + - |   0,666667
+  Isolated State: B2
+MissingEvent_1                                              :    4    4    0    3(   3:   0) | - + - - - - - |   0,750000
+  Missing Event Transition: 0 (C->B)[x == true]
+MissingEvent_2                                              :    3    3    0    3(   3:   0) | - + - - - - - |   1,000000
+  Missing Event Transition: 1 (A->B)[x == 0]
+  Missing Event Transition: 2 (B->A)[x == 1]
+MissingEvent_3                                              :    5    5    0    6(   6:   0) | - + - - - - - |   1,200000
+  Missing Event Transition: 5 (B->B)[x == 0]
+MissingEvent_4                                              :    5    5    0    7(   7:   0) | - + - - - - - |   1,400000
+  Missing Event Transition: 3 (A->B)[x == 1]
+  Missing Event Transition: 4 (B->C)[x == 2]
+  Missing Event Transition: 5 (C->D)[x == 1]
+  Missing Event Transition: 6 (D->A)[x == 2]
+MissingEvent_5                                              :    7    7    0    6(   6:   0) | - + - - - - - |   0,857143
+  Missing Event Transition: 3 (C->D)[x != y]
+  Missing Event Transition: 5 (E->F)[x == y]
+UnreachableState_1                                          :    7    7    0    5(   5:   0) | - - - + - - - |   0,714286
+  Unreachable State: F
+UnreachableState_2                                          :    5    5    0    4(   4:   0) | - - - + - - - |   0,800000
+  Unreachable State: D
+UnreachableState_3                                          :    5    5    0    6(   6:   0) | - - - + - - - |   1,200000
+  Unreachable State: D
+UnreachableState_4                                          :    7    7    0    5(   5:   0) | - - - + - - - |   0,714286
+  Unreachable State: E
+  Unreachable State: F
+UnreachableState_5                                          :    9    9    0    8(   8:   0) | - - - + - - - |   0,888889
+  Unreachable State: E
+  Unreachable State: F
+
+[Total number of processed elements]
+#SM:36
+#N:215
+#S:199
+#C:16
+#T:244
+
+[AntiPattern Hits]              #SM   #S   #T
+APCrossLevelTransition            5    0    8
+APMissingEvent                    5    0   10
+APGenericStateName                5    6    0
+APUnreachableState                5    7    0
+APCascadedConditions              5    0    8
+APIsolatedState                   6    7    0
+APComplexStatechartDiagram        5    0    0

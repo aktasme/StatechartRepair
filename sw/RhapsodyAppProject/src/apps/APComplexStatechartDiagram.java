@@ -35,7 +35,7 @@ public class APComplexStatechartDiagram extends AntiPatternBase
 		}
 		
 		statechart.setComplexity(complexity);
-		statechart.setCSD(bReturn);
+		statechart.setComplex(bReturn);
 		
 		return bReturn;
 	}

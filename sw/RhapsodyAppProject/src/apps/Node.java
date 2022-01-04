@@ -2,7 +2,9 @@ package apps;
 
 import java.util.Vector;
 
-import com.telelogic.rhapsody.core.*;
+import com.telelogic.rhapsody.core.IRPCollection;
+import com.telelogic.rhapsody.core.IRPStateVertex;
+import com.telelogic.rhapsody.core.IRPTransition;
 
 public class Node extends Element
 {
@@ -33,7 +35,7 @@ public class Node extends Element
 		Vector<Transition> inTransitions = new Vector<Transition>();
 		
 		IRPCollection irpTransitions =  irpStateVertex.getInTransitions();
-		for(int index = 1; index <= irpTransitions.getCount(); index++)
+		for(int index = 1; index < irpTransitions.getCount() + 1; index++)
 		{
 			IRPTransition irpTransition = (IRPTransition)irpTransitions.getItem(index);
 			Transition transition = statechart.getTransition(irpTransition.getGUID());
@@ -44,9 +46,9 @@ public class Node extends Element
 			}
 			else
 			{
-				System.out.printf("State:%s Transition:%s getInTransitions() null pointer\n", irpStateVertex.getName(), irpTransition.getName());
+				System.out.printf("State:%s Transition(index:%d):%s getInTransitions() null pointer\n", irpStateVertex.getName(), index, irpTransition.getGUID());
 			}
-		}	
+		}
 		
 		return inTransitions;
 	}
@@ -56,7 +58,7 @@ public class Node extends Element
 		Vector<Transition> outTransitions = new Vector<Transition>();
 		
 		IRPCollection irpTransitions =  irpStateVertex.getOutTransitions();
-		for(int index = 1; index <= irpTransitions.getCount(); index++)
+		for(int index = 1; index < irpTransitions.getCount() + 1; index++)
 		{
 			IRPTransition irpTransition = (IRPTransition)irpTransitions.getItem(index);
 			Transition transition = statechart.getTransition(irpTransition.getGUID());

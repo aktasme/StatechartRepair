@@ -1,4 +1,4 @@
-package log;
+package apps;
 
 public class CommonLog 
 {
@@ -15,6 +15,18 @@ public class CommonLog
 		return log;
 	}
 	
+	public String toStatisticsString()
+	{
+		String log = "";
+		return log;	
+	}
+
+	public String toString()
+	{
+		String string = "";
+		return string;
+	}
+	
 	protected String toString(boolean condition)
 	{
 		String string = "-";		
@@ -29,6 +41,11 @@ public class CommonLog
 	
 	public void print()
 	{
-		System.out.println(toPrintableString());
+		System.out.print(toPrintableString());
+	}
+	
+	public void printStatistics()
+	{
+		System.out.print(toStatisticsString());
 	}
 }

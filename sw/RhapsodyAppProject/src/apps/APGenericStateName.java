@@ -24,22 +24,13 @@ public class APGenericStateName extends AntiPatternBase
 		name = this.getClass().getSimpleName();
 		statesFound = new Vector<State>();
 	}
-
-	@Override
-	public void run(IRPApplication irpApplication, Statechart statechart) 
-	{
-		statesFound.clear();
-		
-		while(control(irpApplication, statechart))
-		{
-			repair(irpApplication, statechart);
-		}
-	}
-
+	
 	@Override
 	public boolean control(IRPApplication irpApplication, Statechart statechart) 
 	{
 		boolean bReturn = false;
+		
+		statesFound.clear();
 		
 		if(!statechart.isIncludeAndState())
 		{
@@ -67,7 +58,7 @@ public class APGenericStateName extends AntiPatternBase
 		if(bReturn)
 		{
 			hitCountStatechart++;
-			statechart.setISN(true);
+			statechart.setGenericStateName(true);
 		}
 		
 		return bReturn;
@@ -91,7 +82,7 @@ public class APGenericStateName extends AntiPatternBase
 				String oldName = irpState.getName();
 				String newName = irpParent.getName() + "_Initial";
 				state.setName(newName);
-				//System.out.printf("Change name from %s to %s\n", oldName, newName);
+				System.out.printf("Change name from %s to %s\n", oldName, newName);
 			}
 			else if(inTransitions.size() > 0)
 			{
@@ -112,7 +103,7 @@ public class APGenericStateName extends AntiPatternBase
 
 					String newName = prevNode.getName() + "_" + postName;
 					state.setName(newName);
-					//System.out.printf("Change name from %s to %s\n", oldName, newName);
+					System.out.printf("Change name from %s to %s\n", oldName, newName);
 				}
 			}
 			else
@@ -124,5 +115,38 @@ public class APGenericStateName extends AntiPatternBase
 		
 		statesFound.clear();
 		return bReturn;
+	}
+	
+	@Override
+	public boolean highlight(IRPApplication irpApplication, Statechart statechart)
+	{
+		boolean bReturn = false;
+		
+		Iterator<State> iter = statesFound.iterator();
+		while(iter.hasNext())
+		{
+			State state = iter.next();
+			IRPState irpState = state.getIrpState();
+			irpState.highLightElement();
+			bReturn = true;
+		}
+		
+		return bReturn;
+	}
+	
+	@Override
+	public String toPrintableString()
+	{
+		String statisticsString = "";
+		
+		Iterator<State> iter = statesFound.iterator();
+		while(iter.hasNext())
+		{
+			State state = iter.next();
+			String nameLineString = "  Generic Name State: " + state.getName() + "\n";
+			statisticsString += nameLineString;
+		}
+
+		return statisticsString;
 	}
 }
